@@ -1,0 +1,611 @@
+var divs = $("div");
+
+$("p.details").css("background-color", "yellow").show("fast");
+$(".clicktohide").click(function() { $(this).slideUp("slow"); });
+
+
+var img = $("<img/>", // Create a new <img> element
+{ src:url, // with this HTML attribute,
+css: {borderWidth:5}, // this CSS style,
+click: handleClick // and this event handler.
+});
+
+jQuery(function() { // Invoked when the document has loaded
+// All jQuery code goes here
+});
+
+
+jQuery.noConflict(); // Restore $ to its original state
+jQuery(function($) { // Use $ as a local alias for the jQuery object
+// Put all your jQuery code here
+});
+
+// invoke the function f once for each element of the array a
+$.each(a,f);
+// Call the jQuery() function to obtain a jQuery object that represents all
+// <a> elements in the document. Then call the each() method of that jQuery
+// object to invoke the function f once for each selected element.
+$("a").each(f);
+
+
+
+$("body").length // => 1: documents have only a single body element
+$("body")[0] // This the same as document.body
+
+
+// Find all <script> elements in the document body
+var bodyscripts = $("script", document.body);
+bodyscripts.selector // => "script"
+bodyscripts.context // => document.body
+bodyscripts.jquery // => "1.4.2"
+
+// Number the divs of the document, up to and including div#last
+$("div").each(function(idx) { // find all <div>s, and iterate through them
+$(this).prepend(idx + ": "); // Insert index at start of each
+if (this.id === "last") return false; // Stop at element #last
+});
+
+// Find all headings, map to their ids, convert to a true array, and sort it.
+$(":header").map(function() { return this.id; }).toArray().sort();
+
+$("div").each(function() { // For each <div> element
+if ($(this).is(":hidden")) return; // Skip hidden elements
+// Do something with the visible ones here
+});
+
+
+$("form").attr("action"); // Query the action attr of 1st form
+$("#icon").attr("src", "icon.gif"); // Set the src attribute
+$("#banner").attr({src:"banner.gif", // Set 4 attributes at once
+alt:"Advertisement",
+width:720, height:64});
+$("a").attr("target", "_blank"); // Make all links load in new windows
+$("a").attr("target", function() { // Load local links locally and load
+if (this.host == location.host) return "_self"
+else return "_blank"; // off-site links in a new window
+});
+
+$("a").attr({target: function() {...}}); // We can also pass functions like this
+$("a").removeAttr("target"); // Make all links load in this window
+
+
+$("h1").css("font-weight"); // Get font weight of first <h1>
+$("h1").css("fontWeight"); // Camel case works, too
+$("h1").css("font"); // Error: can't query compound styles
+$("h1").css("font-variant", // Set a style on all <h1> elements
+"smallcaps");
+$("div.note").css("border", // Okay to set compound styles
+"solid black 2px");
+$("h1").css({ backgroundColor: "black", // Set multiple styles at once
+textColor: "white", // camelCase names work better
+fontVariant: "small-caps", // as object properties
+padding: "10px 2px 4px 20px",
+border: "dotted black 4px" });
+// Increase all <h1> font sizes by 25%
+$("h1").css("font-size", function(i,curval) {
+return Math.round(1.25*parseInt(curval));
+});
+
+// Adding CSS classes
+$("h1").addClass("hilite"); // Add a class to all <h1> elements
+$("h1+p").addClass("hilite first"); // Add 2 classes to <p> elts after <h1>
+$("section").addClass(function(n) { // Pass a function to add a custom class
+return "section" + n; // to each matched element
+});
+// Removing CSS classes
+$("p").removeClass("hilite"); // Remove a class from all <p> elements
+$("p").removeClass("hilite first"); // Multiple classes are allowed
+$("section").removeClass(function(n) { // Remove custom classes from elements
+return "section" + n;
+});
+$("div").removeClass(); // Remove all classes from all <div>s
+// Toggling CSS classes
+$("tr:odd").toggleClass("oddrow"); // Add the class if it is not there
+// or remove it if it is
+$("h1").toggleClass("big bold"); // Toggle two classes at once
+$("h1").toggleClass(function(n) { // Toggle a computed class or classes
+return "big bold h1-" + n;
+});
+$("h1").toggleClass("hilite", true); // Works like addClass
+$("h1").toggleClass("hilite", false); // Works like removeClass
+// Testing for CSS classes
+$("p").hasClass("first") // Does any p element have this class?
+$("#lead").is(".first") // This does the same thing
+$("#lead").is(".first.hilite") // is() is more flexible than hasClass()
+
+
+$("#surname").val() // Get value from the surname text field
+$("#usstate").val() // Get single value from <select>
+$("select#extras").val() // Get array of values from <select multiple>
+$("input:radio[name=ship]:checked").val() // Get val of checked radio button
+$("#email").val("Invalid email address") // Set value of a text field
+$("input:checkbox").val(["opt1", "opt2"]) // Check any checkboxes with
+// these names or values
+$("input:text").val(function() { // Reset all text fields to their default
+return this.defaultValue;
+})
+var title = $("head title").text() // Get document title
+var headline = $("h1").html() // Get html of first <h1> element
+$("h1").text(function(n,current) { // Give each heading a section number
+return "§" + (n+1) + ": " + current
+});
+
+
+
+var elt = $("#sprite"); // The element we want to move
+var position = elt.offset(); // Get its current position
+position.top += 100; // Change its Y coordinate
+elt.offset(position); // Set the new position
+// Move all <h1> elements to the right by a distance that depends on their
+// position in the document
+$("h1").offset(function(index,curpos) {
+return {left: curpos.left + 25*index, top:curpos.top};
+});
+
+
+var body = $("body");
+var contentWidth = body.width();
+var paddingWidth = body.innerWidth();
+var borderWidth = body.outerWidth();
+var marginWidth = body.outerWidth(true);
+var padding = paddingWidth-contentWidth; // sum of left and right padding
+var borders = borderWidth-paddingWidth; // sum of left and right border widths
+var margins = marginWidth-borderWidth; // sum of left and right margins
+
+
+// Scroll the window by n pages. n can be fractional or negative
+function page(n) {
+var w = $(window); // Wrap the window in a jQuery object
+var pagesize = w.height(); // Get the size of a page
+var current = w.scrollTop(); // Get the current scrollbar position
+w.scrollTop(current + n*pagesize); // Set new scrollbar position
+}
+
+$("div").data("x", 1); // Set some data
+$("div.nodata").removeData("x"); // Remove some data
+var x = $('#mydiv').data("x"); // Query some data
+
+
+$(e).data(...) // The method form
+$.data(e, ...) // The function form
+
+$("#log").append("<br/>"+message); // Add content at end of the #log element
+$("h1").prepend("§"); // Add section sign at start of each <h1>
+$("h1").before("<hr/>"); // Insert a rule before each <h1>
+$("h1").after("<hr/>"); // And after as well
+$("hr").replaceWith("<br/>"); // Replace <hr/> elements with <br/>
+$("h2").each(function() { // Replace <h2> with <h1>, keeping content
+var h2 = $(this);
+h2.replaceWith("<h1>" + h2.html() + "</h1>");
+});
+// after() and before() can be called on text nodes, as well
+// This is another way to add a section sign at the start of each <h1>
+$("h1").map(function() { return this.firstChild; }).before("§");
+
+Operation $(target).method(content) $(content).method(target)
+insert content at end of target append() appendTo()
+insert content at start of target prepend() prependTo()
+insert content after target after() insertAfter()
+insert content before target before() insertBefore()
+replace target with content replaceWith() replaceAll()
+
+
+$("<br/>+message").appendTo("#log"); // Append html to #log
+$(document.createTextNode("§")).prependTo("h1"); // Append text node to
+
+$("<hr/>").insertBefore("h1"); // Insert rule before <h1>s
+$("<hr/>").insertAfter("h1"); // Insert rule after <h1>s
+$("<br/>").replaceAll("hr"); // Replace <hr/> with <br/>
+
+
+// Append a new div, with id "linklist", to the end of the document
+$(document.body).append("<div id='linklist'><h1>List of Links</h1></div>");
+// Copy all links in the document and insert them into that new div
+$("a").clone().appendTo("#linklist");
+// Insert <br/> elements after each link so they display on separate lines
+$("#linklist > a").after("<br/>");
+
+// Wrap all <h1> elements with <i> elements
+$("h1").wrap(document.createElement("i")); // Produces <i><h1>...</h1></i>
+// Wrap the content of all <h1> elements. Using a string argument is easier.
+$("h1").wrapInner("<i/>"); // Produces <h1><i>...</i></h1>
+// Wrap the first paragraph in one anchor and div
+$("body>p:first").wrap("<a name='lead'><div class='first'></div></a>");
+// Wrap all the other paragraphs in another div
+$("body>p:not(:first)").wrapAll("<div class='rest'></div>");
+
+// Clicking on any <p> gives it a gray background
+$("p").click(function() { $(this).css("background-color", "gray"); });
+
+
+
+blur() focusin() mousedown() mouseup()
+change() focusout() mouseenter() resize()
+click() keydown() mouseleave() scroll()
+dblclick() keypress() mousemove() select()
+error() keyup() mouseout() submit()
+focus() load() mouseover() unload()
+
+
+$("<img/>", {
+src: image_url,
+alt: image_description,
+className: "translucent_image",
+click: function() { $(this).css("opacity", "50%"); }
+});
+
+altKey ctrlKey newValue screenX
+attrChange currentTarget offsetX screenY
+attrName detail offsetY shiftKey
+bubbles eventPhase originalTarget srcElement
+button fromElement pageX target
+cancelable keyCode pageY toElement
+charCode layerX prevValue view
+clientX layerY relatedNode wheelDelta
+clientY metaKey relatedTarget which
+
+preventDefault() isDefaultPrevented()
+stopPropagation() isPropagationStopped()
+stopImmediatePropagation() isImmediatePropagationStopped()
+
+$('p').bind('click', f);
+$('a').bind('mouseenter mouseleave', f);
+
+// Bind f as a mouseover handler in namespace "myMod" to all <a> elements
+$('a').bind('mouseover.myMod', f);
+
+
+// Bind f as a mouseout handler in namespaces "myMod" and "yourMod"
+$('a').bind('mouseout.myMod.yourMod', f);
+$('a').bind({mouseenter:f, mouseleave:g});
+
+$('*').unbind(); // Remove all jQuery event handlers from all elements!
+// Unbind all mouseover and mouseout handlers on all <a> elements
+$('a').unbind("mouseover mouseout");
+
+
+// Unbind all mouseover and mouseout handlers in the "myMod" namespace
+$('a').unbind("mouseover.myMod mouseout.myMod");
+// Unbind handlers for any kind of event in the myMod namespace
+$('a').unbind(".myMod");
+// Unbind click handlers that are in both namespaces "ns1" and "ns2"
+$('a').unbind("click.ns1.ns2");
+
+
+$('#mybutton').unbind('click', myClickHandler);
+$('a').unbind({ // Remove specific mouseover and mouseout handlers
+mouseover: mouseoverHandler,
+mouseout: mouseoutHandler
+});
+
+$("#my_form").submit(); // Act as if the user clicked the Submit button
+
+$("#my_form").trigger("submit");
+$("button").trigger("click.ns1"); // Trigger click handlers in a namespace
+$("button").trigger("click!"); // Trigger click handlers in no namespace
+
+
+// The onclick handler of button1 triggers the same event on button2
+$('#button1').click(function(e) { $('#button2').trigger(e); });
+// Add an extra property to the event object when triggering an event
+$('#button1').trigger({type:'click', synthetic:true});
+// This handler tests that extra property to distinguish real from synthetic
+$('#button1').click(function(e) { if (e.synthetic) {...}; });
+
+$('#button1').trigger("click", true); // Pass a single extra argument
+$('#button1').trigger("click", [x,y,z]); // Pass three extra arguments
+
+
+$("#logoff").click(function() {
+$.event.trigger("logoff"); // Broadcast an event
+window.location = "logoff.php"; // Navigate to a new page
+});
+
+$(document).delegate("a", "mouseover", linkHandler);
+
+
+// Static event handlers for static links
+$("a").bind("mouseover", linkHandler);
+// Live event handlers for parts of the document that are dynamically updated
+$(".dynamic").delegate("a", "mouseover", linkHandler);
+
+$("a").live("mouseover", linkHandler);
+$("a", $(".dynamic")).live("mouseover", linkHandler);
+
+x.live(type,handler);
+$(x.context).delegate(x.selector, type, handler);
+
+$('a').die('mouseover'); // Remove all live handlers for mouseover on <a> elts
+$('a').die('mouseover', linkHandler); // Remove just one specific live handle
+
+$(document).undelegate('a'); // Remove all live handlers for <a> elements
+$(document).undelegate('a', 'mouseover'); // Remove live mouseover handlers
+$(document).undelegate('a', 'mouseover', linkHandler); // One specific handler
+
+jQuery.fx.speeds["medium-fast"] = 300;
+jQuery.fx.speeds["medium-slow"] = 500;
+
+$("#message").fadeIn(); // Fade an element in over 400ms
+$("#message").fadeOut("fast"); // Fade it out over 200ms
+$(".stopmoving").click(function() { jQuery.fx.off = true; });
+
+// Quickly fade in an element, and when it is visible, display some text in it.
+$("#message").fadeIn("fast", function() { $(this).text("Hello World"); });
+
+// Pass duration and callback as object properties instead of arguments
+$("#message").fadeIn({
+duration: "fast",
+complete: function() { $(this).text("Hello World"); }
+});
+
+// Fade all images out, then show them, then slide up, then slide down
+$("img").fadeOut().show(300).slideUp().slideToggle();
+
+
+// Shrink the height of all images to 0
+$("img").animate({ height: 0 });
+
+
+$("#sprite").animate({
+opacity: .25, // Animate opacity to .25
+font-size: 10 // Animate font size to 10 pixels
+}, {
+duration: 500, // Animation lasts 1/2 second
+complete: function() { // Call this function when done
+this.text("Goodbye"); // Change element text.
+}
+});
+
+
+$("p").animate({
+"margin-left": "+=.5in", // Increase paragraph indent
+opacity: "-=.1" // And decrease their opacity
+});
+
+$("img").animate({
+width: "hide",
+borderLeft: "hide",
+borderRight: "hide",
+paddingLeft: "hide",
+paddingRight: "hide"
+});
+$("img").fadeIn(500)
+.animate({"width":"+=100"}, {queue:false, duration:1000})
+.fadeOut(500);
+
+$("img").animate({"width":"+=100"}, {duration: 500, easing:"linear"});
+
+$("img").animate({"width":"+=100"}, 500, "linear");
+
+// Use the specialEasing option to specify custom easing functions
+$("img").animate({ width:"hide", height:"hide", opacity:"hide" },
+{ specialEasing: { width: "linear", height: "linear" }});
+// Another way to do it:
+// Pass [target value, easing function] arrays in the first object argument.
+$("img").animate({
+width: ["hide", "linear"], height: ["hide", "linear"], opacity:"hide"
+});
+
+// Be careful that we don't keep queueing up animations on mouse events!
+$("img").bind({
+mouseover: function() { $(this).stop().fadeTo(300, 1.0); },
+mouseout: function() { $(this).stop().fadeTo(300, 0.5); }
+});
+
+// Quickly fade out halfway, wait, then slide up
+$("img").fadeTo(100, 0.5).delay(200).slideUp();
+$("img").bind({
+mouseover: function() { $(this).stop(true).delay(100).fadeTo(300, 1.0); },
+mouseout: function() { $(this).stop(true).fadeTo(300, 0.5); }
+});
+
+
+// Fade an element in, wait, set some text in it, and animate its border
+$("#message").fadeIn().delay(200).queue(function(next) {
+$(this).text("Hello World"); // Display some text
+next(); // Run the next item on the queue
+}).animate({borderWidth: "+=10px;"}); // Grow its border
+
+$(this).dequeue(); // Instead of next()
+
+$(e).queue(f); // Create a jQuery object holding e, and call queue method
+jQuery.queue(e,f); // Just call the jQuery.queue() utility function
+
+
+/ Load and display the latest status report every 60 seconds
+setInterval(function() { $("#stats").load("status_report.html"); }, 60000);
+
+// Load and display the temperature section of the weather report
+$('#temp').load("weather_report.html #temperature");
+
+
+// Load the weather report for a specified zipcode
+$('#temp').load("us_weather_report.html", "zipcode=02134");
+// Here we use an object as data instead and specify degrees Fahrenheit
+$('#temp').load("us_weather_report.html", { zipcode:02134, units:'F' });
+
+// Dynamically load a script from some other server
+jQuery.getScript("http://example.com/js/widget.js")
+
+// Load a library and use it once it loads
+jQuery.getScript("js/jquery.my_plugin.js", function() {
+$('div').my_plugin(); // Use the library we loaded
+});
+
+// Suppose data.json contains the text: '{"x":1,"y":2}'
+jQuery.getJSON("data.json", function(data) {
+// Now data is the object {x:1, y:2}
+});
+
+
+$("#submit_button").click(function(event) {
+$(this.form).load( // Replace the form by loading...
+this.form.action, // the form url
+$(this.form).serialize()); // with the form data appended to it
+event.preventDefault(); // Don't do the default form submission
+this.disabled = "disabled"; // Prevent multiple submissions
+});
+
+
+
+$.param({a:[1,2,3]}) // Returns "a[]=1&a[]=2&a[]=3"
+$.param({o:{x:1,y:true}}) // Returns "o[x]=1&o[y]=true"
+$.param({o:{x:{y:[1,2]}}}) // Returns "o[x][y][]=1&o[x][y][]=2"
+
+// Request text from the server and display it in an alert dialog
+jQuery.get("debug.txt", alert);
+
+
+jQuery.ajax({
+type: "GET", // The HTTP request method.
+url: url, // The URL of the data to fetch.
+data: null, // Don't add any data to the URL.
+dataType: "script", // Execute the response as a script once we get it.
+success: callback // Call this function when done.
+});
+
+jQuery.ajaxSetup({
+timeout: 2000, // Abort all Ajax requests after 2 seconds
+cache: false // Defeat browser cache by adding a timestamp to the URL
+});
+
+
+beforeSend “ajaxSend” ajaxSend()
+success “ajaxSuccess” ajaxSuccess()
+error “ajaxError” ajaxError()
+complete “ajaxComplete” ajaxComplete()
+“ajaxStart” ajaxStart()
+“ajaxStop” ajaxStop()
+
+
+$("#loading_animation").bind({
+ajaxStart: function() { $(this).show(); },
+ajaxStop: function() { $(this).hide(); }
+});
+
+
+p:nth-child(3n+1):text(JavaScript):not(:has(a))
+
+
+"blockquote i" // Matches an <i> element within a <blockquote>
+"ol > li" // An <li> element as a direct child of an <ol>
+"#output + *" // The sibling after the element with id="output"
+"div.note > h1 + p" // A <p> following a <h1> inside a <div class="note">
+
+"h1, h2, h3" // Matches <h1>, <h2>, and <h3> elements
+"#p1, #p2, #p3" // Matches elements with id p1, p2, and p3
+"div.note, p.note" // Matches <div> and <p> elements with class="note"
+"body>p,div.note>p" // <p> children of <body> and <div class="note">
+
+
+(h1, h2, h3)+p // Not legal
+h1+p, h2+p, h3+p // Write this instead
+
+var paras = $("p");
+paras.first() // Select only the first <p> element
+paras.last() // Select only the last <p>
+paras.eq(1) // Select the second <p>
+paras.eq(-2) // Select the second to last <p>
+paras[1] // The second <p> element, itself
+
+
+$("div").filter(".note") // Same as $("div.note")
+$("div").filter($(".note")) // Same as $("div.note")
+$("div").filter(function(idx) { return idx%2==0 }) // Same as $("div:even")
+$("div").not("#header, #footer"); // All <div> elements except two special ones
+
+
+$("p").has("a[href]") // Paragraphs that include links
+
+
+// Equivalent ways to select all <div> and all <p> elements
+$("div, p") // Use a selector group
+$("div").add("p") // Pass a selector to add()
+$("div").add($("p")) // Pass a jQuery object to add()
+var paras = document.getElementsByTagName("p"); // An array-like object
+$("div").add(paras); // Pass an array of elements to add()
+
+
+$("div").find("p") // find <p> elements inside <div>s. Same as $("d
+
+
+// ids "header" and "footer". Same as $("#header>span,#footer>span")
+$("#header, #footer").children("span")
+
+
+$("h1").next("p") // Same as $("h1+p")
+$("h1").prev() // Sibling elements before <h1> elements
+
+$("#footer").nextAll("p") // All <p> siblings following the #footer element
+$("#footer").prevAll() // All siblings before the #footer elemen
+
+$("li").parent() // Parents of list items, like <ul> and <ol> elements
+$("a[href]").parents("p") // <p> elements that contain links
+
+$("a[href]").closest("div") // Innermost <div>s that contain links
+$("a[href]").parentsUntil(":not(div)") // All <div> wrappers directly around <a>
+
+
+// First, without method chaining
+var divs = $("div");
+var paras = divs.find("p");
+paras.addClass("highlight");
+divs.css("border", "solid black 1px");
+// Here's how we could do it with a method chain
+$("div").find("p").addClass("highlight").end().css("border", "solid black 1px");
+// Or we can reorder the operations and avoid the call to end()
+$("div").css("border", "solid black 1px").find("p").addClass("highlight");
+
+
+var sel = $("div"); // Select all <div> elements
+sel.pushStack(document.getElementsByTagName("p")); // Modify it to all <p> elts
+sel.end(); // Restore <div>
+
+
+$("div").find("p").andSelf(). // find <p>s in <div>s, and merge them
+addClass("highlight"). // Highlight them all
+end().end(). // Pop stack twice back to $("div")
+css("border", "solid black 1px"); // Give the divs a border
+
+jQuery.fn.println = function() {
+// Join all the arguments into a space-separated string
+var msg = Array.prototype.join.call(arguments, " ");
+// Loop through each element in the jQuery object
+this.each(function() {
+// For each one, append the string as plain text, then append a <br/>.
+jQuery(this).append(document.createTextNode(msg)).append("<br/>");
+});
+// Return the unmodified jQuery object for method chaining
+return this;
+};
+
+
+$("#debug").println("x = ", x, "; y = ", y);
+
+
+(function($) { // An anonymous function with one parameter named $
+// Put your plugin code here
+}(jQuery)); // Invoke the function with the jQuery object as its argument
+
+
+// and added to the document.
+jQuery.debug = function() {
+var elt = jQuery("#debug"); // Find the #debug element
+if (elt.length == 0) { // Create it if it doesn't exist
+elt = jQuery("<div id='debug'><h1>Debugging Output</h1></div>");
+jQuery(document.body).append(elt);
+}
+elt.println.apply(elt, arguments); // Output the arguments to it
+};
+
+jQuery.expr[':'].draggable = function(e) { return e.draggable === true; };
+
+
+jQuery.expr[':'].data = function(element, index, match, array) {
+// Note: IE7 and before do not implement hasAttribute()
+return element.hasAttribute("data-" + match[3]);
+};
+
+
+// Make <input> elements with class="date" into date picker widgets
+$("input.date").datepicker();

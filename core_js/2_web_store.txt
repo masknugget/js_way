@@ -1,0 +1,457 @@
+Web Storage
+Cookies
+IE User Data
+Offline Web Applications
+Web Databases
+
+var name = localStorage.username; // Query a stored value.
+name = localStorage["username"]; // Array notation equivalent
+if (!name) {
+name = prompt("What is your name?"); // Ask the user a question.
+localStorage.username = name; // Store the user's response.
+}
+// Iterate through all stored name/value pairs
+for(var name in localStorage) { // Iterate all stored names
+var value = localStorage[name]; // Look up the value of each one
+}
+
+
+
+// If you store a number, it is automatically converted to a string.
+// Don't forget to parse it when retrieving it from storage.
+localStorage.x = 10;
+var x = parseInt(localStorage.x);
+// Convert a Date to a string when setting, and parse it when getting
+localStorage.lastRead = (new Date()).toUTCString();
+var lastRead = new Date(Date.parse(localStorage.lastRead));
+// JSON makes a convenient encoding for any primitive or data structure
+localStorage.data = JSON.stringify(data); // Encode and store
+var data = JSON.parse(localStorage.data); // Retrieve and decode.
+
+
+localStorage.setItem("x", 1); // Store an number with the name "x"
+localStorage.getItem("x"); // Retrieve a value
+// Enumerate all stored name/value pairs
+for(var i = 0; i < localStorage.length; i++) { // Length gives the # of pairs
+var name = localStorage.key(i); // Get the name of pair i
+var value = localStorage.getItem(name); // Get the value of that pair
+}
+localStorage.removeItem("x"); // Delete the item "x"
+localStorage.clear(); // Delete any other items, too
+
+
+localStorage.o = {x:1}; // Store an object that has a property x
+localStorage.o.x = 2; // Attempt to set the property of the stored object
+localStorage.o.x // => 1: x is unchanged
+
+localStorage.getItem("o").x = 2; // We don't expect this to store the value 2
+
+// Figure out what memory I'm using
+var memory = window.localStorage ||
+(window.UserDataStorage && new UserDataStorage()) ||
+new CookieStorage();
+// Then search my memory
+var username = memory.getItem("username");
+
+document.cookie = "version=" + encodeURIComponent(document.lastModified);
+
+
+/ Store the name/value pair as a cookie, encoding the value with
+// encodeURIComponent() in order to escape semicolons, commas, and spaces.
+// If daysToLive is a number, set the max-age attribute so that the cookie
+// expires after the specified number of days. Pass 0 to delete a cookie.
+function setCookie(name, value, daysToLive) {
+var cookie = name + "=" + encodeURIComponent(value);
+if (typeof daysToLive === "number")
+cookie += "; max-age=" + (daysToLive*60*60*24);
+document.cookie = cookie;
+}
+
+
+// Return the document's cookies as an object of name/value pairs.
+// Assume that cookie values are encoded with encodeURIComponent().
+function getCookies() {
+var cookies = {}; // The object we will return
+var all = document.cookie; // Get all cookies in one big string
+if (all === "") // If the property is the empty string
+return cookies; // return an empty object
+var list = all.split("; "); // Split into individual name=value pairs
+for(var i = 0; i < list.length; i++) { // For each cookie
+var cookie = list[i];
+var p = cookie.indexOf("="); // Find the first = sign
+var name = cookie.substring(0,p); // Get cookie name
+var value = cookie.substring(p+1); // Get cookie value
+value = decodeURIComponent(value); // Decode the value
+cookies[name] = value; // Store name and value in object
+}
+return cookies;
+}
+
+
+/*
+* CookieStorage.js
+* This class implements the Storage API that localStorage and sessionStorage
+* do, but implements it on top of HTTP Cookies.
+*/
+function CookieStorage(maxage, path) { // Arguments specify lifetime and scope
+// Get an object that holds all cookies
+var cookies = (function() { // The getCookies() function shown earlier
+var cookies = {}; // The object we will return
+var all = document.cookie; // Get all cookies in one big string
+if (all === "") // If the property is the empty string
+return cookies; // return an empty object
+var list = all.split("; "); // Split into individual name=value pairs
+for(var i = 0; i < list.length; i++) { // For each cookie
+var cookie = list[i];
+var p = cookie.indexOf("="); // Find the first = sign
+var name = cookie.substring(0,p); // Get cookie name
+var value = cookie.substring(p+1); // Get cookie value
+value = decodeURIComponent(value); // Decode the value
+cookies[name] = value; // Store name and value
+}
+return cookies;
+}());
+// Collect the cookie names in an array
+var keys = [];
+for(var key in cookies) keys.push(key);
+// Now define the public properties and methods of the Storage API
+// The number of stored cookies
+this.length = keys.length;
+// Return the name of the nth cookie, or null if n is out of range
+this.key = function(n) {
+if (n < 0 || n >= keys.length) return null;
+return keys[n];
+};
+// Return the value of the named cookie, or null.
+this.getItem = function(name) { return cookies[name] || null; };
+// Store a value
+this.setItem = function(key, value) {
+if (!(key in cookies)) { // If no existing cookie with this name
+keys.push(key); // Add key to the array of keys
+this.length++; // And increment the length
+}
+// Store this name/value pair in the set of cookies.
+cookies[key] = value;
+// Now actually set the cookie.
+// First encode value and create a name=encoded-value string
+var cookie = key + "=" + encodeURIComponent(value);
+// Add cookie attributes to that string
+if (maxage) cookie += "; max-age=" + maxage;
+if (path) cookie += "; path=" + path;
+// Set the cookie through the magic document.cookie property
+document.cookie = cookie;
+};
+// Remove the specified cookie
+this.removeItem = function(key) {
+
+    if (!(key in cookies)) return; // If it doesn't exist, do nothing
+// Delete the cookie from our internal set of cookies
+delete cookies[key];
+// And remove the key from the array of names, too.
+// This would be easier with the ES5 array indexOf() method.
+for(var i = 0; i < keys.length; i++) { // Loop through all keys
+if (keys[i] === key) { // When we find the one we want
+keys.splice(i,1); // Remove it from the array.
+break;
+}
+}
+this.length--; // Decrement cookie length
+// Finally actually delete the cookie by giving it an empty value
+// and an immediate expiration date.
+document.cookie = key + "=; max-age=0";
+};
+// Remove all cookies
+this.clear = function() {
+// Loop through the keys, removing the cookies
+for(var i = 0; i < keys.length; i++)
+document.cookie = keys[i] + "=; max-age=0";
+// Reset our internal state
+cookies = {};
+keys = [];
+this.length = 0;
+};
+}
+
+
+
+var memory = document.createElement("div"); // Create an element
+memory.id = "_memory"; // Give it a name
+memory.style.display = "none"; // Never display it
+memory.style.behavior = "url('#default#userData')"; // Attach a magic behavior
+document.body.appendChild(memory); // Add it to the document
+
+
+memory.load("myStoredData"); // Load a named batch of saved data
+var name = memory.getAttribute("username"); // Get one piece of stored data
+if (!name) { // If it wasn't defined
+name = prompt("What is your name?); // Get user input
+memory.setAtttribute("username", name); // Set it as an attribute
+memory.save("myStoredData"); // And save it for next time
+}
+
+
+var now = (new Date()).getTime(); // Now, in milliseconds
+var expires = now + 100 * 24 * 60 * 60 * 1000; // 100 days from now in ms
+expires = new Date(expires).toUTCString(); // Convert it to a string
+memory.expires = expires; // Set userData expiration
+
+
+function UserDataStorage(maxage) {
+// Create a document element and install the special userData
+// behavior on it so it gets save() and load() methods.
+var memory = document.createElement("div"); // Create an element
+memory.style.display = "none"; // Never display it
+memory.style.behavior = "url('#default#userData')"; // Attach magic behavior
+document.body.appendChild(memory); // Add to the document
+// If maxage is specified, expire the userData in maxage seconds
+if (maxage) {
+var now = new Date().getTime(); // The current time
+var expires = now + maxage * 1000; // maxage seconds from now
+memory.expires = new Date(expires).toUTCString();
+}
+// Initialize memory by loading saved values.
+// The argument is arbitrary, but must also be passed to save()
+memory.load("UserDataStorage"); // Load any stored data
+this.getItem = function(key) { // Retrieve saved values from attributes
+return memory.getAttribute(key) || null;
+};
+this.setItem = function(key, value) {
+memory.setAttribute(key,value); // Store values as attributes
+memory.save("UserDataStorage"); // Save state after any change
+};
+this.removeItem = function(key) {
+memory.removeAttribute(key); // Remove stored value attribute
+memory.save("UserDataStorage"); // Save new state
+};
+}
+
+
+<!DOCTYPE HTML>
+<html manifest="myapp.appcache">
+<head>...</head>
+<body>...</body>
+</html>
+
+
+// The event handlers below all use this function to display status messages.
+// Since the handlers all display status messages this way, they return false
+// to cancel the event and prevent the browser from displaying its own status.
+function status(msg) {
+// Display the message in the document element with id "statusline"
+document.getElementById("statusline").innerHTML = msg;
+console.log(msg); // And also in the console for debugging
+}
+// Each time the application is loaded, it checks its manifest file.
+// The checking event is always fired first when this process begins.
+window.applicationCache.onchecking = function() {
+status("Checking for a new version.");
+return false;
+};
+// If the manifest file has not changed, and the app is already cached,
+// the noupdate event is fired and the process ends.
+window.applicationCache.onnoupdate = function() {
+    status("This version is up-to-date.")
+return false;
+};
+// If the application is not already cached, or if the manifest has changed,
+// the browser downloads and caches everything listed in the manifest.
+// The downloading event signals the start of this download process.
+window.applicationCache.ondownloading = function() {
+status("Downloading new version");
+window.progresscount = 0; // Used in the progress handler below
+return false;
+};
+// progress events are fired periodically during the downloading process,
+// typically once for each file downloaded.
+window.applicationCache.onprogress = function(e) {
+// The event object should be a progress event (like those used by XHR2)
+// that allows us to compute a completion percentage, but if not,
+// we keep count of how many times we've been called.
+var progress = "";
+if (e && e.lengthComputable) // Progress event: compute percentage
+progress = " " + Math.round(100*e.loaded/e.total) + "%"
+else // Otherwise report # of times called
+progress = " (" + ++progresscount + ")"
+status("Downloading new version" + progress);
+return false;
+};
+// The first time an application is downloaded into the cache, the browser
+// fires the cached event when the download is complete.
+window.applicationCache.oncached = function() {
+status("This application is now cached locally");
+return false;
+};
+// When an already-cached application is updated, and the download is complete
+// the browser fires "updateready". Note that the user will still be seeing
+// the old version of the application when this event arrives.
+window.applicationCache.onupdateready = function() {
+status("A new version has been downloaded. Reload to run it");
+return false;
+};
+// If the browser is offline and the manifest cannot be checked, an "error"
+// event is fired. This also happens if an uncached application references
+// a manifest file that does not exist
+window.applicationCache.onerror = function() {
+status("Couldn't load manifest or cache application");
+return false;
+};
+// If a cached application references a manifest file that does not exist,
+// an obsolete event is fired and the application is removed from the cache.
+// Subsequent loads are done from the network rather than from the cache.
+window.applicationCache.onobsolete = function() {
+
+    status("This application is no longer cached. " +
+"Reload to get the latest version from the network.");
+return false;
+};
+
+
+////////////////////////
+
+
+CACHE MANIFEST
+# PermaNote v8
+permanote.html
+permanote.js
+NETWORK:
+note
+
+
+<!DOCTYPE HTML>
+<html manifest="permanote.appcache">
+<head>
+<title>PermaNote Editor</title>
+<script src="permanote.js"></script>
+<style>
+#editor { width: 100%; height: 250px; }
+#statusline { width: 100%; }
+</style>
+
+</head>
+<body>
+<div id="toolbar">
+<button id="savebutton" onclick="save()">Save</button>
+<button onclick="sync()">Sync Note</button>
+<button onclick="applicationCache.update()">Update Application</button>
+</div>
+<textarea id="editor"></textarea>
+<div id="statusline"></div>
+</body>
+</html>
+
+
+Example 20-7. permanote.js
+// Some variables we need throughout
+var editor, statusline, savebutton, idletimer;
+// The first time the application loads
+window.onload = function() {
+// Initialize local storage if this is the first time
+if (localStorage.note == null) localStorage.note = "";
+if (localStorage.lastModified == null) localStorage.lastModified = 0;
+if (localStorage.lastSaved == null) localStorage.lastSaved = 0;
+// Find the elements that are the editor UI. Initialize global variables.
+editor = document.getElementById("editor");
+statusline = document.getElementById("statusline");
+savebutton = document.getElementById("savebutton");
+editor.value = localStorage.note; // Initialize editor with saved note
+editor.disabled = true; // But don't allow editing until we sync
+// Whenever there is input in the textarea
+editor.addEventListener("input",
+function (e) {
+// Save the new value in localStorage
+localStorage.note = editor.value;
+localStorage.lastModified = Date.now();
+// Reset the idle timer
+if (idletimer) clearTimeout(idletimer);
+idletimer = setTimeout(save, 5000);
+// Enable the save button
+savebutton.disabled = false;
+},
+false);
+// Each time the application loads, try to sync up with the server
+sync();
+};
+// Save to the server before navigating away from the page
+window.onbeforeunload = function() {
+if (localStorage.lastModified > localStorage.lastSaved)
+save();
+};
+// If we go offline, let the user know
+window.onoffline = function() { status("Offline"); }
+// When we come online again, sync up.
+window.ononline = function() { sync(); };
+// Notify the user if there is a new version of this application available.
+// We could also force a reload here with location.reload()
+window.applicationCache.onupdateready = function() {
+status("A new version of this application is available. Reload to run it");
+
+
+
+};
+// Also let the user know if there is not a new version available.
+window.applicationCache.onnoupdate = function() {
+status("You are running the latest version of the application.");
+};
+// A function to display a status message in the status line
+function status(msg) { statusline.innerHTML = msg; }
+// Upload the note text to the server (if we're online).
+// Will be automatically called after 5 seconds of inactivity whenever
+// the note has been modified.
+function save() {
+if (idletimer) clearTimeout(idletimer);
+idletimer = null;
+if (navigator.onLine) {
+var xhr = new XMLHttpRequest();
+xhr.open("PUT", "/note");
+xhr.send(editor.value);
+xhr.onload = function() {
+localStorage.lastSaved = Date.now();
+savebutton.disabled = true;
+};
+}
+}
+// Check for a new version of the note on the server. If a newer
+// version is not found, save the current version to the server.
+function sync() {
+if (navigator.onLine) {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "/note");
+xhr.send();
+xhr.onload = function() {
+var remoteModTime = 0;
+if (xhr.status == 200) {
+var remoteModTime = xhr.getResponseHeader("Last-Modified");
+remoteModTime = new Date(remoteModTime).getTime();
+}
+if (remoteModTime > localStorage.lastModified) {
+status("Newer note found on server.");
+var useit =
+confirm("There is a newer version of the note\n" +
+"on the server. Click Ok to use that version\n"+
+"or click Cancel to continue editing this\n"+
+"version and overwrite the server");
+var now = Date.now();
+if (useit) {
+editor.value = localStorage.note = xhr.responseText;
+localStorage.lastSaved = now;
+status("Newest version downloaded.");
+}
+else
+status("Ignoring newer version of the note.");
+localStorage.lastModified = now;
+}
+else
+status("You are editing the current version of the note.");
+if (localStorage.lastModified > localStorage.lastSaved) {
+save();
+}
+editor.disabled = false; // Re-enable the editor
+editor.focus(); // And put cursor in it
+}
+}
+else { // If we are currently offline, we can't sync
+status("Can't sync while offline");
+editor.disabled = false;
+editor.focus();
+}
+}

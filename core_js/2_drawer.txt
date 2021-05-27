@@ -1,0 +1,759 @@
+<img src="images/help.gif"
+onmouseover="this.src='images/help_rollover.gif'"
+onmouseout="this.src='images/help.gif'">
+
+<script>(new Image()).src = "images/help_rollover.gif";</script>
+<img src="images/help.gif"
+onmouseover="this.src='images/help_rollover.gif'"
+onmouseout="this.src='images/help.gif'">
+
+
+/**
+* rollover.js: unobtrusive image rollovers.
+*
+* To create image rollovers, include this module in your HTML file and
+* use the data-rollover attribute on any <img> element to specify the URL of
+* the rollover image. For example:
+*
+* <img src="normal_image.png" data-rollover="rollover_image.png">
+*
+* Note that this module requires onLoad.js
+*/
+onLoad(function() { // Everything in one anonymous function: no symbols defined
+// Loop through all images, looking for the data-rollover attribute
+for(var i = 0; i < document.images.length; i++) {
+var img = document.images[i];
+var rollover = img.getAttribute("data-rollover");
+if (!rollover) continue; // Skip images without data-rollover
+// Ensure that the rollover image is in the cache
+(new Image()).src = rollover;
+// Define an attribute to remember the default image URL
+img.setAttribute("data-rollout", img.src);
+// Register the event handlers that create the rollover effect
+img.onmouseover = function() {
+this.src = this.getAttribute("data-rollover");
+};
+img.onmouseout = function() {
+this.src = this.getAttribute("data-rollout");
+};
+}
+});
+
+<audio src="background_music.mp3"/>
+<video src="news.mov" width=320 height=240/>
+
+
+<audio id="music">
+<source src="music.mp3" type="audio/mpeg">
+<source src="music.ogg" type='audio/ogg; codec="vorbis"'>
+</audio>
+
+
+
+<video id="news" width=640 height=480 controls preload>
+<!-- WebM format for Firefox and Chrome -->
+<source src="news.webm" type='video/webm; codecs="vp8, vorbis"'>
+<!-- H.264 format for IE and Safari -->
+<source src="news.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+<!-- Fall back on the Flash plugin -->
+<object width=640 height=480 type="application/x-shockwave-flash"
+data="flash_movie_player.swf">
+<!-- Param elements here configure the Flash movie player you're using -->
+<!-- Text is the ultimate fallback content -->
+<div>video element not supported and Flash plugin not installed.</div>
+</object>
+</video>
+
+new Audio("chime.wav").play(); // Load and play a sound effect
+
+
+
+var a = new Audio();
+if (a.canPlayType("audio/wav")) {
+a.src = "soundeffect.wav";
+a.play();
+}
+
+// When the document has loaded, start playing some background music
+window.addEventListener("load", function() {
+document.getElementById("music").play();
+}, false);
+
+
+var percent_loaded = Math.floor(song.buffered.end(0) / song.duration * 100);
+if (song.readyState === song.HAVE_ENOUGH_DATA) song.play();
+
+if (song.error.code == song.error.MEDIA_ERR_DECODE)
+    alert("Can't play song: corrupt audio data.");
+
+
+
+<!-- Begin an SVG figure and declare our namespace -->
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 1000 1000"> <!-- Coordinate system for figure -->
+<defs> <!-- Set up some definitions we'll use -->
+<linearGradient id="fade"> <!-- a color gradient named "fade" -->
+<stop offset="0%" stop-color="#008"/> <!-- Start a dark blue -->
+<stop offset="100%" stop-color="#ccf"/> <!-- Fade to light blue -->
+</linearGradient>
+</defs>
+<!-- Draw a rectangle with a thick black border and fill it with the fade -->
+<rect x="100" y="200" width="800" height="600"
+stroke="black" stroke-width="25" fill="url(#fade)"/>
+</svg>
+
+<object data="sample.svg" type="image/svg+xml" width="100" height="100"/>
+
+
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:svg="http://www.w3.org/2000/svg">
+<!-- declare HTML as default namespace and SVG with "svg:" prefix -->
+<body>
+This is a red square: <svg:svg width="10" height="10">
+<svg:rect x="0" y="0" width="10" height="10" fill="red"/>
+</svg:svg>
+This is a blue circle: <svg:svg width="10" height="10">
+<svg:circle cx="5" cy="5" r="5" fill="blue"/>
+</svg:svg>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+This is a red square: <svg width="10" height="10">
+<rect x="0" y="0" width="10" height="10" fill="red"/>
+</svg>
+This is a blue circle: <svg width="10" height="10">
+<circle cx="5" cy="5" r="5" fill="blue"/>
+</svg>
+</body>
+</html>
+
+
+/**
+* Create an <svg> element and draw a pie chart into it.
+* Arguments:
+* data: an array of numbers to chart, one for each wedge of the pie.
+* width,height: the size of the SVG graphic, in pixels
+* cx, cy, r: the center and radius of the pie
+* colors: an array of HTML color strings, one for each wedge
+* labels: an array of labels to appear in the legend, one for each wedge
+* lx, ly: the upper-left corner of the chart legend
+* Returns:
+* An <svg> element that holds the pie chart.
+* The caller must insert the returned element into the document.
+*/
+function pieChart(data, width, height, cx, cy, r, colors, labels, lx, ly) {
+// This is the XML namespace for svg elements
+var svgns = "http://www.w3.org/2000/svg";
+// Create the <svg> element, and specify pixel size and user coordinates
+var chart = document.createElementNS(svgns, "svg:svg");
+chart.setAttribute("width", width);
+chart.setAttribute("height", height);
+chart.setAttribute("viewBox", "0 0 " + width + " " + height);
+// Add up the data values so we know how big the pie is
+var total = 0;
+for(var i = 0; i < data.length; i++) total += data[i];
+// Now figure out how big each slice of pie is. Angles in radians.
+var angles = []
+for(var i = 0; i < data.length; i++) angles[i] = data[i]/total*Math.PI*2;
+// Loop through each slice of pie.
+startangle = 0;
+for(var i = 0; i < data.length; i++) {
+// This is where the wedge ends
+var endangle = startangle + angles[i];
+// Compute the two points where our wedge intersects the circle
+// These formulas are chosen so that an angle of 0 is at 12 o'clock
+// and positive angles increase clockwise.
+var x1 = cx + r * Math.sin(startangle);
+var y1 = cy - r * Math.cos(startangle);
+var x2 = cx + r * Math.sin(endangle);
+var y2 = cy - r * Math.cos(endangle);
+// This is a flag for angles larger than than a half circle
+// It is required by the SVG arc drawing component
+var big = 0;
+if (endangle - startangle > Math.PI) big = 1;
+// We describe a wedge with an <svg:path> element
+// Notice that we create this with createElementNS()
+var path = document.createElementNS(svgns, "path");
+// This string holds the path details
+var d = "M " + cx + "," + cy + // Start at circle center
+" L " + x1 + "," + y1 + // Draw line to (x1,y1)
+" A " + r + "," + r + // Draw an arc of radius r
+" 0 " + big + " 1 " + // Arc details...
+x2 + "," + y2 + // Arc goes to to (x2,y2)
+" Z"; // Close path back to (cx,cy)
+// Now set attributes on the <svg:path> element
+path.setAttribute("d", d); // Set this path
+path.setAttribute("fill", colors[i]); // Set wedge color
+path.setAttribute("stroke", "black"); // Outline wedge in black
+path.setAttribute("stroke-width", "2"); // 2 units thick
+chart.appendChild(path); // Add wedge to chart
+// The next wedge begins where this one ends
+startangle = endangle;
+// Now draw a little matching square for the key
+var icon = document.createElementNS(svgns, "rect");
+icon.setAttribute("x", lx); // Position the square
+icon.setAttribute("y", ly + 30*i);
+icon.setAttribute("width", 20); // Size the square
+icon.setAttribute("height", 20);
+icon.setAttribute("fill", colors[i]); // Same fill color as wedge
+icon.setAttribute("stroke", "black"); // Same outline, too.
+icon.setAttribute("stroke-width", "2");
+chart.appendChild(icon); // Add to the chart
+// And add a label to the right of the rectangle
+var label = document.createElementNS(svgns, "text");
+label.setAttribute("x", lx + 30); // Position the text
+label.setAttribute("y", ly + 30*i + 18);
+// Text style attributes could also be set via CSS
+label.setAttribute("font-family", "sans-serif");
+label.setAttribute("font-size", "16");
+// Add a DOM text node to the <svg:text> element
+label.appendChild(document.createTextNode(labels[i]));
+chart.appendChild(label); // Add text to the chart
+}
+return chart;
+}
+
+
+
+<html>
+<head>
+<script src="PieChart.js"></script>
+</head>
+<body onload="document.body.appendChild(
+    pieChart([12, 23, 34, 45], 640, 400, 200, 200, 150,
+['red','blue','yellow','green'],
+['North','South', 'East', 'West'], 400, 100));
+">
+</body>
+</html>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Analog Clock</title>
+<script>
+function updateTime() { // Update the SVG clock graphic to show current time
+var now = new Date(); // Current time
+var min = now.getMinutes(); // Minutes
+var hour = (now.getHours() % 12) + min/60; // Fractional hours
+var minangle = min*6; // 6 degrees per minute
+var hourangle = hour*30; // 30 degrees per hour
+// Get SVG elements for the hands of the clock
+var minhand = document.getElementById("minutehand");
+var hourhand = document.getElementById("hourhand");
+// Set an SVG attribute on them to move them around the clock face
+minhand.setAttribute("transform", "rotate(" + minangle + ",50,50)");
+hourhand.setAttribute("transform", "rotate(" + hourangle + ",50,50)");
+// Update the clock again in 1 minute
+setTimeout(updateTime, 60000);
+}
+</script>
+<style>
+/* These CSS styles all apply to the SVG elements defined below */
+#clock { /* styles for everything in the clock */
+stroke: black; /* black lines */
+stroke-linecap: round; /* with rounded ends */
+fill: #eef; /* on a light blue gray background */
+}
+#face { stroke-width: 3px;} /* clock face outline */
+#ticks { stroke-width: 2; } /* lines that mark each hour */
+#hourhand {stroke-width: 5px;} /* wide hour hand */
+#minutehand {stroke-width: 3px;} /* narrow minute hand */
+#numbers { /* how to draw the numbers */
+font-family: sans-serif; font-size: 7pt; font-weight: bold;
+text-anchor: middle; stroke: none; fill: black;
+}
+</style>
+</head>
+<body onload="updateTime()">
+<!-- viewBox is coordinate system, width and height are on-screen size -->
+<svg id="clock" viewBox="0 0 100 100" width="500" height="500">
+<defs> <!-- Define a filter for drop-shadows -->
+<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+<feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+<feOffset in="blur" dx="1" dy="1" result="shadow" />
+<feMerge>
+<feMergeNode in="SourceGraphic"/><feMergeNode in="shadow"/>
+</feMerge>
+</filter>
+</defs>
+<circle id="face" cx="50" cy="50" r="45"/> <!-- the clock face -->
+<g id="ticks"> <!-- 12 hour tick marks -->
+<line x1='50' y1='5.000' x2='50.00' y2='10.00'/>
+<line x1='72.50' y1='11.03' x2='70.00' y2='15.36'/>
+<line x1='88.97' y1='27.50' x2='84.64' y2='30.00'/>
+<line x1='95.00' y1='50.00' x2='90.00' y2='50.00'/>
+<line x1='88.97' y1='72.50' x2='84.64' y2='70.00'/>
+<line x1='72.50' y1='88.97' x2='70.00' y2='84.64'/>
+<line x1='50.00' y1='95.00' x2='50.00' y2='90.00'/>
+<line x1='27.50' y1='88.97' x2='30.00' y2='84.64'/>
+<line x1='11.03' y1='72.50' x2='15.36' y2='70.00'/>
+<line x1='5.000' y1='50.00' x2='10.00' y2='50.00'/>
+<line x1='11.03' y1='27.50' x2='15.36' y2='30.00'/>
+<line x1='27.50' y1='11.03' x2='30.00' y2='15.36'/>
+</g>
+<g id="numbers"> <!-- Number the cardinal directions-->
+<text x="50" y="18">12</text><text x="85" y="53">3</text>
+<text x="50" y="88">6</text><text x="15" y="53">9</text>
+</g>
+<!-- Draw hands pointing straight up. We rotate them in the code. -->
+<g id="hands" filter="url(#shadow)"> <!-- Add shadows to the hands -->
+<line id="hourhand" x1="50" y1="50" x2="50" y2="24"/>
+<line id="minutehand" x1="50" y1="50" x2="50" y2="20"/>
+</g>
+</svg>
+</body>
+</html>
+
+
+<body>
+This is a red square: <canvas id="square" width=10 height=10></canvas>.
+This is a blue circle: <canvas id="circle" width=10 height=10></canvas>.
+<script>
+var canvas = document.getElementById("square"); // Get first canvas element
+var context = canvas.getContext("2d"); // Get 2D drawing context
+context.fillStyle = "#f00"; // Set fill color to red
+context.fillRect(0,0,10,10); // Fill a square
+canvas = document.getElementById("circle"); // Second canvas element
+context = canvas.getContext("2d"); // Get its context
+context.beginPath(); // Begin a new "path"
+context.arc(5, 5, 5, 0, 2*Math.PI, true); // Add a circle to the path
+context.fillStyle = "#00f"; // Set blue fill color
+context.fill(); // Fill the path
+</script>
+</body>
+
+var canvas = document.getElementById("my_canvas_id");
+var c = canvas.getContext('2d');
+
+c.beginPath(); // Start a new path
+c.moveTo(100, 100); // Begin a subpath at (100,100)
+c.lineTo(200, 200); // Add a line from (100,100) to (200,200)
+c.lineTo(100, 200); // Add a line from (200,200) to (100,200)
+c.fill(); // Fill a triangular area
+c.stroke(); // Stroke two sides of the triangle
+
+
+c.moveTo(300,100); // Begin a new subpath at (300,100);
+c.lineTo(300,200); // Draw a vertical line down to (300,200);
+
+
+
+// Define a regular polygon with n sides, centered at (x,y) with radius r.
+// The vertices are equally spaced along the circumference of a circle.
+// Put the first vertex straight up or at the specified angle.
+// Rotate clockwise, unless the last argument is true.
+function polygon(c,n,x,y,r,angle,counterclockwise) {
+angle = angle || 0;
+counterclockwise = counterclockwise || false;
+c.moveTo(x + r*Math.sin(angle), // Begin a new subpath at the first vertex
+y - r*Math.cos(angle)); // Use trigonometry to compute position
+var delta = 2*Math.PI/n; // Angular distance between vertices
+for(var i = 1; i < n; i++) { // For each of the remaining vertices
+angle += counterclockwise?-delta:delta; // Adjust angle
+c.lineTo(x + r*Math.sin(angle), // Add line to next vertex
+y - r*Math.cos(angle));
+}
+c.closePath(); // Connect last vertex back to the first
+}
+// Start a new path and add polygon subpaths
+c.beginPath();
+polygon(c, 3, 50, 70, 50); // Triangle
+polygon(c, 4, 150, 60, 50, Math.PI/4); // Square
+polygon(c, 5, 255, 55, 50); // Pentagon
+polygon(c, 6, 365, 53, 50, Math.PI/6); // Hexagon
+polygon(c, 4, 365, 53, 20, Math.PI/4, true); // Small square inside the hexagon
+// Set some properties that control how the graphics will look
+c.fillStyle = "#ccc"; // Light gray interiors
+c.strokeStyle = "#008"; // outlined with dark blue lines
+c.lineWidth = 5; // five pixels wide.
+// Now draw all the polygons (each in its own subpath) with these calls
+c.fill(); // Fill the shapes
+c.stroke(); // And stroke their outlines
+
+
+// Revert to the last saved graphics state, but don't pop the stack.
+CanvasRenderingContext2D.prototype.revert = function() {
+this.restore(); // Restore the old graphics state.
+this.save(); // Save it again so we can go back to it.
+return this; // Allow method chaining.
+};
+// Set the graphics attributes specified by the properties of the object o.
+// Or, if no argument is passed, return the current attributes as an object.
+// Note that this does not handle the transformation or clipping region.
+CanvasRenderingContext2D.prototype.attrs = function(o) {
+if (o) {
+for(var a in o) // For each property in o
+this[a] = o[a]; // Set it as a graphics attribute
+return this; // Enable method chaining
+}
+else return {
+fillStyle: this.fillStyle, font: this.font,
+globalAlpha: this.globalAlpha,
+globalCompositeOperation: this.globalCompositeOperation,
+lineCap: this.lineCap, lineJoin: this.lineJoin,
+lineWidth: this.lineWidth, miterLimit: this.miterLimit,
+textAlign: this.textAlign, textBaseline: this.textBaseline,
+shadowBlur: this.shadowBlur, shadowColor: this.shadowColor,
+shadowOffsetX: this.shadowOffsetX, shadowOffsetY: this.shadowOffsetY,
+strokeStyle: this.strokeStyle
+};
+};
+
+
+
+x' = x + dx; // An X coordinate of 0 in the new system is dx in the old
+y' = y + dy;
+x' = sx * x;
+y' = sy * y;
+
+x' = x * cos(a) - y * sin(a);
+y' = y * cos(a) + x * sin(a);
+
+
+// Shear transform:
+// x' = x + kx*y;
+// y' = y + ky*x;
+function shear(c,kx,ky) { c.transform(1, ky, kx, 1, 0, 0); }
+// Rotate theta radians clockwise around the point (x,y)
+// This can also be accomplished with a translate,rotate,translate sequence
+function rotateAbout(c,theta,x,y) {
+var ct = Math.cos(theta), st = Math.sin(theta);
+c.transform(ct, -st, st, ct, -x*ct-y*st+x, x*st-y*ct+y);
+}
+
+c.save(); // Save current coordinate system
+c.setTransform(1,0,0,1,0,0); // Revert to the default coordinate system
+// Perform operations using default CSS pixel coordinates
+c.restore(); // Restore the saved coordinate system
+
+
+var deg = Math.PI/180; // For converting degrees to radians
+// Draw a level-n Koch Snowflake fractal on the canvas context c,
+// with lower-left corner at (x,y) and side length len.
+function snowflake(c, n, x, y, len) {
+c.save(); // Save current transformation
+c.translate(x,y); // Translate origin to starting point
+c.moveTo(0,0); // Begin a new subpath at the new origin
+leg(n); // Draw the first leg of the snowflake
+c.rotate(-120*deg); // Now rotate 120 degrees counterclockwise
+leg(n); // Draw the second leg
+c.rotate(-120*deg); // Rotate again
+leg(n); // Draw the final leg
+c.closePath(); // Close the subpath
+c.restore(); // And restore original transformation
+// Draw a single leg of a level-n Koch snowflake.
+// This function leaves the current point at the end of the leg it has
+// drawn and translates the coordinate system so the current point is (0,0).
+// This means you can easily call rotate() after drawing a leg.
+function leg(n) {
+c.save(); // Save the current transformation
+if (n == 0) { // Nonrecursive case:
+c.lineTo(len, 0); // Just draw a horizontal line
+} // _ _
+else { // Recursive case: draw 4 sub-legs like: \/
+c.scale(1/3,1/3); // Sub-legs are 1/3rd the size of this leg
+leg(n-1); // Recurse for the first sub-leg
+c.rotate(60*deg); // Turn 60 degrees clockwise
+leg(n-1); // Second sub-leg
+c.rotate(-120*deg); // Rotate 120 degrees back
+leg(n-1); // Third sub-leg
+c.rotate(60*deg); // Rotate back to our original heading
+leg(n-1); // Final sub-leg
+}
+c.restore(); // Restore the transformation
+c.translate(len, 0); // But translate to make end of leg (0,0)
+}
+}
+snowflake(c,0,5,115,125); // A level-0 snowflake is an equilateral triangle
+snowflake(c,1,145,115,125); // A level-1 snowflake is a 6-sided star
+snowflake(c,2,285,115,125); // etc.
+snowflake(c,3,425,115,125);
+snowflake(c,4,565,115,125); // A level-4 snowflake looks like a snowflake!
+c.stroke(); // Stroke this very complicated path
+
+// A utility function to convert angles from degrees to radians
+function rads(x) { return Math.PI*x/180; }
+// Draw a circle. Scale and rotate if you want an ellipse instead.
+// There is no current point, so draw just the circle with no straight
+// line from the current point to the start of the circle.
+c.beginPath();
+c.arc(75,100,50, // Center at (75,100), radius 50
+0,rads(360),false); // Go clockwise from 0 to 360 degrees
+// Draw a wedge. Angles are measured clockwise from the positive x axis.
+// Note that arc() adds a line from the current point to the arc start.
+c.moveTo(200, 100); // Start at the center of the circle
+c.arc(200, 100, 50, // Circle center and radius
+rads(-60), rads(0), // start at angle -60 and go to angle 0
+false); // false means clockwise
+c.closePath(); // Add radius back to the center of the circle
+// Same wedge, opposite direction
+c.moveTo(325, 100);
+c.arc(325, 100, 50, rads(-60), rads(0), true); // counterclockwise
+c.closePath();
+// Use arcTo() for rounded corners. Here we draw a square with
+// upper left corner at (400,50) and corners of varying radii.
+c.moveTo(450, 50); // Begin in the middle of the top edge.
+c.arcTo(500,50,500,150,30); // Add part of top edge and upper right corner.
+c.arcTo(500,150,400,150,20); // Add right edge and lower right corner.
+c.arcTo(400,150,400,50,10); // Add bottom edge and lower left corner.
+c.arcTo(400,50,500,50,0); // Add left edge and upper left corner.
+c.closePath(); // Close path to add the rest of the top edge.
+// Quadratic Bezier curve: one control point
+c.moveTo(75, 250); // Begin at (75,250)
+c.quadraticCurveTo(100,200, 175, 250); // Curve to (175,250)
+c.fillRect(100-3,200-3,6,6); // Mark the control point (100,200)
+// Cubic Bezier curve
+c.moveTo(200, 250); // Start at (200,250)
+c.bezierCurveTo(220,220,280,280,300,250); // Curve to (300,250)
+c.fillRect(220-3,220-3,6,6); // Mark control points
+c.fillRect(280-3,280-3,6,6);
+// Define some graphics attributes and draw the curves
+c.fillStyle = "#aaa"; // Gray fills
+c.lineWidth = 5; // 5-pixel black (by default) lines
+c.fill(); // Fill the curves
+c.stroke(); // Stroke their outlines
+
+
+context.strokeStyle = "blue"; // Stroke lines in blue
+context.fillStyle = "#aaa"; // Fill areas with light gray
+
+var colors = [
+"#f44", // Hexadecimal RGB value: red
+"#44ff44", // Hexadecimal RRGGBB value: green
+"rgb(60, 60, 255)", // RGB as integers 0-255: blue
+"rgb(100%, 25%, 100%)", // RGB as percentages: purple
+"rgba(100%, 25%, 100%, 0.5)", // RGB plus alpha 0-1: translucent purple
+"rgba(0,0,0,0)", // Completely transparent black
+"transparent", // Synonym for the above
+"hsl(60, 100%, 50%)", // Fully saturated yellow
+"hsl(60, 75%, 50%)", // Less saturated yellow
+"hsl(60, 100%, 75%)", // Fully saturated yellow, lighter
+"hsl(60, 100%, 25%)", // Fully saturated yellow, darker
+"hsla(60, 100%, 50%, 0.5)", // Fully saturated yellow, 50% opaque
+];
+
+var image = document.getElementById("myimage");
+c.fillStyle = c.createPattern(image, "repeat");
+
+var offscreen = document.createElement("canvas"); // Create an offscreen canvas
+offscreen.width = offscreen.height = 10; // Set its size
+offscreen.getContext("2d").strokeRect(0,0,6,6); // Get its context and draw
+var pattern = c.createPattern(offscreen,"repeat"); // And use it as a pattern
+
+// A linear gradient, diagonally across the canvas (assuming no transforms)
+var bgfade = c.createLinearGradient(0,0,canvas.width,canvas.height);
+bgfade.addColorStop(0.0, "#88f"); // Start with light blue in upper left
+bgfade.addColorStop(1.0, "#fff"); // Fade to white in lower right
+// A gradient between two concentric circles. Transparent in the middle
+// fading to translucent gray and then back to transparent.
+var peekhole = c.createRadialGradient(300,300,100, 300,300,300);
+peekhole.addColorStop(0.0, "transparent"); // Transparent
+peekhole.addColorStop(0.7, "rgba(100,100,100,.9)"); // Translucent gray
+peekhole.addColorStop(1.0, "rgba(0,0,0,0)"); // Transparent again
+
+
+c.fillStyle = bgfade; // Start with the linear gradient
+c.fillRect(0,0,600,600); // Fill the entire canvas
+c.strokeStyle = pattern; // Use the pattern for stroking lines
+c.lineWidth = 100; // Use really wide lines
+c.strokeRect(100,100,400,400); // Draw a big square
+c.fillStyle = peekhole; // Switch to the radial gradient
+c.fillRect(0,0,600,600); // Cover canvas with this translucent fill
+
+
+"48pt sans-serif"
+"bold 18px Times Roman"
+"italic 12pt monospaced"
+"bolder smaller serif" // bolder and smaller than the font of the <canvas>
+
+
+// Define some drawing attributes
+c.font = "bold 60pt sans-serif"; // Big font
+c.lineWidth = 2; // Narrow lines
+c.strokeStyle = "#000"; // Black lines
+// Outline a rectangle and some text
+c.strokeRect(175, 25, 50, 325); // A vertical stripe down the middle
+c.strokeText("<canvas>", 15, 330); // Note strokeText() instead of fillText()
+// Define a complex path with an interior that is outside.
+polygon(c,3,200,225,200); // Large triangle
+polygon(c,3,200,225,100,0,true); // Smaller reverse triangle inside
+
+// Make that path the clipping region.
+c.clip();
+// Stroke the path with a 5 pixel line, entirely inside the clipping region.
+c.lineWidth = 10; // Half of this 10 pixel line will be clipped away
+c.stroke();
+// Fill the parts of the rectangle and text that are inside the clipping region
+c.fillStyle = "#aaa" // Light gray
+c.fillRect(175, 25, 50, 325); // Fill the vertical stripe
+c.fillStyle = "#888" // Darker gray
+c.fillText("<canvas>", 15, 330); // Fill the text
+
+
+// Define a subtle shadow
+c.shadowColor = "rgba(100,100,100,.4)"; // Translucent gray
+c.shadowOffsetX = c.shadowOffsetY = 3; // Shadow offset to lower right
+c.shadowBlur = 5; // Soften shadow edges
+// Draw some text in a blue box using that shadow
+c.lineWidth = 10;
+c.strokeStyle = "blue";
+c.strokeRect(100, 100, 300, 200); // Draw a rectangle
+c.font = "Bold 36pt Helvetica";
+c.fillText("Hello World", 115, 225); // Draw some text
+// Define a less subtle shadow. A larger offset makes items "float" higher.
+// Note how the transparent shadow overlaps the blue box.
+c.shadowOffsetX = c.shadowOffsetY = 20;
+c.shadowBlur = 10;
+c.fillStyle = "red"; // Draw a solid red rectangle
+c.fillRect(50,25,200,65); // that floats above the blue box
+
+
+
+// Draw a line in the upper left
+c.moveTo(5,5);
+c.lineTo(45,45);
+c.lineWidth = 8;
+c.lineCap = "round";
+c.stroke();
+// Define a transformation
+c.translate(50,100);
+c.rotate(-45*Math.PI/180); // Straighten out the line
+c.scale(10,10); // Enlarge it so we can see the individual pixels
+// Use draw image to copy the line
+c.drawImage(c.canvas,
+0, 0, 50, 50, // source rectangle: untransformed
+0, 0, 50, 50); // destination rectangle: transformed
+
+var img = document.createElement("img"); // Create an <img> element
+img.src = canvas.toDataURL(); // Set its src attribute
+document.body.appendChild(img); // Append it to the document
+
+
+// Smear the pixels of the rectangle to the right, producing a
+// sort of motion blur as if objects are moving from right to left.
+// n must be 2 or larger. Larger values produce bigger smears.
+// The rectangle is specified in the default coordinate system.
+function smear(c, n, x, y, w, h) {
+// Get the ImageData object that represents the rectangle of pixels to smear
+var pixels = c.getImageData(x,y,w,h);
+// This smear is done in-place and requires only the source ImageData.
+// Some image processing algorithms require an additional ImageData to
+// store transformed pixel values. If we needed an output buffer, we could
+// create a new ImageData with the same dimensions like this:
+// var output_pixels = c.createImageData(pixels);
+// These dimensions may be different than w and h arguments: there may be
+// more than one device pixel per CSS pixel.
+var width = pixels.width, height = pixels.height;
+// This is the byte array that holds the raw pixel data, left-to-right and
+// top-to-bottom. Each pixel occupies 4 consecutive bytes in R,G,B,A order.
+var data = pixels.data;
+// Each pixel after the first in each row is smeared by replacing it with
+// 1/nth of its own value plus m/nths of the previous pixel's value
+var m = n-1;
+for(var row = 0; row < height; row++) { // For each row
+var i = row*width*4 + 4; // The offset of the second pixel of the row
+for(var col = 1; col < width; col++, i += 4) { // For each column
+data[i] = (data[i] + data[i-4]*m)/n; // Red pixel component
+data[i+1] = (data[i+1] + data[i-3]*m)/n; // Green
+data[i+2] = (data[i+2] + data[i-2]*m)/n; // Blue
+data[i+3] = (data[i+3] + data[i-1]*m)/n; // Alpha component
+}
+}
+// Now copy the smeared image data back to the same position on the canvas
+c.putImageData(pixels, x, y);
+}
+
+
+// Returns true if the specified mouse event is over the current path
+// in the specified CanvasRenderingContext2D object.
+function hitpath(context, event) {
+// Get <canvas> element from the context object
+var canvas = context.canvas;
+// Get canvas size and position
+var bb = canvas.getBoundingClientRect();
+// Translate and scale mouse event coordinates to canvas coordinates
+var x = (event.clientX-bb.left)*(canvas.width/bb.width);
+var y = (event.clientY-bb.top)*(canvas.height/bb.height);
+// Call isPointInPath with these transformed coordinates
+return context.isPointInPath(x,y);
+}
+
+canvas.onclick = function(event) {
+if (hitpath(this.getContext("2d"), event) {
+alert("Hit!"); // Click over current path
+}
+};
+
+// Returns true if the specified mouse event is over a nontransparent pixel.
+function hitpaint(context, event) {
+// Translate and scale mouse event coordinates to canvas coordinates
+var canvas = context.canvas;
+var bb = canvas.getBoundingClientRect();
+var x = (event.clientX-bb.left)*(canvas.width/bb.width);
+var y = (event.clientY-bb.top)*(canvas.height/bb.height);
+// Get the pixel (or pixels if multiple device pixels map 1 CSS pixel)
+var pixels = c.getImageData(x,y,1,1);
+// If any pixels have a nonzero alpha, return true (hit)
+for(var i = 3; i < pixels.data.length; i+=4) {
+if (pixels.data[i] !== 0) return true;
+}
+// Otherwise it was a miss.
+return false;
+}
+
+
+onLoad(function() { // When the document firsts loads
+// Find all elements of class "sparkline"
+var elts = document.getElementsByClassName("sparkline");
+main: for(var e = 0; e < elts.length; e++) { // For each element
+var elt = elts[e];
+// Get content of the element and convert to an array of numbers.
+// If the conversion fails, skip this element.
+var content = elt.textContent || elt.innerText; // Element content
+var content = content.replace(/^\s+|\s+$/g, ""); // Strip spaces
+var text = content.replace(/#.*$/gm, ""); // Strip comments
+text = text.replace(/[\n\r\t\v\f]/g, " "); // Convert \n etc, to space
+var data = text.split(/\s+|\s*,\s*/); // Split on space or comma
+for(var i = 0; i < data.length; i++) { // For each chunk
+data[i] = Number(data[i]); // Convert to a number
+if (isNaN(data[i])) continue main; // and abort on failure
+}
+// Now compute the color, width, height, and y axis bounds of the
+// sparkline from the data, from data- attributes of the element,
+// and from the computed style of the element.
+var style = getComputedStyle(elt, null);
+var color = style.color;
+var height = parseInt(elt.getAttribute("data-height")) ||
+parseInt(style.fontSize) || 20;
+var width = parseInt(elt.getAttribute("data-width")) ||
+data.length * (parseInt(elt.getAttribute("data-dx")) || height/6);
+var ymin = parseInt(elt.getAttribute("data-ymin")) ||
+Math.min.apply(Math, data);
+var ymax = parseInt(elt.getAttribute("data-ymax")) ||
+Math.max.apply(Math, data);
+if (ymin >= ymax) ymax = ymin + 1;
+// Create the canvas element.
+var canvas = document.createElement("canvas");
+canvas.width = width; // Set canvas dimensions
+canvas.height = height;
+canvas.title = content; // Use the element content as a tooltip
+elt.innerHTML = ""; // Erase existing element content
+elt.appendChild(canvas); // Insert the canvas into the element
+// Now plot the points (i,data[i]), transforming to canvas coordinates.
+var context = canvas.getContext('2d');
+for(var i = 0; i < data.length; i++) { // For each data point
+var x = width*i/data.length; // Scale i
+var y = (ymax-data[i])*height/(ymax-ymin); // Scale data[i]
+context.lineTo(x,y); // First lineTo() does a moveTo() instead
+}
+context.strokeStyle = color; // Specify the color of the sparkline
+context.stroke(); // and draw it
+}
+});

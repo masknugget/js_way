@@ -1,0 +1,496 @@
+font-weight: bold
+
+margin-left: 10%; /* left margin is 10% of page width */
+text-indent: .5in; /* indent by 1/2 inch */
+font-size: 12pt; /* 12 point font size */
+
+<p style="margin: 20px; border: solid red 2px;">
+This paragraph has increased margins and is
+surrounded by a rectangular red border.
+</p>
+
+
+
+p { /* the selector "p" matches all <p> elements */
+text-indent: .5in; /* indent the first line by .5 inches */
+}
+.warning { /* Any element with class="warning" */
+background-color: yellow; /* gets a yellow background */
+border: solid black 5px; /* and a big black border */
+}
+
+<html>
+<head><title>Test Document</title>
+<style>
+body { margin-left: 30px; margin-right: 15px; background-color: #ffffff }
+p { font-size: 24px; }
+</style>
+</head>
+<body><p>Testing, testing</p>
+</html>
+
+<head>
+<title>Test Document</title>
+<link rel="stylesheet" href="mystyles.css" type="text/css">
+</head>
+
+font: bold italic 24pt helvetica;
+
+.radius10 {
+border-radius: 10px; /* for current browsers */
+-moz-border-radius: 10px; /* for Firefox 3.x */
+-webkit-border-radius: 10px; /* For Safari 3.2 and 4 */
+}
+
+<head>
+<style type="text/css">
+/* Specify that headings display in blue italic text. */
+h1, h2 { color: blue; font-style: italic }
+/*
+* Any element of class="WARNING" displays in big bold text with large margins
+* and a yellow background with a fat red border.
+*/
+.WARNING {
+font-weight: bold;
+font-size: 150%;
+margin: 0 1in 0 1in; /* top right bottom left */
+background-color: yellow;
+border: solid red 8px;
+padding: 10px; /* 10 pixels on all 4 sides */
+}
+/*
+* Text within an h1 or h2 heading within an element with class="WARNING"
+* should be centered, in addition to appearing in blue italics.
+*/
+.WARNING h1, .WARNING h2 { text-align: center }
+/* The single element with id="special" displays in centered uppercase. */
+#special {
+text-align: center;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<h1>Cascading Style Sheets Demo</h1>
+<div class="WARNING">
+<h2>Warning</h2>
+This is a warning!
+Notice how it grabs your attention with its bold text and bright colors.
+Also notice that the heading is centered and in blue italics.
+</div>
+<p id="special">
+This paragraph is centered<br>
+and appears in uppercase letters.<br>
+<span style="text-transform: none">
+Here we explicitly use an inline style to override the uppercase letters.
+</span>
+</p>
+
+<div style="position: absolute; left: 100px; top: 100px;">
+
+position Specifies the type of positioning applied to an element
+top , left Specify the position of the top and left edges of an element
+bottom , right Specify the position of the bottom and right edges of an element
+width , height Specify the size of an element
+z-index Specifies the “stacking order” of an element relative to any overlapping elements; defines a
+third dimension of element positioning
+display Specifies how and whether an element is displayed
+visibility Specifies whether an element is visible
+clip Defines a “clipping region” for an element; only portions of the element within this region are
+displayed
+overflow Specifies what to do if an element is bigger than the space allotted for it
+margin , border , padding Specify spacing and borders for an element.
+background Specifies the background color or image of an element.
+opacity Specifies how opaque (or translucent) an element is. This is a CSS3 property, supported by
+some browsers. A working alternative exists for IE.
+
+
+position: absolute; right: 0px; bottom: 0px;
+position: fixed; right: 10px; top: 10px;
+
+
+<div style="position: absolute; top: 10px; left: 10px;
+width: 10px; height: 10px; background-color: blue">
+</div>
+
+<div style="position: absolute; left: 25%; top: 25%; width: 50%; height: 50%;
+border: 2px solid black">
+</div>
+
+<!-- The text-shadow property produces shadows automatically -->
+<span style="text-shadow: 3px 3px 1px #888">Shadowed</span>
+<!-- Here's how we can produce a similar effect with positioning. -->
+<span style="position:relative;">
+Shadowed <!-- This is the text that casts the shadow. -->
+
+<span style="position:absolute; top:3px; left:3px; z-index:-1; color: #888">
+Shadowed <!-- This is the shadow -->
+</span>
+</span>
+
+border: solid black 1px; /* border is drawn with a solid, black 1-pixel line */
+border: 3px dotted red; /* border is drawn in 3-pixel red dots */
+
+border-top-right-radius: 50px;
+
+margin: 5px; padding: 5px;
+
+margin-left: 25px;
+padding-bottom: 5px;
+
+padding: 1px 2px 3px 4px;
+/* The previous line is equivalent to the following lines. */
+padding-top: 1px;
+padding-right: 2px;
+padding-bottom: 3px;
+padding-left: 4px;
+
+
+<div style="box-sizing:border-box; width: 50%;
+padding: 10px; border: solid black 2px;">
+<div style="width: calc(50%-12px); padding: 10px; border: solid black 2px;">
+
+
+#000000 /* black */
+#fff /* white */
+#f00 /* bright red */
+#404080 /* dark unsaturated blue */
+#ccc /* light gray */
+
+opacity: .75; /* standard CSS3 style for transparency */
+filter: alpha(opacity=75); /* transparency for IE; note no decimal point */
+
+rect(top right bottom left)
+style="clip: rect(0px 100px 100px 0px);"
+
+style="clip: rect(auto 100px auto auto);"
+
+
+<!DOCTYPE html>
+<head>
+<style type="text/css">
+/**
+* This is a CSS stylesheet that defines three style rules that we use
+* in the body of the document to create a "window" visual effect.
+* The rules use positioning properties to set the overall size of the window
+* and the position of its components. Changing the size of the window
+* requires careful changes to positioning properties in all three rules.
+**/
+div.window { /* Specifies size and border of the window */
+position: absolute; /* The position is specified elsewhere */
+width: 300px; height: 200px;/* Window size, not including borders */
+border: 3px outset gray; /* Note 3D "outset" border effect */
+}
+div.titlebar { /* Specifies position, size, and style of the titlebar */
+position: absolute; /* It's a positioned element */
+top: 0px; height: 18px; /* Titlebar is 18px + padding and borders */
+width: 290px; /* 290 + 5px padding on left and right = 300 */
+background-color: #aaa; /* Titlebar color */
+border-bottom: groove gray 2px; /* Titlebar has border on bottom only */
+padding: 3px 5px 2px 5px; /* Values clockwise: top, right, bottom, left */
+font: bold 11pt sans-serif; /* Title font */
+}
+div.content { /* Specifies size, position and scrolling for window content */
+position: absolute; /* It's a positioned element */
+top: 25px; /* 18px title+2px border+3px+2px padding */
+height: 165px; /* 200px total - 25px titlebar - 10px padding*/
+width: 290px; /* 300px width - 10px of padding */
+padding: 5px; /* Allow space on all four sides */
+overflow: auto; /* Give us scrollbars if we need them */
+background-color: #fff; /* White background by default */
+}
+div.translucent { /* this class makes a window partially transparent */
+opacity: .75; /* Standard style for transparency */
+filter: alpha(opacity=75); /* Transparency for IE */
+}
+</style>
+</head>
+<body>
+<!-- Here is how we define a window: a "window" div with a titlebar and -->
+<!-- content div nested inside. Note how position is specified with -->
+<!-- a style attribute that augments the styles from the stylesheet. -->
+<div class="window" style="left: 10px; top: 10px; z-index: 10;">
+<div class="titlebar">Test Window</div>
+<div class="content">
+1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br><!-- Lots of lines to -->
+1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0<br><!-- demonstrate scrolling-->
+</div>
+</div>
+
+<!-- Here's another window with different position, color, and font weight -->
+<div class="window" style="left: 75px; top: 110px; z-index: 20;">
+<div class="titlebar">Another Window</div>
+<div class="content translucent"
+style="background-color:#ccc; font-weight:bold;">
+This is another window. Its <tt>z-index</tt> puts it on top of the other one.
+CSS styles make its content area translucent, in browsers that support that.
+</div>
+</div>
+
+e.style.fontSize = "24pt";
+e.style.fontWeight = "bold";
+e.style.color = "blue";
+
+position: absolute; font-family: sans-serif; background-color: #ffffff;
+
+
+e.style.position = "absolute";
+e.style.fontFamily = "sans-serif";
+e.style.backgroundColor = "#ffffff";
+
+e.style.left = 300; // Incorrect: this is a number, not a string
+e.style.left = "300"; // Incorrect: the units are missing
+
+e.style.left = "300px";
+
+e.style.left = (x0 + left_margin + left_border + left_padding) + "px";
+
+
+e.style.margin = topMargin + "px " + rightMargin + "px " +
+bottomMargin + "px " + leftMargin + "px";
+
+e.style.marginTop = topMargin + "px";
+e.style.marginRight = rightMargin + "px";
+e.style.marginBottom = bottomMargin + "px";
+e.style.marginLeft = leftMargin + "px";
+
+
+// Set the style attribute of e to the string s with either of these lines:
+e.setAttribute("style", s);
+e.style.cssText = s;
+// Query the inline style string of the element e with either of these:
+s = e.getAttribute("style");
+s = e.style.cssText;
+
+
+
+function shake(e, oncomplete, distance, time) {
+// Handle arguments
+if (typeof e === "string") e = document.getElementById(e);
+if (!time) time = 500;
+if (!distance) distance = 5;
+var originalStyle = e.style.cssText; // Save the original style of e
+e.style.position = "relative"; // Make e relatively positioned
+var start = (new Date()).getTime(); // Note the animation start time
+animate(); // Start the animation
+// This function checks the elapsed time and updates the position of e.
+// If the animation is complete, it restores e to its original state.
+// Otherwise, it updates e's position and schedules itself to run again.
+function animate() {
+var now = (new Date()).getTime(); // Get current time
+var elapsed = now-start; // How long since we started
+var fraction = elapsed/time; // What fraction of total time?
+if (fraction < 1) { // If the animation is not yet complete
+// Compute the x position of e as a function of animation
+// completion fraction. We use a sinusoidal function, and multiply
+// the completion fraction by 4pi, so that it shakes back and
+// forth twice.
+var x = distance * Math.sin(fraction*4*Math.PI);
+e.style.left = x + "px";
+// Try to run again in 25ms or at the end of the total time.
+// We're aiming for a smooth 40 frames/second animation.
+setTimeout(animate, Math.min(25, time-elapsed));
+}
+else { // Otherwise, the animation is complete
+e.style.cssText = originalStyle // Restore the original style
+if (oncomplete) oncomplete(e); // Invoke completion callback
+}
+}
+}
+// Fade e from fully opaque to fully transparent over time milliseconds.
+// Assume that e is fully opaque when this function is invoked.
+// oncomplete is an optional function that will be invoked with e as its
+// argument when the animation is done. If time is omitted, use 500ms.
+// This function does not work in IE, but could be modified to animate
+// IE's nonstandard filter property in addition to opacity.
+function fadeOut(e, oncomplete, time) {
+if (typeof e === "string") e = document.getElementById(e);
+if (!time) time = 500;
+// We use Math.sqrt as a simple "easing function" to make the animation
+// subtly nonlinear: it fades quickly at first and then slows down some.
+var ease = Math.sqrt;
+var start = (new Date()).getTime(); // Note the animation start time
+animate(); // And start animating
+function animate() {
+    var elapsed = (new Date()).getTime()-start; // elapsed time
+var fraction = elapsed/time; // As a fraction of total
+if (fraction < 1) { // If the animation is not yet complete
+var opacity = 1 - ease(fraction); // Compute element opacity
+e.style.opacity = String(opacity); // Set it on e
+setTimeout(animate, // Schedule another frame
+Math.min(25, time-elapsed));
+}
+else { // Otherwise, we're done
+e.style.opacity = "0"; // Make e fully transparent
+if (oncomplete) oncomplete(e); // Invoke completion callback
+}
+}
+}
+
+<button onclick="shake(this, fadeOut);">Shake and Fade</button>
+
+var title = document.getElementById("section1title");
+var titlestyles = window.getComputedStyle(element, null);
+
+// Scale the text size of element e by the specified factor
+function scale(e, factor) {
+// Use the computed style to query the current size of the text
+var size = parseInt(window.getComputedStyle(e,"").fontSize);
+// And use the inline style to enlarge that size
+e.style.fontSize = factor*size + "px";
+}
+
+// Alter the background color of element e by the specified amount.
+// Factors > 1 lighten the color and factors < 1 darken it.
+function scaleColor(e, factor) {
+var color = window.getComputedStyle(e, "").backgroundColor; // Query
+var components = color.match(/[\d\.]+/g); // Parse r,g,b, and a components
+for(var i = 0; i < 3; i++) { // Loop through r, g and b
+var x = Number(components[i]) * factor; // Scale each one
+x = Math.round(Math.min(Math.max(x, 0), 255)); // Round and set bounds
+components[i] = String(x);
+}
+if (components.length == 3) // A rgb() color
+e.style.backgroundColor = "rgb(" + components.join() + ")";
+else // A rgba() color
+e.style.backgroundColor = "rgba(" + components.join() + ")";
+}
+
+.attention { /* Styles to grab the user's attention */
+background-color: yellow; /* Yellow highlight background */
+font-weight: bold; /* Bold text */
+border: solid black 2px; /* Black box */
+}
+
+function grabAttention(e) { e.className = "attention"; }
+function releaseAttention(e) { e.className = ""; }
+
+
+
+
+
+function classList(e) {
+if (e.classList) return e.classList; // Return e.classList if it exists
+else return new CSSClassList(e); // Otherwise try to fake it
+}
+// CSSClassList is a JavaScript class that simulates DOMTokenList
+function CSSClassList(e) { this.e = e; }
+// Return true if e.className contains the class c, false otherwise
+CSSClassList.prototype.contains = function(c) {
+// Check that c is a valid class name
+if (c.length === 0 || c.indexOf(" ") != -1)
+throw new Error("Invalid class name: '" + c + "'");
+// Check common cases first
+var classes = this.e.className;
+if (!classes) return false; // e has no classes at all
+if (classes === c) return true; // e has one class that matches exactly
+// Otherwise, use a RegExp to search for c as a word by itself
+// \b in a regular expression requires a match at a word boundary.
+return classes.search("\\b" + c + "\\b") != -1;
+};
+// Add c to the e.className if it is not already present
+CSSClassList.prototype.add = function(c) {
+if (this.contains(c)) return; // Do nothing if already present
+var classes = this.e.className;
+if (classes && classes[classes.length-1] != " ")
+c = " " + c; // Add a space if we need one
+this.e.className += c; // Add c to the className
+};
+// Remove all occurrences of c from e.className
+CSSClassList.prototype.remove = function(c) {
+// Make sure c is a valid class name
+if (c.length === 0 || c.indexOf(" ") != -1)
+throw new Error("Invalid class name: '" + c + "'");
+// Remove all occurances of c as a word, plus any trailing space
+var pattern = new RegExp("\\b" + c + "\\b\\s*", "g");
+this.e.className = this.e.className.replace(pattern, "");
+};
+// Add c to e.className if it is not already present and return true.
+// Otherwise, remove all occurrences of c from e.className and return false.
+CSSClassList.prototype.toggle = function(c) {
+if (this.contains(c)) { // If e.className contains c
+this.remove(c); // then remove it.
+return false;
+}
+else { // Otherwise:
+this.add(c); // add it.
+return true;
+}
+
+};
+// Return e.className itself
+CSSClassList.prototype.toString = function() { return this.e.className; };
+// Return of the names in e.className
+CSSClassList.prototype.toArray = function() {
+return this.e.className.match(/\b\w+\b/g) || [];
+};
+
+function disableStylesheet(ss) {
+if (typeof ss === "number")
+document.styleSheets[ss].disabled = true;
+else {
+var sheets = document.querySelectorAll(ss);
+for(var i = 0; i < sheets.length; i++)
+heets[i].disabled = true;
+}
+}
+
+var firstRule = document.styleSheets[0].cssRules[0];
+document.styleSheets[0].insertRule("H1 { text-weight: bold; }", 0);
+
+
+var ss = document.styleSheets[0]; // Get the first stylesheet
+var rules = ss.cssRules?ss.cssRules:ss.rules; // Get the stylesheet rules
+for(var i = 0; i < rules.length; i++) { // Loop through those rules
+var rule = rules[i];
+if (!rule.selectorText) continue; // Skip @import and other nonstyle rules
+var selector = rule.selectorText; // The selector
+var ruleText = rule.style.cssText; // The styles, in text form
+// If the rule applies to h1 elements, apply it to h2 elements as well
+// Note this only works if the selector is literally "h1"
+if (selector == "h1") {
+if (ss.insertRule) ss.insertRule("h2 {" + ruleText + "}", rules.length);
+else if (ss.addRule) ss.addRule("h2", ruleText, rules.length);
+}
+// If the rule sets the text-decoration property, delete it.
+if (rule.style.textDecoration) {
+if (ss.deleteRule) ss.deleteRule(i);
+else if (ss.removeRule) ss.removeRule(i);
+i--; // Adjust the loop index since the former rule i+1 is now rule i
+}
+}
+
+// names are selectors and their values are the corresponding styles
+function addStyles(styles) {
+// First, create a new stylesheet
+var styleElt, styleSheet;
+if (document.createStyleSheet) { // If the IE API is defined, use it
+styleSheet = document.createStyleSheet();
+}
+else {
+var head = document.getElementsByTagName("head")[0]
+styleElt = document.createElement("style"); // New <style> element
+head.appendChild(styleElt); // Insert it into <head>
+// Now the new stylesheet should be the last one
+styleSheet = document.styleSheets[document.styleSheets.length-1]
+}
+// Now insert the styles into it
+if (typeof styles === "string") {
+// The argument is stylesheet text
+if (styleElt) styleElt.innerHTML = styles;
+else styleSheet.cssText = styles; // The IE API
+}
+else {
+// The argument is an object of individual rules to insert
+var i = 0;
+for(selector in styles) {
+if (styleSheet.insertRule) {
+var rule = selector + " {" + styles[selector] + "}";
+styleSheet.insertRule(rule, i++);
+}
+else {
+styleSheet.addRule(selector, styles[selector], i++);
+}
+}
+}
+}
