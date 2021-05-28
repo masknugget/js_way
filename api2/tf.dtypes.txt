@@ -1,0 +1,12 @@
+Classes
+
+class DType: Represents the type of the elements in a Tensor.
+Functions
+
+as_dtype(...): Converts the given type_value to a DType.
+
+cast(...): Casts a tensor to a new type.
+
+complex(...): Converts two real numbers to a complex number.
+
+saturate_cast(...): Performs a safe saturating cast of value to dtype.
