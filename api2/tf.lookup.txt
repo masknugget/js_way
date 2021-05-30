@@ -1,14 +1,15 @@
 Modules
 
-experimental module: Public API for tf.lookup.experimental namespace.
+    experimental module: Public API for tf.lookup.experimental namespace.
+
 Classes
 
-class KeyValueTensorInitializer: Table initializers given keys and values tensors.
+    class KeyValueTensorInitializer: Table initializers given keys and values tensors.
 
-class StaticHashTable: A generic hash table that is immutable once initialized.
+    class StaticHashTable: A generic hash table that is immutable once initialized.
 
-class StaticVocabularyTable: String to Id table that assigns out-of-vocabulary keys to hash buckets.
+    class StaticVocabularyTable: String to Id table that assigns out-of-vocabulary keys to hash buckets.
 
-class TextFileIndex: The key and value content to get from each line.
+    class TextFileIndex: The key and value content to get from each line.
 
-class TextFileInitializer: Table initializers from a text file.
+    class TextFileInitializer: Table initializers from a text file.

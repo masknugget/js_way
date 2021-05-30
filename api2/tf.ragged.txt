@@ -134,22 +134,22 @@ Arguments that accept RaggedTensors are marked in bold.
 
 Functions
 
-boolean_mask(...): Applies a boolean mask to data without flattening the mask dimensions.
+    boolean_mask(...): Applies a boolean mask to data without flattening the mask dimensions.
 
-constant(...): Constructs a constant RaggedTensor from a nested Python list.
+    constant(...): Constructs a constant RaggedTensor from a nested Python list.
 
-cross(...): Generates feature cross from a list of tensors.
+    cross(...): Generates feature cross from a list of tensors.
 
-cross_hashed(...): Generates hashed feature cross from a list of tensors.
+    cross_hashed(...): Generates hashed feature cross from a list of tensors.
 
-map_flat_values(...): Applies op to the flat_values of one or more RaggedTensors.
+    map_flat_values(...): Applies op to the flat_values of one or more RaggedTensors.
 
-range(...): Returns a RaggedTensor containing the specified sequences of numbers.
+    range(...): Returns a RaggedTensor containing the specified sequences of numbers.
 
-row_splits_to_segment_ids(...): Generates the segmentation corresponding to a RaggedTensor row_splits.
+    row_splits_to_segment_ids(...): Generates the segmentation corresponding to a RaggedTensor row_splits.
 
-segment_ids_to_row_splits(...): Generates the RaggedTensor row_splits corresponding to a segmentation.
+    segment_ids_to_row_splits(...): Generates the RaggedTensor row_splits corresponding to a segmentation.
 
-stack(...): Stacks a list of rank-R tensors into one rank-(R+1) RaggedTensor.
+    stack(...): Stacks a list of rank-R tensors into one rank-(R+1) RaggedTensor.
 
-stack_dynamic_partitions(...): Stacks dynamic partitions of a Tensor or RaggedTensor.
+    stack_dynamic_partitions(...): Stacks dynamic partitions of a Tensor or RaggedTensor.
