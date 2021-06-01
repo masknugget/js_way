@@ -9,7 +9,6 @@
 from tensorflow import keras
 from tensorflow.keras import layers
 
-
 # ## 1.导入数据
 
 # In[ ]:
@@ -18,7 +17,6 @@ from tensorflow.keras import layers
 num_words = 30000
 maxlen = 200
 
-
 # In[ ]:
 
 
@@ -26,16 +24,13 @@ maxlen = 200
 print(x_train.shape, ' ', y_train.shape)
 print(x_test.shape, ' ', y_test.shape)
 
-
 # In[ ]:
 
 
 x_train = keras.preprocessing.sequence.pad_sequences(x_train, maxlen, padding='post')
 x_test = keras.preprocessing.sequence.pad_sequences(x_test, maxlen, padding='post')
 
-
 # In[ ]:
-
 
 
 print(x_train.shape, ' ', y_train.shape)
@@ -54,24 +49,26 @@ def lstm_model():
         layers.LSTM(1, activation='sigmoid', return_sequences=False)
     ])
     model.compile(optimizer=keras.optimizers.Adam(),
-                 loss=keras.losses.BinaryCrossentropy(),
-                 metrics=['accuracy'])
+                  loss=keras.losses.BinaryCrossentropy(),
+                  metrics=['accuracy'])
     return model
+
+
 model = lstm_model()
 model.summary()
-
 
 # In[11]:
 
 
 # get_ipython().run_cell_magic('time', '', 'history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)')
 
-history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)
+history = model.fit(x_train, y_train, batch_size=64, epochs=5, validation_split=0.1)
 
 # In[14]:
 
 
 import matplotlib.pyplot as plt
+
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
 plt.legend(['training', 'valivation'], loc='upper left')
@@ -90,19 +87,20 @@ def lstm_model():
         layers.GRU(1, activation='sigmoid', return_sequences=False)
     ])
     model.compile(optimizer=keras.optimizers.Adam(),
-                 loss=keras.losses.BinaryCrossentropy(),
-                 metrics=['accuracy'])
+                  loss=keras.losses.BinaryCrossentropy(),
+                  metrics=['accuracy'])
     return model
+
+
 model = lstm_model()
 model.summary()
-
 
 # In[16]:
 
 
 # get_ipython().run_cell_magic('time', '', 'history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)')
 
-history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)
+history = model.fit(x_train, y_train, batch_size=64, epochs=5, validation_split=0.1)
 
 # In[17]:
 
@@ -125,9 +123,11 @@ def lstm_model():
         layers.CuDNNLSTM(1, activation='sigmoid', return_sequences=False)
     ])
     model.compile(optimizer=keras.optimizers.Adam(),
-                 loss=keras.losses.BinaryCrossentropy(),
-                 metrics=['accuracy'])
+                  loss=keras.losses.BinaryCrossentropy(),
+                  metrics=['accuracy'])
     return model
+
+
 model = lstm_model()
 model.summary()
 # tf2版没有
@@ -138,7 +138,7 @@ model.summary()
 
 # get_ipython().run_cell_magic('time', '', 'history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)')
 
-history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)
+history = model.fit(x_train, y_train, batch_size=64, epochs=5, validation_split=0.1)
 
 # In[ ]:
 
@@ -161,20 +161,20 @@ def lstm_model():
         layers.CuDNNGRU(1, activation='sigmoid', return_sequences=False)
     ])
     model.compile(optimizer=keras.optimizers.Adam(),
-                 loss=keras.losses.BinaryCrossentropy(),
-                 metrics=['accuracy'])
+                  loss=keras.losses.BinaryCrossentropy(),
+                  metrics=['accuracy'])
     return model
+
+
 model = lstm_model()
 model.summary()
-
 
 # In[ ]:
 
 
 # get_ipython().run_cell_magic('time', '', 'history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)')
 
-history = model.fit(x_train, y_train, batch_size=64, epochs=5,validation_split=0.1)
-
+history = model.fit(x_train, y_train, batch_size=64, epochs=5, validation_split=0.1)
 
 # In[ ]:
 
@@ -184,14 +184,7 @@ plt.plot(history.history['val_accuracy'])
 plt.legend(['training', 'valivation'], loc='upper left')
 plt.show()
 
-
 # In[ ]:
 
 
-
-
 # In[ ]:
-
-
-
-
