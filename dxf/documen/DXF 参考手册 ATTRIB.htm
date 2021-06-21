@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>DXF 参考手册: ATTRIB</title>
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad-header.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad_html.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/disableComments.css"><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/cookies-worker.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk_006.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/adsk_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/toc-treedata.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/product-books.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/acad.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="ATTRIB">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   <script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/prompt.js"></script></head>
+   <body onload="convSymbols(); initFrame('./filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a31.htm','DXFd0e10401','indexDXF.html'); initPage('ATTRIB','DXF 参考手册');"><div class="acad-header"><table width="100%"><tbody><tr><td valign="top" align="left"><div class="header-links"><a href="http://docs.autodesk.com/ACD/2011/CHS/landing.html" target="_parent">常用</a><a href="http://docs.autodesk.com/ACD/2011/CHS/acad-indexes.html" target="_parent" class="header_link">索引颜色</a></div></td><td valign="top" align="right"><form name="searchForm" onsubmit='loadSearchResults(searchData.value,"../"); return false;'><input type="text" name="searchData" id="searchData" value="搜索" onfocus='javascript:searchData.value=""' class="query"><input type="image" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/searchSubmit.gif" name="searchButton" id="searchButton" class="searchButton" onclick='loadSearchResults(searchData.value,"../"); return false;' value="Search"></form></td></tr><tr><td valign="top"><div class="productName">AutoCAD 2011 帮助</div></td><td valign="top"><div class="companyLogo"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/Autodesk.png"></div></td></tr></tbody></table></div>
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WS1a9193826455f5ff18cb41610ec0a2e719-7a31.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">在目录中显示</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a31.htm" target="content" onclick="javascript:showInContents('d0e10401');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">添加到收藏夹</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a31.htm" class="headNavLink" onclick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">主页: DXF 参考手册</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">ATTDEF</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a33.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">ENTITIES 段</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">BODY</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2f.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm">ENTITIES 段</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span class="anchor_wrapper"><a name="WSc30cd3d5faa8f6d8e3b895ffb7556c21-7ff9"></a></span><span>ATTRIB</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a31"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ec2"></a></span>以下组码适用于属性图元。除此处所述的组码以外，另请参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm#WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fff">
+                     <!--Reference = WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fff; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm-->通用图元组码</a></span></span>。关于此表中使用的缩写和格式方面的信息，请参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm#WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd">
+                     <!--Reference = WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm-->本参考的格式惯例</a></span></span>。
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a30"></a></span><div class="table_Ruled">
+            <table class="ruled" cellspacing="0" cellpadding="0">
+               <colgroup>
+                  <col style="width:0.917in">
+                  <col style="width:4.760in">
+                  </colgroup><tbody><tr class="RuledHeading">
+                     <th class="table-heading" colspan="2"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ec1"></a></span><p class="table-heading">ATTRIB 组码</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledHeading">
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ec0"></a></span><p class="table-heading">组码</p>
+                     </th>
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ebf"></a></span><p class="table-heading">说明</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ebe"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ebd"></a></span><p class="table-body">子类标记 (AcDbText) </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ebc"></a></span><p class="table-body">39</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ebb"></a></span><p class="table-body">厚度（可选；默认值 = 0）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eba"></a></span><p class="table-body">10</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb9"></a></span><p class="table-body">文字起点（在 OCS 中）</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb8"></a></span><p class="table-body">DXF：X 值；APP：三维点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb7"></a></span><p class="table-body">20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb6"></a></span><p class="table-body">DXF：文字起点的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值（在 OCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb5"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb4"></a></span><p class="table-body">文字高度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb3"></a></span><p class="table-body">1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb2"></a></span><p class="table-body">默认值（字符串）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb1"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eb0"></a></span><p class="table-body">子类标记 (AcDbAttribute) </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf05"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf06"></a></span><p class="table-body">版本号：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf07"></a></span><p class="table-body">0 = 2010</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eaf"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eae"></a></span><p class="table-body">属性标签（字符串；不能包含空格）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ead"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eac"></a></span><p class="table-body">属性标记：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eab"></a></span><p class="table-body">1 = 属性不可见（不出现）</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4eaa"></a></span><p class="table-body">2 = 固定属性</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea9"></a></span><p class="table-body">4 = 输入属性时要求进行验证</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea8"></a></span><p class="table-body">8 = 属性为预设（插入时无提示）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea7"></a></span><p class="table-body">73</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea6"></a></span><p class="table-body">字段长度（可选；默认值 = 0）（当前未使用） </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea5"></a></span><p class="table-body">50</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea4"></a></span><p class="table-body">文字旋转角度（可选；默认值 = 0）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea3"></a></span><p class="table-body">41</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea2"></a></span><p class="table-body">X 相对缩放比例（宽度）（可选；默认值 = 1）。使用拟合类型的文字时，该值也将进行调整。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea1"></a></span><p class="table-body">51</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4ea0"></a></span><p class="table-body">倾斜角（可选；默认值 = 0）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e9f"></a></span><p class="table-body">7</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e9e"></a></span><p class="table-body">文字样式名（可选；默认值 = 标准）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e9d"></a></span><p class="table-body">71</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e9c"></a></span><p class="table-body">文字生成标志（可选；默认值 = 0）。参见 <span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm#WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fd7">
+                                    <!--Reference = WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fd7; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm-->TEXT</a></span></span> 组码
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e9b"></a></span><p class="table-body">72</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e9a"></a></span><p class="table-body">文字水平对正类型（可选；默认值 = 0）。参见 <span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm#WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fd7">
+                                    <!--Reference = WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fd7; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm-->TEXT</a></span></span> 组码
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e99"></a></span><p class="table-body">74</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e98"></a></span><p class="table-body">垂直文字对正类型（可选；默认值 = 0）。请参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm#WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fd7">
+                                    <!--Reference = WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fd7; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm-->TEXT</a></span></span>中的组码 73
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e97"></a></span><p class="table-body">11 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e96"></a></span><p class="table-body">对齐点（在 OCS 中）（可选）</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e95"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值；APP：三维点
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e94"></a></span><p class="table-body">只有当 72 或 74 组出现且非零时才出现</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e93"></a></span><p class="table-body">21, 31</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e92"></a></span><p class="table-body">DXF：对齐点的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值（在 OCS 中）（可选）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e91"></a></span><p class="table-body">210</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e90"></a></span><p class="table-body">拉伸方向。仅当图元的拉伸方向与 WCS 的 <em class="mild">Z</em> 轴不平行时才出现（可选；默认值 = 0, 0, 1）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e8f"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值；APP：三维矢量
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e8e"></a></span><p class="table-body">220, 230</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e8d"></a></span><p class="table-body">DXF：拉伸方向的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值（可选）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS73099cc142f487551e5a0cb10850d4cd7c-7df0"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS73099cc142f487551e5a0cb10850d4cd7c-7def"></a></span><p class="table-body">锁定位置标志。锁定块参照中属性的位置</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf08"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf09"></a></span><p class="table-body">子类标记 (AcDbXrecord)</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf0a"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf0b"></a></span><p class="table-body">重复记录克隆标志（决定如何合并重复条目）：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf0c"></a></span><p class="table-body">1 = 保留现有</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf0d"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf0e"></a></span><p class="table-body">多行文字标志：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf0f"></a></span><p class="table-body">2 = 多行文字属性</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf10"></a></span><p class="table-body">4 = 固定多行文字属性定义</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf11"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf12"></a></span><p class="table-body">实际锁定标志：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf13"></a></span><p class="table-body">0 = 解锁</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf14"></a></span><p class="table-body">1 = 锁定</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf15"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf16"></a></span><p class="table-body">次要属性数或属性定义数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf17"></a></span><p class="table-body">340</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf18"></a></span><p class="table-body">次要属性或属性定义的硬指针 ID</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf19"></a></span><p class="table-body">10</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf1a"></a></span><p class="table-body">属性或属性定义对齐点</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf1b"></a></span><p class="table-body">DXF：X 值；APP：三维点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf1c"></a></span><p class="table-body">20,30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf1d"></a></span><p class="table-body">DXF：插入点的 Y 值和 Z 值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf1e"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf1f"></a></span><p class="table-body">当前注释比例</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf20"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf21"></a></span><p class="table-body">属性或属性定义标签字符串</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf22"></a></span><p class="table-body">0</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf23"></a></span><p class="table-body">图元类型 (MTEXT)</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf24"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf25"></a></span><p class="table-body">子类标记 (AcDbEntity)</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf26"></a></span><p class="table-body">67</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf27"></a></span><p class="table-body">不存在或零表示图元位于模型空间中。1 表示图元位于图纸空间中（可选）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf28"></a></span><p class="table-body">8</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf29"></a></span><p class="table-body">图层名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf2a"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf2b"></a></span><p class="table-body">子类标记 (AcDbMText)</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf2c"></a></span><p class="table-body">10</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf2d"></a></span><p class="table-body">插入点</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf2e"></a></span><p class="table-body">DXF：X 值；APP：三维点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf2f"></a></span><p class="table-body">20,30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf30"></a></span><p class="table-body">DXF：插入点的 Y 值和 Z 值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf31"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf32"></a></span><p class="table-body">标称（初始）文字高度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf33"></a></span><p class="table-body">41</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf34"></a></span><p class="table-body">参照矩形宽度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf35"></a></span><p class="table-body">46</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf36"></a></span><p class="table-body">定义注释高度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf37"></a></span><p class="table-body">71</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf38"></a></span><p class="table-body">附着点：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf39"></a></span><p class="table-body">1 = 左上；2 = 中上；3 = 右上</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf3a"></a></span><p class="table-body">4 = 左中；5 = 正中；6 = 右中</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf3b"></a></span><p class="table-body">7 = 左下；8 = 中下；9 = 右下</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf3c"></a></span><p class="table-body">72</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf3d"></a></span><p class="table-body">图形方向：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf3e"></a></span><p class="table-body">1 = 从左到右</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf3f"></a></span><p class="table-body">3 = 从上到下</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf40"></a></span><p class="table-body">5 = 随样式（从相关文字样式继承走向）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf41"></a></span><p class="table-body">1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf42"></a></span><p class="table-body">文字字符串</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf43"></a></span><p class="table-body">如果字符串长度小于 250 个字符，所有字符均出现在组 1 中。如果字符串长度大于 250 个字符，该字符串将分成长度为 250 个字符的数据块，并显示在一个或多个组 3 代码中。如果使用组 3 代码，则最后一个组将是组 1 并且少于 250
+                           个字符。
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf44"></a></span><p class="table-body">3</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf45"></a></span><p class="table-body">附加文字（始终在长度为 250 个字符的数据块中）（可选）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf46"></a></span><p class="table-body">7</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf47"></a></span><p class="table-body">DXF：X 值；APP：三维矢量文字样式名（如果未提供，则为 STANDARD）（可选）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf48"></a></span><p class="table-body">210</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf49"></a></span><p class="table-body">拉伸方向（可选；默认值 = 0, 0, 1）</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf4a"></a></span><p class="table-body">DXF：X 值；APP：三维矢量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf4b"></a></span><p class="table-body">220,230</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf4c"></a></span><p class="table-body">DXF：拉伸方向的 Y 值和 Z 值（可选）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf4d"></a></span><p class="table-body">11</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf4e"></a></span><p class="table-body">X 轴方向矢量（在 WCS 中）</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf4f"></a></span><p class="table-body">DXF：X 值；APP：三维矢量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf50"></a></span><p class="table-body">21,31</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf51"></a></span><p class="table-body">DXF：X 轴方向矢量的 Y 值和 Z 值（在 WCS 中）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf52"></a></span><p class="table-body">42</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf53"></a></span><p class="table-body">构成多行文字图元的字符的水平宽度。</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf54"></a></span><p class="table-body">该值始终等于或小于组码 41 的值（只读，如果提供则忽略）。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf55"></a></span><p class="table-body">43</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf56"></a></span><p class="table-body">多行文字图元的垂直高度（只读，如果提供则忽略）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf57"></a></span><p class="table-body">50</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf58"></a></span><p class="table-body">以弧度为单位的旋转角度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf59"></a></span><p class="table-body">73</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf5a"></a></span><p class="table-body">多行文字的行距样式（可选）： </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf5b"></a></span><p class="table-body">1= 至少（将替代为较高的字符） </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf5c"></a></span><p class="table-body">2 = 精确（将不替代为较高的字符） </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf5d"></a></span><p class="table-body">44</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf5e"></a></span><p class="table-body">多行文字的行距比例（可选）： </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf5f"></a></span><p class="table-body">要应用的行距的默认百分比（五分之三）。 </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf60"></a></span><p class="table-body">有效值的范围从 0.25 到 4.00 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf61"></a></span><p class="table-body">90</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf62"></a></span><p class="table-body">背景填充设置：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf63"></a></span><p class="table-body">0 = 背景填充关闭</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf64"></a></span><p class="table-body">1 = 使用背景填充颜色</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf65"></a></span><p class="table-body">2 = 使用图形窗口颜色作为背景填充颜色</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf66"></a></span><p class="table-body">63</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf67"></a></span><p class="table-body">背景色（颜色索引编号）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf68"></a></span><p class="table-body">420-429</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf69"></a></span><p class="table-body">背景色（RGB 颜色）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf6a"></a></span><p class="table-body">430-439</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf6b"></a></span><p class="table-body">背景色（颜色名）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf6c"></a></span><p class="table-body">45</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf6d"></a></span><p class="table-body">填充框大小（可选）：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf6e"></a></span><p class="table-body">确定文字周围的边框大小。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf6f"></a></span><p class="table-body">63</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf70"></a></span><p class="table-body">背景填充颜色（可选）： </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf71"></a></span><p class="table-body">组码 90 为 1 时要用于背景填充的颜色。 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291cf72"></a></span><p class="table-body">441</p>
+                     </td>
+                     <td class="table-body">背景填充颜色的透明度（未实现）</td>
+                  </tr>
+               
+            </tbody></table>
+         </div>
+         <p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4e8c"></a></span>如
+果组 72 和/或 74 的值非零，则文字插入点的值将被忽略，根据文字对齐点和文字字符串的长度（应用文字样式之后），AutoCAD 
+将计算新值。如果 72 和 74 值为零或缺失，则文字对齐点被忽略，并且 AutoCAD 
+根据文字插入点和文字字符串本身的长度（在应用文字样式之后）重新计算该文字对齐点。
+            
+         </p>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">请将您对此页内容的评论发送给我们</span></a></div><br><script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script><script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/ga.js" type="text/javascript"></script><script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("UA-2967772-176");
+                    pageTracker._trackPageview();
+                } catch(err) {}
+            </script></div>
+   
+<div class="leftContent" id="leftContent"><div class="acad-contents" id="acad-contents" style="left: 0px;"><table id="tbl-acad-contents" border="0"><tbody id="tbody-acad-contents"><tr onclick='parent.location.href=".././filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm"' onmouseover="highlightTOCItem('DXFd0e8944', 0, true, false)" onmouseout="highlightTOCItem('DXFd0e8944', 0, false, false)"><td class="toc_item" id="tdDXFd0e8944_i"></td><td class="toc_entry_0" id="tdDXFd0e8944">ENTITIES 段</td><td class="toc_item_top" id="tdDXFd0e8944_it"><img alt="" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20ATTRIB_files/top_topic.gif"></td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm"' onmouseover="highlightTOCItem('DXFd0e8967', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e8967', 1, false, false)"><td class="toc_item" id="tdDXFd0e8967_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e8967">通用图元组码</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3b.htm"' onmouseover="highlightTOCItem('DXFd0e9349', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9349', 1, false, false)"><td class="toc_item" id="tdDXFd0e9349_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9349">3DFACE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a39.htm"' onmouseover="highlightTOCItem('DXFd0e9501', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9501', 1, false, false)"><td class="toc_item" id="tdDXFd0e9501_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9501">3DSOLID</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a37.htm"' onmouseover="highlightTOCItem('DXFd0e9573', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9573', 1, false, false)"><td class="toc_item" id="tdDXFd0e9573_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9573">ACAD_PROXY_ENTITY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a35.htm"' onmouseover="highlightTOCItem('DXFd0e9690', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9690', 1, false, false)"><td class="toc_item" id="tdDXFd0e9690_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9690">ARC</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a33.htm"' onmouseover="highlightTOCItem('DXFd0e9809', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9809', 1, false, false)"><td class="toc_item" id="tdDXFd0e9809_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9809">ATTDEF</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a31.htm"' onmouseover="highlightTOCItem('DXFd0e10401', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e10401', 1, false, false)"><td class="toc_item_selected" id="tdDXFd0e10401_i"></td><td colspan="2" class="toc_entry_1_selected" id="tdDXFd0e10401">ATTRIB</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2f.htm"' onmouseover="highlightTOCItem('DXFd0e10986', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e10986', 1, false, false)"><td class="toc_item" id="tdDXFd0e10986_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e10986">BODY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2d.htm"' onmouseover="highlightTOCItem('DXFd0e11044', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e11044', 1, false, false)"><td class="toc_item" id="tdDXFd0e11044_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e11044">CIRCLE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2b.htm"' onmouseover="highlightTOCItem('DXFd0e11142', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e11142', 1, false, false)"><td class="toc_item" id="tdDXFd0e11142_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e11142">DIMENSION</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a15.htm"' onmouseover="highlightTOCItem('DXFd0e12089', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e12089', 1, false, false)"><td class="toc_item" id="tdDXFd0e12089_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e12089">ELLIPSE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a13.htm"' onmouseover="highlightTOCItem('DXFd0e12222', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e12222', 1, false, false)"><td class="toc_item" id="tdDXFd0e12222_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e12222">HATCH</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a08.htm"' onmouseover="highlightTOCItem('DXFd0e13260', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13260', 1, false, false)"><td class="toc_item" id="tdDXFd0e13260_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13260">HELIX</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a06.htm"' onmouseover="highlightTOCItem('DXFd0e13379', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13379', 1, false, false)"><td class="toc_item" id="tdDXFd0e13379_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13379">IMAGE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a04.htm"' onmouseover="highlightTOCItem('DXFd0e13628', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13628', 1, false, false)"><td class="toc_item" id="tdDXFd0e13628_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13628">INSERT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a02.htm"' onmouseover="highlightTOCItem('DXFd0e13795', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13795', 1, false, false)"><td class="toc_item" id="tdDXFd0e13795_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13795">LEADER</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a00.htm"' onmouseover="highlightTOCItem('DXFd0e14054', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14054', 1, false, false)"><td class="toc_item" id="tdDXFd0e14054_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14054">LIGHT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79fe.htm"' onmouseover="highlightTOCItem('DXFd0e14269', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14269', 1, false, false)"><td class="toc_item" id="tdDXFd0e14269_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14269">LINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79fc.htm"' onmouseover="highlightTOCItem('DXFd0e14388', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14388', 1, false, false)"><td class="toc_item" id="tdDXFd0e14388_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14388">LWPOLYLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff211a40be11dcc57291cfca.htm"' onmouseover="highlightTOCItem('DXFd0e14537', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14537', 1, false, false)"><td class="toc_item" id="tdDXFd0e14537_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14537">MESH</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79fa.htm"' onmouseover="highlightTOCItem('DXFd0e14689', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14689', 1, false, false)"><td class="toc_item" id="tdDXFd0e14689_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14689">MLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ffc751fd10f4618e369-5bdf.htm"' onmouseover="highlightTOCItem('DXFd0e14957', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14957', 1, false, false)"><td class="toc_item" id="tdDXFd0e14957_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14957">MLEADERSTYLE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ffc751fd10f4618e369-5bd9.htm"' onmouseover="highlightTOCItem('DXFd0e15233', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e15233', 1, false, false)"><td class="toc_item" id="tdDXFd0e15233_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e15233">MLEADER</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f8.htm"' onmouseover="highlightTOCItem('DXFd0e16036', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16036', 1, false, false)"><td class="toc_item" id="tdDXFd0e16036_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16036">MTEXT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f6.htm"' onmouseover="highlightTOCItem('DXFd0e16350', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16350', 1, false, false)"><td class="toc_item" id="tdDXFd0e16350_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16350">OLEFRAME</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f4.htm"' onmouseover="highlightTOCItem('DXFd0e16415', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16415', 1, false, false)"><td class="toc_item" id="tdDXFd0e16415_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16415">OLE2FRAME</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f2.htm"' onmouseover="highlightTOCItem('DXFd0e16677', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16677', 1, false, false)"><td class="toc_item" id="tdDXFd0e16677_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16677">POINT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f0.htm"' onmouseover="highlightTOCItem('DXFd0e16781', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16781', 1, false, false)"><td class="toc_item" id="tdDXFd0e16781_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16781">POLYLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79ed.htm"' onmouseover="highlightTOCItem('DXFd0e17000', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17000', 1, false, false)"><td class="toc_item" id="tdDXFd0e17000_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17000">RAY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79eb.htm"' onmouseover="highlightTOCItem('DXFd0e17087', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17087', 1, false, false)"><td class="toc_item" id="tdDXFd0e17087_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17087">REGION</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e9.htm"' onmouseover="highlightTOCItem('DXFd0e17145', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17145', 1, false, false)"><td class="toc_item" id="tdDXFd0e17145_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17145">SECTION</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e7.htm"' onmouseover="highlightTOCItem('DXFd0e17273', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17273', 1, false, false)"><td class="toc_item" id="tdDXFd0e17273_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17273">SEQEND</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e5.htm"' onmouseover="highlightTOCItem('DXFd0e17310', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17310', 1, false, false)"><td class="toc_item" id="tdDXFd0e17310_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17310">SHAPE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e3.htm"' onmouseover="highlightTOCItem('DXFd0e17439', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17439', 1, false, false)"><td class="toc_item" id="tdDXFd0e17439_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17439">SOLID</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e1.htm"' onmouseover="highlightTOCItem('DXFd0e17608', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17608', 1, false, false)"><td class="toc_item" id="tdDXFd0e17608_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17608">SPLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79df.htm"' onmouseover="highlightTOCItem('DXFd0e17850', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17850', 1, false, false)"><td class="toc_item" id="tdDXFd0e17850_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17850">SUN</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79dd.htm"' onmouseover="highlightTOCItem('DXFd0e17968', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17968', 1, false, false)"><td class="toc_item" id="tdDXFd0e17968_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17968">SURFACE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d3.htm"' onmouseover="highlightTOCItem('DXFd0e18734', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e18734', 1, false, false)"><td class="toc_item" id="tdDXFd0e18734_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e18734">TABLE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm"' onmouseover="highlightTOCItem('DXFd0e19401', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e19401', 1, false, false)"><td class="toc_item" id="tdDXFd0e19401_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e19401">TEXT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79ce.htm"' onmouseover="highlightTOCItem('DXFd0e19735', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e19735', 1, false, false)"><td class="toc_item" id="tdDXFd0e19735_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e19735">TOLERANCE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79cc.htm"' onmouseover="highlightTOCItem('DXFd0e19861', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e19861', 1, false, false)"><td class="toc_item" id="tdDXFd0e19861_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e19861">TRACE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79ca.htm"' onmouseover="highlightTOCItem('DXFd0e20030', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e20030', 1, false, false)"><td class="toc_item" id="tdDXFd0e20030_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e20030">UNDERLAY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c8.htm"' onmouseover="highlightTOCItem('DXFd0e20179', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e20179', 1, false, false)"><td class="toc_item" id="tdDXFd0e20179_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e20179">VERTEX</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c6.htm"' onmouseover="highlightTOCItem('DXFd0e20338', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e20338', 1, false, false)"><td class="toc_item" id="tdDXFd0e20338_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e20338">VIEWPORT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c4.htm"' onmouseover="highlightTOCItem('DXFd0e21045', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e21045', 1, false, false)"><td class="toc_item" id="tdDXFd0e21045_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e21045">WIPEOUT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c2.htm"' onmouseover="highlightTOCItem('DXFd0e21287', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e21287', 1, false, false)"><td class="toc_item" id="tdDXFd0e21287_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e21287">XLINE</td></tr></tbody></table></div></div><div class="rightContent" id="rightContent"><div class="exchange_content_widget"><iframe src="http://autocad.autodesk.com/?html=fragment-autocad_help_rightnav_widget2&amp;topic_id=WS1a9193826455f5ff18cb41610ec0a2e719-7a31&amp;topic_name=ATTRIB" scrolling="no" marginheight="0" marginwidth="0" width="190" height="600" frameborder="0"></iframe></div></div></body><div id="edge-translate-notifier-container" class="edge-translate-notifier-center"></div></html>

@@ -1,0 +1,54 @@
+Modules
+
+experimental module: Public API for tf.train.experimental namespace.
+Classes
+
+    class BytesList: Container that holds repeated fundamental values of byte type in the tf.train.Feature message.
+
+    class Checkpoint: Manages saving/restoring trackable values to disk.
+
+    class CheckpointManager: Manages multiple checkpoints by keeping some and deleting unneeded ones.
+
+    class CheckpointOptions: Options for constructing a Checkpoint.
+
+    class ClusterDef: A ProtocolMessage
+
+    class ClusterSpec: Represents a cluster as a set of "tasks", organized into "jobs".
+
+    class Coordinator: A coordinator for threads.
+
+    class Example: An Example is a mostly-normalized data format for storing data for training and inference.
+
+    class ExponentialMovingAverage: Maintains moving averages of variables by employing an exponential decay.
+
+    class Feature: A Feature is a list which may hold zero or more values.
+
+    class FeatureList: Contains zero or more values of tf.train.Features.
+
+    class FeatureLists: Contains the mapping from name to tf.train.FeatureList.
+
+    class Features: Protocol message for describing the features of a tf.train.Example.
+
+    class FloatList: Container that holds repeated fundamental values of float type in the tf.train.Feature message.
+
+    class Int64List: Container that holds repeated fundamental value of int64 type in the tf.train.Feature message.
+
+    class JobDef: A ProtocolMessage
+
+    class SequenceExample: A SequenceExample is a format for representing one or more sequences and some context.
+
+    class ServerDef: A ProtocolMessage
+
+Functions
+
+    checkpoints_iterator(...): Continuously yield new checkpoint files as they appear.
+
+    get_checkpoint_state(...): Returns CheckpointState proto from the "checkpoint" file.
+
+    latest_checkpoint(...): Finds the filename of latest saved checkpoint file.
+
+    list_variables(...): Lists the checkpoint keys and shapes of variables in a checkpoint.
+
+    load_checkpoint(...): Returns CheckpointReader for checkpoint found in ckpt_dir_or_file.
+
+    load_variable(...): Returns the tensor value of the given variable in the checkpoint.

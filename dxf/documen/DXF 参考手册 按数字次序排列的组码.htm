@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>DXF 参考手册: 按数字次序排列的组码</title>
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad-header.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad_html.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/disableComments.css"><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/cookies-worker.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk_006.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/adsk_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/toc-treedata.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/product-books.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/acad.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="按数字次序排列的组码">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   <script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/prompt.js"></script></head>
+   <body onload="convSymbols(); initFrame('./filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a62.htm','DXFd0e646','indexDXF.html'); initPage('按数字次序排列的组码','DXF 参考手册');"><div class="acad-header"><table width="100%"><tbody><tr><td valign="top" align="left"><div class="header-links"><a href="http://docs.autodesk.com/ACD/2011/CHS/landing.html" target="_parent">常用</a><a href="http://docs.autodesk.com/ACD/2011/CHS/acad-indexes.html" target="_parent" class="header_link">索引颜色</a></div></td><td valign="top" align="right"><form name="searchForm" onsubmit='loadSearchResults(searchData.value,"../"); return false;'><input type="text" name="searchData" id="searchData" value="搜索" onfocus='javascript:searchData.value=""' class="query"><input type="image" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/searchSubmit.gif" name="searchButton" id="searchButton" class="searchButton" onclick='loadSearchResults(searchData.value,"../"); return false;' value="Search"></form></td></tr><tr><td valign="top"><div class="productName">AutoCAD 2011 帮助</div></td><td valign="top"><div class="companyLogo"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/Autodesk.png"></div></td></tr></tbody></table></div>
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WS1a9193826455f5ff18cb41610ec0a2e719-7a62.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">在目录中显示</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a62.htm" target="content" onclick="javascript:showInContents('d0e646');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">添加到收藏夹</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a62.htm" class="headNavLink" onclick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">主页: DXF 参考手册</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">组码值类型</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a64.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">DXF 格式</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">HEADER 段</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f05.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm">DXF 格式</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span class="anchor_wrapper"><a name="WSc30cd3d5faa8f6d84413eeffb75563a4-7ffa"></a></span><span>按数字次序排列的组码</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a62"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5714"></a></span>下表列出了组码或组码范围以及组码值的解释。在此表中，“固定”表明组码始终具有相同的用途。如果组码不固定，则其用途取决于上下文。关于此表中使用的缩写和格式方面的信息，请参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm#WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd">
+                     <!--Reference = WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm-->本参考的格式惯例</a></span></span>。
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a61"></a></span><div class="table_Ruled">
+            <table class="ruled" cellspacing="0" cellpadding="0">
+               <colgroup>
+                  <col style="width:0.917in">
+                  <col style="width:4.760in">
+                  </colgroup><tbody><tr class="RuledHeading">
+                     <th class="table-heading" colspan="2"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5713"></a></span><p class="table-heading">按数字次序排列的组码</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledHeading">
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5712"></a></span><p class="table-heading">组码</p>
+                     </th>
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5711"></a></span><p class="table-heading">说明</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5710"></a></span><p class="table-body">-5</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-570f"></a></span><p class="table-body">APP：永久反应器链</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-570e"></a></span><p class="table-body">-4</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-570d"></a></span><p class="table-body">APP：条件运算符（<em class="mild">仅</em>与 <span class="code"><em class="codeEmphasisStrong">ssget</em></span> 一起使用）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-570c"></a></span><p class="table-body">-3</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-570b"></a></span><p class="table-body">APP：扩展数据 (XDATA) 标记（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-570a"></a></span><p class="table-body">-2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5709"></a></span><p class="table-body">APP：图元名参照（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5708"></a></span><p class="table-body">-1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5707"></a></span><p class="table-body">APP：图元名。每次打开图形时，图元名都会发生变化，从不保存（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5706"></a></span><p class="table-body">0</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5705"></a></span><p class="table-body">表示图元类型的字符串（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5704"></a></span><p class="table-body">1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5703"></a></span><p class="table-body">图元的主文字值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5702"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5701"></a></span><p class="table-body">名称（属性标记、块名等）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5700"></a></span><p class="table-body">3-4</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ff"></a></span><p class="table-body">其他文字或名称值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56fe"></a></span><p class="table-body">5</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56fd"></a></span><p class="table-body">图元句柄；最多 16 个十六进制数字的字符串（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56fc"></a></span><p class="table-body">6</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56fb"></a></span><p class="table-body">线型名（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56fa"></a></span><p class="table-body">7</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f9"></a></span><p class="table-body">文字样式名（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f8"></a></span><p class="table-body">8</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f7"></a></span><p class="table-body">图层名（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f6"></a></span><p class="table-body">9</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f5"></a></span><p class="table-body">DXF：变量名称标识符（仅在 DXF 文件的 HEADER 段中使用）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f4"></a></span><p class="table-body">10</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f3"></a></span><p class="table-body">主要点；直线或文字图元的起点、圆的圆心，等等</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f2"></a></span><p class="table-body">DXF：主要点的 <em class="mild">X</em> 值（后跟 <em class="mild">Y</em> 和 <em class="mild">Z</em> 值代码 20 和 30）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f1"></a></span><p class="table-body">APP：三维点（三个实数的列表）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56f0"></a></span><p class="table-body">11-18</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ef"></a></span><p class="table-body">其他点</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ee"></a></span><p class="table-body">DXF：其他点的 <em class="mild">X</em> 值（后跟 <em class="mild">Y</em> 值代码 21-28 和 <em class="mild">Z</em> 值代码 31-38）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ed"></a></span><p class="table-body">APP：三维点（三个实数的列表）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ec"></a></span><p class="table-body">20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56eb"></a></span><p class="table-body">DXF：主要点的 Y 值和 <em class="mild">Z</em> 值 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ea"></a></span><p class="table-body">21-28, 31-37</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e9"></a></span><p class="table-body">DXF：其他点的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e8"></a></span><p class="table-body">38</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e7"></a></span><p class="table-body">DXF：如果非零，则为图元的标高</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e6"></a></span><p class="table-body">39</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e5"></a></span><p class="table-body">如果非零，则为图元的厚度（固定)</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e4"></a></span><p class="table-body">40-48</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e3"></a></span><p class="table-body">双精度浮点值（文字高度、缩放比例等）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e2"></a></span><p class="table-body">48</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e1"></a></span><p class="table-body">线型比例；双精度浮点标量值；默认值适用于所有图元类型</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56e0"></a></span><p class="table-body">49</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56df"></a></span><p class="table-body">重复的双精度浮点值。一个图元的可变长度表（例如，LTYPE 表中的虚线长度）中可能会出现多个 49 组。7<em class="mild">x</em> 组始终出现在第一个 49 组<em class="mild">之前</em>，用以指定表的长度
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56de"></a></span><p class="table-body">50-58</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56dd"></a></span><p class="table-body">角度（在 DXF 文件中以度为单位，在 AutoLISP 和 ObjectARX 应用程序中以弧度为单位）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56dc"></a></span><p class="table-body">60</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56db"></a></span><p class="table-body">图元可见性；整数值；未赋值或值为 0 时表示可见；值为 1 时表示不可见</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56da"></a></span><p class="table-body">62</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d9"></a></span><p class="table-body">颜色号（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d8"></a></span><p class="table-body">66</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d7"></a></span><p class="table-body">“后跟图元”标志（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d6"></a></span><p class="table-body">67</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d5"></a></span><p class="table-body">空间 — 模型空间或图纸空间（固定）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d4"></a></span><p class="table-body">68</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d3"></a></span><p class="table-body">APP：指示视口是处于打开状态但在屏幕上完全不可见，还是未激活或处于关闭状态</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d2"></a></span><p class="table-body">69</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d1"></a></span><p class="table-body">APP：视口标识号</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56d0"></a></span><p class="table-body">70-78</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56cf"></a></span><p class="table-body">整数值，例如重复计数、标志位或模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ce"></a></span><p class="table-body">90-99</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56cd"></a></span><p class="table-body">32 位整数值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56cc"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56cb"></a></span><p class="table-body">子类数据标记（将派生类名作为字符串）从其他具体类派生的所有对象和图元类必须具有此标记。子类数据标记用于分离由同一对象的继承链中的不同类定义的数据。</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ca"></a></span><p class="table-body">对于从 ObjectARX 派生的每个不同的具体类的 DXF 名称来说，这是必须满足的额外要求（参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7945.htm#WSc30cd3d5faa8f6d81cb25f1ffb755717d-7ff9">
+                                    <!--Reference = WSc30cd3d5faa8f6d81cb25f1ffb755717d-7ff9; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7945.htm-->子类标记</a></span></span>）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c9"></a></span><p class="table-body">102</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c8"></a></span><p class="table-body">控
+制字符串，后跟“{&lt;任意名称&gt;”或“}”。与扩展数据 1002 
+组码类似，不同之处在于当字符串以“{”开始时，其后可跟任意字符串，字符串的解释取决于应用程序。唯一允许的另外一个控制字符串是作为组结束符的
+“}”。除了执行图形核查操作期间外，AutoCAD
+                           不会解释这些字符串。它们供应用程序使用
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c7"></a></span><p class="table-body">105</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c6"></a></span><p class="table-body">DIMVAR 符号表条目的对象句柄</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c5"></a></span><p class="table-body">110</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c4"></a></span><p class="table-body">UCS 原点（仅当将代码 72 设定为 1 时才显示）</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c3"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值；APP：三维点
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c2"></a></span><p class="table-body">111</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c1"></a></span><p class="table-body">UCS <em class="mild">X</em> 轴（仅当将代码 72 设定为 1 时才显示）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56c0"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值；APP：三维矢量
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56bf"></a></span><p class="table-body">112</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56be"></a></span><p class="table-body">UCS <em class="mild">Y</em> 轴（仅当将代码 72 设定为 1 时才显示）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56bd"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值；APP：三维矢量
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56bc"></a></span><p class="table-body">120-122</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56bb"></a></span><p class="table-body">DXF：UCS 原点的 <em class="mild">Y</em> 值，UCS <em class="mild">X</em> 轴和 UCS <em class="mild">Y</em> 轴
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56ba"></a></span><p class="table-body">130-132</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56b9"></a></span><p class="table-body">DXF：UCS 原点的 Z 值，UCS <em class="mild">X</em> 轴和 UCS <em class="mild">Y</em> 轴
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56b8"></a></span><p class="table-body">140-149</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56b7"></a></span><p class="table-body">双精度浮点值（例如点、标高和 DIMSTYLE 设置）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56b6"></a></span><p class="table-body">170-179</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56b5"></a></span><p class="table-body">16 位整数值，例如表示 DIMSTYLE 设置的标志位</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7058"></a></span><p class="table-body">210</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7057"></a></span><p class="table-body">拉伸方向（固定）</p><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7056"></a></span><p class="table-body">DXF：拉伸方向的 <em class="mild">X</em> 值
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7055"></a></span><p class="table-body">APP：三维拉伸方向矢量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7054"></a></span><p class="table-body">220, 230</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7053"></a></span><p class="table-body">DXF：拉伸方向的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7052"></a></span><p class="table-body">270-279</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7051"></a></span><p class="table-body">16 位整数值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7050"></a></span><p class="table-body">280-289</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-704f"></a></span><p class="table-body">16 位整数值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-704e"></a></span><p class="table-body">290-299</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-704d"></a></span><p class="table-body">布尔标志值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-704c"></a></span><p class="table-body">300-309</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-704b"></a></span><p class="table-body">任意字符串</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-704a"></a></span><p class="table-body">310-319</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7049"></a></span><p class="table-body">具有相同表示和 1004 组码限制的任意二进制块：用最大长度为 254 个字符的十六进制字符串表示最大长度为 127 个字节的数据块</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7048"></a></span><p class="table-body">320-329</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7047"></a></span><p class="table-body">任意对象句柄；“按原样”获取的句柄值。它们在 INSERT 和 XREF 操作期间不进行转换</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7046"></a></span><p class="table-body">330-339</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55de9af080101d7e8b304-7045"></a></span><p class="table-body">软指针句柄；指向同一个 DXF 文件或图形中的其他对象的任意软指针。在 INSERT 和 XREF 操作期间进行转换</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56a2"></a></span><p class="table-body">340-349</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56a1"></a></span><p class="table-body">硬指针句柄；指向同一个 DXF 文件或图形中的其他对象的任意硬指针。在 INSERT 和 XREF 操作期间进行转换</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-56a0"></a></span><p class="table-body">350-359</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-569f"></a></span><p class="table-body">软所有者句柄；指向同一个 DXF 文件或图形中的其他对象的任意软所有者指针。在 INSERT 和 XREF 操作期间进行转换</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-569e"></a></span><p class="table-body">360-369</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-569d"></a></span><p class="table-body">硬所有者句柄；指向同一个 DXF 文件或图形中的其他对象的任意硬所有者指针。在 INSERT 和 XREF 操作期间进行转换</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-569c"></a></span><p class="table-body">370-379</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-569b"></a></span><p class="table-body">线宽枚举值 (AcDb::LineWeight)。作为 16 位整数存储和移动。自定义非图元对象可以使用整个范围内的组码，但图元类只能在其表示中使用 371-379 DXF 组码，因为 AutoCAD 和 AutoLISP 都始终假定 370
+                           组码是图元的线宽。这使 370 组码与其他“通用”图元字段具有相同的行为
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-569a"></a></span><p class="table-body">380-389</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5699"></a></span><p class="table-body">PlotStyleName 类型枚举 (AcDb::PlotStyleNameType)。作为 16 位整数存储和移动。自定义非图元对象可以使用整个范围内的组码，但图元类只能在其表示中使用 381-389 DXF 组码，原因与上述线宽范围相同</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5698"></a></span><p class="table-body">390-399</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5697"></a></span><p class="table-body">表
+示 PlotStyleName 对象的句柄值的字符串，本质上是硬指针，但范围不同，更容易处理向后兼容。作为对象 ID（在 DXF 
+文件中为句柄）和 AutoLISP 中的特殊类型存储和移动。自定义非图元对象可以使用整个范围内的组码，但图元类只能在其表示中使用
+                           391-399 DXF 组码，原因与上述线宽范围相同
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5696"></a></span><p class="table-body">400-409</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5695"></a></span><p class="table-body">16 位整数 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5694"></a></span><p class="table-body">410-419</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5693"></a></span><p class="table-body">字符串 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5692"></a></span><p class="table-body">420-427</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5691"></a></span><p class="table-body">32
+ 位整数值。与真彩色一同使用时，表示 24 位颜色值的 32 位整数。高阶字节（8 位）为 0；低阶字节为包含“蓝色”值 
+(0-255)、然后是“绿色”值的无符号字符；次高阶字节是“红色”值。将此整数值转换为十六进制值将得到以下位掩码：0x00RRGGBB。例如，红
+色==200、绿色==100
+                           和蓝色==50 的真彩色为 0x00C86432，而在 DXF 中以十进制表示则为 
+13132850
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5690"></a></span><p class="table-body">430-437</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-568f"></a></span><p class="table-body">字符串；用于真彩色时，则为表示颜色名称的字符串</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-568e"></a></span><p class="table-body">440-447</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-568d"></a></span><p class="table-body">32 位整数值。用于真彩色时，表示透明度值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-568c"></a></span><p class="table-body">450-459</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-568b"></a></span><p class="table-body">长整数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-568a"></a></span><p class="table-body">460-469</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5689"></a></span><p class="table-body">双精度浮点值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5688"></a></span><p class="table-body">470-479</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5687"></a></span><p class="table-body">字符串</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291ce94"></a></span><p class="table-body">480-481</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291ce95"></a></span><p class="table-body">硬指针句柄；指向同一个 DXF 文件或图形中的其他对象的任意硬指针。在 INSERT 和 XREF 操作期间进行转换</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5686"></a></span><p class="table-body">999</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5685"></a></span><p class="table-body">DXF：999 组码指示后面的行是注释字符串。SAVEAS 不会在 DXF 输出文件中包含这样的组，但 OPEN 则包括这些组并忽略注释。可以使用 999 组在您编辑的 DXF 文件中包含注释</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5684"></a></span><p class="table-body">1000</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5683"></a></span><p class="table-body">扩展数据中的 ASCII 字符串（最多可以包含 255 个字节）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5682"></a></span><p class="table-body">1001</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5681"></a></span><p class="table-body">扩展数据的注册应用程序名（最多可以包含 31 个字节的 ASCII 字符串）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5680"></a></span><p class="table-body">1002</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-567f"></a></span><p class="table-body">扩展数据控制字符串（“<span class="code">{</span>”或“<span class="code">}</span>”）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-567e"></a></span><p class="table-body">1003 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-567d"></a></span><p class="table-body">扩展数据图层名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-567c"></a></span><p class="table-body">1004</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-567b"></a></span><p class="table-body">扩展数据中的字节数据块（最多可以包含 127 个字节）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-567a"></a></span><p class="table-body">1005</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5679"></a></span><p class="table-body">扩展数据中的图元句柄；最多可以包含 16 个十六进制数字的字符串 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5678"></a></span><p class="table-body">1010</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5677"></a></span><p class="table-body">扩展数据中的点 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5676"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值（后跟 1020 和 1030 组）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5675"></a></span><p class="table-body">APP：三维点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5674"></a></span><p class="table-body">1020, 1030</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5673"></a></span><p class="table-body">DXF：点的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5672"></a></span><p class="table-body">1011</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5671"></a></span><p class="table-body">扩展数据中的三维世界空间位置 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5670"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值（后跟 1021 和 1031 组）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-566f"></a></span><p class="table-body">APP：三维点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-566e"></a></span><p class="table-body">1021, 1031</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-566d"></a></span><p class="table-body">DXF：世界空间位置的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-566c"></a></span><p class="table-body">1012</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-566b"></a></span><p class="table-body">扩展数据中的三维世界空间位移</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-566a"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值（后跟 1022 和 1032 组）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5669"></a></span><p class="table-body">APP：三维矢量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5668"></a></span><p class="table-body">1022, 1032</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5667"></a></span><p class="table-body">DXF：世界空间位移的 <em class="mild">Y</em> 值和 <em class="mild">Z</em> 值
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5666"></a></span><p class="table-body">1013</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5665"></a></span><p class="table-body">扩展数据中的三维空间方向</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5664"></a></span><p class="table-body">DXF：<em class="mild">X</em> 值（后跟 1022 和 1032 组）
+                        </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5663"></a></span><p class="table-body">APP：三维矢量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5662"></a></span><p class="table-body">1023, 1033</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5661"></a></span><p class="table-body">DXF：世界空间方向的 <em class="mild">Y</em> 和 <em class="mild">Z</em> 值
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5660"></a></span><p class="table-body">1040</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-565f"></a></span><p class="table-body">扩展数据双精度浮点值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-565e"></a></span><p class="table-body">1041</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-565d"></a></span><p class="table-body">扩展数据距离值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-565c"></a></span><p class="table-body">1042</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-565b"></a></span><p class="table-body">扩展数据缩放比例</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-565a"></a></span><p class="table-body">1070</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5659"></a></span><p class="table-body">扩展数据 16 位有符号整数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5658"></a></span><p class="table-body">1071</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5657"></a></span><p class="table-body">扩展数据 32 位有符号长整数</p>
+                     </td>
+                  </tr>
+               
+            </tbody></table>
+         </div>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">请将您对此页内容的评论发送给我们</span></a></div><br><script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script><script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/ga.js" type="text/javascript"></script><script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("UA-2967772-176");
+                    pageTracker._trackPageview();
+                } catch(err) {}
+            </script></div>
+   
+<div class="leftContent" id="leftContent"><div class="acad-contents" id="acad-contents" style="left: 0px;"><table id="tbl-acad-contents" border="0"><tbody id="tbody-acad-contents"><tr onclick='parent.location.href=".././filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm"' onmouseover="highlightTOCItem('DXFd0e47', 0, true, false)" onmouseout="highlightTOCItem('DXFd0e47', 0, false, false)"><td class="toc_item" id="tdDXFd0e47_i"></td><td class="toc_entry_0" id="tdDXFd0e47">DXF 格式</td><td class="toc_item_top" id="tdDXFd0e47_it"><img alt="" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E6%8C%89%E6%95%B0%E5%AD%97%E6%AC%A1%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E7%BB%84%E7%A0%81_files/top_topic.gif"></td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6a.htm"' onmouseover="highlightTOCItem('DXFd0e78', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e78', 1, false, false)"><td class="toc_item" id="tdDXFd0e78_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e78">本参考的结构</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a69.htm"' onmouseover="highlightTOCItem('DXFd0e123', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e123', 1, false, false)"><td class="toc_item" id="tdDXFd0e123_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e123">对《DXF 参考手册》的修订</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm"' onmouseover="highlightTOCItem('DXFd0e142', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e142', 1, false, false)"><td class="toc_item" id="tdDXFd0e142_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e142">本参考的格式惯例</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a65.htm"' onmouseover="highlightTOCItem('DXFd0e175', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e175', 1, false, false)"><td class="toc_item" id="tdDXFd0e175_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e175">对象和图元代码</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a64.htm"' onmouseover="highlightTOCItem('DXFd0e270', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e270', 1, false, false)"><td class="toc_item" id="tdDXFd0e270_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e270">组码值类型</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a62.htm"' onmouseover="highlightTOCItem('DXFd0e646', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e646', 1, false, false)"><td class="toc_item_selected" id="tdDXFd0e646_i"></td><td colspan="2" class="toc_entry_1_selected" id="tdDXFd0e646">按数字次序排列的组码</td></tr></tbody></table></div></div><div class="rightContent" id="rightContent"><div class="exchange_content_widget"><iframe src="http://autocad.autodesk.com/?html=fragment-autocad_help_rightnav_widget2&amp;topic_id=WS1a9193826455f5ff18cb41610ec0a2e719-7a62&amp;topic_name=按数字次序排列的组码" scrolling="no" marginheight="0" marginwidth="0" width="190" height="600" frameborder="0"></iframe></div></div></body><div id="edge-translate-notifier-container" class="edge-translate-notifier-center"></div></html>

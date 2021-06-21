@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>DXF 参考手册: 通用图元组码</title>
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad-header.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad_html.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/disableComments.css"><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/cookies-worker.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk_006.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/adsk_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/toc-treedata.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/product-books.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/acad.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="通用图元组码">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   <script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/prompt.js"></script></head>
+   <body onload="convSymbols(); initFrame('./filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm','DXFd0e8967','indexDXF.html'); initPage('通用图元组码','DXF 参考手册');"><div class="acad-header"><table width="100%"><tbody><tr><td valign="top" align="left"><div class="header-links"><a href="http://docs.autodesk.com/ACD/2011/CHS/landing.html" target="_parent">常用</a><a href="http://docs.autodesk.com/ACD/2011/CHS/acad-indexes.html" target="_parent" class="header_link">索引颜色</a></div></td><td valign="top" align="right"><form name="searchForm" onsubmit='loadSearchResults(searchData.value,"../"); return false;'><input type="text" name="searchData" id="searchData" value="搜索" onfocus='javascript:searchData.value=""' class="query"><input type="image" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/searchSubmit.gif" name="searchButton" id="searchButton" class="searchButton" onclick='loadSearchResults(searchData.value,"../"); return false;' value="Search"></form></td></tr><tr><td valign="top"><div class="productName">AutoCAD 2011 帮助</div></td><td valign="top"><div class="companyLogo"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/Autodesk.png"></div></td></tr></tbody></table></div>
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">在目录中显示</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm" target="content" onclick="javascript:showInContents('d0e8967');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">添加到收藏夹</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm" class="headNavLink" onclick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">主页: DXF 参考手册</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">ENTITIES 段</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">ENTITIES 段</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">3DFACE</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3b.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm">ENTITIES 段</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span class="anchor_wrapper"><a name="WSc30cd3d5faa8f6d8e3b895ffb7556c21-7fff"></a></span><span>通用图元组码</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a3d"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fbf"></a></span>下表列出了适用于几乎所有图形对象的组码。此处显示的某些组码仅在图元特性具有非默认值时才包含在图元定义中。请记住，在按照图元类型（与<em class="mild">特定</em>图元关联的代码列表）参照组码时，此处显示的代码也将出现。
+         </p>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff211a40be11dcc57291ce96"></a></span><div class="note-note"><span class="label">注意</span>编写程序时不要依赖这些 DXF 代码表中显示的次序。尽管这些表显示了组码通常出现的次序，但这个次序在某些条件下或在 AutoCAD<sup>®</sup> 以后的版本中可能会改变。控制图元的代码应该由事例（开关）或表驱动，这样即使组未按预期的次序显示，仍可以得到正确的处理。
+            </div>
+         </div>
+         <p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fbe"></a></span>如果省略某个组，则使用 OPEN 输入时它的默认值显示在第三列中。如果组码值等于默认值，则使用 SAVEAS 输出时该值将被省略。关于此表中使用的缩写和格式方面的信息，请参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm#WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd">
+                     <!--Reference = WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm-->本参考的格式惯例</a></span></span>。
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a3c"></a></span><div class="table_Ruled">
+            <table class="ruled" cellspacing="0" cellpadding="0">
+               <colgroup>
+                  <col style="width:0.972in">
+                  <col style="width:3.680in">
+                  <col style="width:1.014in">
+                  </colgroup><tbody><tr class="RuledHeading">
+                     <th class="table-heading" colspan="3"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fbd"></a></span><p class="table-heading">适用于所有图形对象的组码</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledHeading">
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fbc"></a></span><p class="table-heading"></p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fbb"></a></span><p class="table-heading">组码</p>
+                     </th>
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fba"></a></span><p class="table-heading"></p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb9"></a></span><p class="table-heading">说明</p>
+                     </th>
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb8"></a></span><p class="table-heading">如果省略，</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb7"></a></span><p class="table-heading">默认为 …</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb6"></a></span><p class="table-body">-1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb5"></a></span><p class="table-body">APP：图元名（每次打开图形时都会发生变化）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb4"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb3"></a></span><p class="table-body">0</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb2"></a></span><p class="table-body">图元类型</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb1"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fb0"></a></span><p class="table-body">5</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4faf"></a></span><p class="table-body">句柄 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fae"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fad"></a></span><p class="table-body">102</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fac"></a></span><p class="table-body">应用程序定义的组的开始</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fab"></a></span><p class="table-body">“{<em class="mild">application_name</em>”（可选）
+                        </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4faa"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa9"></a></span><p class="table-body"><em class="mild">应用程序定义的代码</em></p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa8"></a></span><p class="table-body">102 组中的代码和值由应用程序定义（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa7"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa6"></a></span><p class="table-body">102 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa5"></a></span><p class="table-body">组的结束“}”（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa4"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa3"></a></span><p class="table-body">102 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa2"></a></span><p class="table-body">“{ACAD_REACTORS”表示 AutoCAD 永久反应器组的开始。仅当将永久反应器附加到此对象时，此组才存在（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa1"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4fa0"></a></span><p class="table-body">330 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f9f"></a></span><p class="table-body">所有者词典的软指针 ID/句柄（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f9e"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f9d"></a></span><p class="table-body">102 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f9c"></a></span><p class="table-body">组的结束“}”（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f9b"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f9a"></a></span><p class="table-body">102 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f99"></a></span><p class="table-body">“{ACAD_XDICTIONARY”表示扩展词典组的开始。仅当将扩展词典附加到此对象时，此组才存在（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f98"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f97"></a></span><p class="table-body">360 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f96"></a></span><p class="table-body">所有者词典的硬所有者 ID/句柄（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f95"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f94"></a></span><p class="table-body">102 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f93"></a></span><p class="table-body">组的结束“}”（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f92"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f91"></a></span><p class="table-body">330</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f90"></a></span><p class="table-body">所有者 BLOCK_RECORD 对象的软指针 ID/句柄</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f8f"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f8e"></a></span><p class="table-body">100</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f8d"></a></span><p class="table-body">子类标记 (AcDbEntity)</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f8c"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f8b"></a></span><p class="table-body">67 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f8a"></a></span><p class="table-body">不存在或零表示图元位于模型空间中。1 表示图元位于图纸空间中（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f89"></a></span><p class="table-body">0</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f88"></a></span><p class="table-body">410</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f87"></a></span><p class="table-body">APP：布局选项卡名</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f86"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f85"></a></span><p class="table-body">8</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f84"></a></span><p class="table-body">图层名</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f83"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f82"></a></span><p class="table-body">6 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f81"></a></span><p class="table-body">线型名（如果不是“BYLAYER”，则出现）。特殊名称“BYBLOCK”表示可变的线型（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f80"></a></span><p class="table-body">BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7008"></a></span><p class="table-body">347</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7007"></a></span><p class="table-body">材质对象的硬指针 ID/句柄（如果不是“BYLAYER”，则出现）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7006"></a></span><p class="table-body">BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f7f"></a></span><p class="table-body">62 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f7e"></a></span><p class="table-body">颜色号（如果不是“BYLAYER”，则出现）；零表示“BYBLOCK”（可变的）颜色；256 表示“BYLAYER”；负值表示层已关闭（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f7d"></a></span><p class="table-body">BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f7c"></a></span><p class="table-body">370</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f7b"></a></span><p class="table-body">线宽枚举值。作为 16 位整数存储和移动。</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f7a"></a></span><p class="table-body">未省略</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f79"></a></span><p class="table-body">48 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f78"></a></span><p class="table-body">线型比例（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f77"></a></span><p class="table-body">1.0 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f76"></a></span><p class="table-body">60 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f75"></a></span><p class="table-body">对象可见性（可选）：0 = 可见；1 = 不可见</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f74"></a></span><p class="table-body">0 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f73"></a></span><p class="table-body">92</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f72"></a></span><p class="table-body">后面的 310 组（二进制数据块记录）中表示的代理图元图形中的字节数（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f71"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f70"></a></span><p class="table-body">310</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f6f"></a></span><p class="table-body">代理图元图形数据（多行；每行最多 256 个字符）（可选）</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f6e"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f6d"></a></span><p class="table-body">420</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f6c"></a></span><p class="table-body">一个 24 位颜色值，应按照值为 0 到 255 的字节进行处理。最低字节是蓝色值，中间字节是绿色值，第三个字节是红色值。最高字节始终为 0。该组码不能用于自定义图元本身的数据，因为该组码是为 AcDbEntity 类级别颜色数据和 AcDbEntity
+                           类级别透明度数据保留的。
+                        </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f6b"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f6a"></a></span><p class="table-body">430</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f69"></a></span><p class="table-body">颜色名。该组码不能用于自定义图元本身的数据，因为该组码是为 AcDbEntity 类级别颜色数据和 AcDbEntity 类级别透明度数据保留的。</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f68"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f67"></a></span><p class="table-body">440</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f66"></a></span><p class="table-body">透明度值。该组码不能用于自定义图元本身的数据，因为该组码是为 AcDbEntity 类级别颜色数据和 AcDbEntity 类级别透明度数据保留的。</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-4f65"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7005"></a></span><p class="table-body">390</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7004"></a></span><p class="table-body">打印样式对象的硬指针 ID/句柄</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7003"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7002"></a></span><p class="table-body">284</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7001"></a></span><p class="table-body">阴影模式</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7000"></a></span><p class="table-body">0 = 投射和接收阴影</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-6fff"></a></span><p class="table-body">1 = 投射阴影</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-6ffe"></a></span><p class="table-body">2 = 接收阴影</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-6ffd"></a></span><p class="table-body">3 = 忽略阴影</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-6ffc"></a></span><p class="table-body">无默认值</p>
+                     </td>
+                  </tr>
+               
+            </tbody></table>
+         </div>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">请将您对此页内容的评论发送给我们</span></a></div><br><script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script><script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/ga.js" type="text/javascript"></script><script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("UA-2967772-176");
+                    pageTracker._trackPageview();
+                } catch(err) {}
+            </script></div>
+   
+<div class="leftContent" id="leftContent"><div class="acad-contents" id="acad-contents" style="left: 0px;"><table id="tbl-acad-contents" border="0"><tbody id="tbody-acad-contents"><tr onclick='parent.location.href=".././filesDXF/WSfacf1429558a55de185c428100849a0ab7-5df0.htm"' onmouseover="highlightTOCItem('DXFd0e8944', 0, true, false)" onmouseout="highlightTOCItem('DXFd0e8944', 0, false, false)"><td class="toc_item" id="tdDXFd0e8944_i"></td><td class="toc_entry_0" id="tdDXFd0e8944">ENTITIES 段</td><td class="toc_item_top" id="tdDXFd0e8944_it"><img alt="" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20%E9%80%9A%E7%94%A8%E5%9B%BE%E5%85%83%E7%BB%84%E7%A0%81_files/top_topic.gif"></td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3d.htm"' onmouseover="highlightTOCItem('DXFd0e8967', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e8967', 1, false, false)"><td class="toc_item_selected" id="tdDXFd0e8967_i"></td><td colspan="2" class="toc_entry_1_selected" id="tdDXFd0e8967">通用图元组码</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a3b.htm"' onmouseover="highlightTOCItem('DXFd0e9349', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9349', 1, false, false)"><td class="toc_item" id="tdDXFd0e9349_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9349">3DFACE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a39.htm"' onmouseover="highlightTOCItem('DXFd0e9501', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9501', 1, false, false)"><td class="toc_item" id="tdDXFd0e9501_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9501">3DSOLID</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a37.htm"' onmouseover="highlightTOCItem('DXFd0e9573', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9573', 1, false, false)"><td class="toc_item" id="tdDXFd0e9573_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9573">ACAD_PROXY_ENTITY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a35.htm"' onmouseover="highlightTOCItem('DXFd0e9690', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9690', 1, false, false)"><td class="toc_item" id="tdDXFd0e9690_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9690">ARC</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a33.htm"' onmouseover="highlightTOCItem('DXFd0e9809', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e9809', 1, false, false)"><td class="toc_item" id="tdDXFd0e9809_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e9809">ATTDEF</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a31.htm"' onmouseover="highlightTOCItem('DXFd0e10401', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e10401', 1, false, false)"><td class="toc_item" id="tdDXFd0e10401_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e10401">ATTRIB</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2f.htm"' onmouseover="highlightTOCItem('DXFd0e10986', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e10986', 1, false, false)"><td class="toc_item" id="tdDXFd0e10986_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e10986">BODY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2d.htm"' onmouseover="highlightTOCItem('DXFd0e11044', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e11044', 1, false, false)"><td class="toc_item" id="tdDXFd0e11044_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e11044">CIRCLE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a2b.htm"' onmouseover="highlightTOCItem('DXFd0e11142', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e11142', 1, false, false)"><td class="toc_item" id="tdDXFd0e11142_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e11142">DIMENSION</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a15.htm"' onmouseover="highlightTOCItem('DXFd0e12089', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e12089', 1, false, false)"><td class="toc_item" id="tdDXFd0e12089_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e12089">ELLIPSE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a13.htm"' onmouseover="highlightTOCItem('DXFd0e12222', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e12222', 1, false, false)"><td class="toc_item" id="tdDXFd0e12222_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e12222">HATCH</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a08.htm"' onmouseover="highlightTOCItem('DXFd0e13260', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13260', 1, false, false)"><td class="toc_item" id="tdDXFd0e13260_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13260">HELIX</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a06.htm"' onmouseover="highlightTOCItem('DXFd0e13379', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13379', 1, false, false)"><td class="toc_item" id="tdDXFd0e13379_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13379">IMAGE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a04.htm"' onmouseover="highlightTOCItem('DXFd0e13628', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13628', 1, false, false)"><td class="toc_item" id="tdDXFd0e13628_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13628">INSERT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a02.htm"' onmouseover="highlightTOCItem('DXFd0e13795', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e13795', 1, false, false)"><td class="toc_item" id="tdDXFd0e13795_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e13795">LEADER</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a00.htm"' onmouseover="highlightTOCItem('DXFd0e14054', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14054', 1, false, false)"><td class="toc_item" id="tdDXFd0e14054_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14054">LIGHT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79fe.htm"' onmouseover="highlightTOCItem('DXFd0e14269', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14269', 1, false, false)"><td class="toc_item" id="tdDXFd0e14269_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14269">LINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79fc.htm"' onmouseover="highlightTOCItem('DXFd0e14388', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14388', 1, false, false)"><td class="toc_item" id="tdDXFd0e14388_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14388">LWPOLYLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff211a40be11dcc57291cfca.htm"' onmouseover="highlightTOCItem('DXFd0e14537', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14537', 1, false, false)"><td class="toc_item" id="tdDXFd0e14537_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14537">MESH</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79fa.htm"' onmouseover="highlightTOCItem('DXFd0e14689', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14689', 1, false, false)"><td class="toc_item" id="tdDXFd0e14689_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14689">MLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ffc751fd10f4618e369-5bdf.htm"' onmouseover="highlightTOCItem('DXFd0e14957', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e14957', 1, false, false)"><td class="toc_item" id="tdDXFd0e14957_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e14957">MLEADERSTYLE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ffc751fd10f4618e369-5bd9.htm"' onmouseover="highlightTOCItem('DXFd0e15233', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e15233', 1, false, false)"><td class="toc_item" id="tdDXFd0e15233_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e15233">MLEADER</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f8.htm"' onmouseover="highlightTOCItem('DXFd0e16036', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16036', 1, false, false)"><td class="toc_item" id="tdDXFd0e16036_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16036">MTEXT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f6.htm"' onmouseover="highlightTOCItem('DXFd0e16350', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16350', 1, false, false)"><td class="toc_item" id="tdDXFd0e16350_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16350">OLEFRAME</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f4.htm"' onmouseover="highlightTOCItem('DXFd0e16415', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16415', 1, false, false)"><td class="toc_item" id="tdDXFd0e16415_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16415">OLE2FRAME</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f2.htm"' onmouseover="highlightTOCItem('DXFd0e16677', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16677', 1, false, false)"><td class="toc_item" id="tdDXFd0e16677_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16677">POINT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79f0.htm"' onmouseover="highlightTOCItem('DXFd0e16781', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e16781', 1, false, false)"><td class="toc_item" id="tdDXFd0e16781_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e16781">POLYLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79ed.htm"' onmouseover="highlightTOCItem('DXFd0e17000', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17000', 1, false, false)"><td class="toc_item" id="tdDXFd0e17000_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17000">RAY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79eb.htm"' onmouseover="highlightTOCItem('DXFd0e17087', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17087', 1, false, false)"><td class="toc_item" id="tdDXFd0e17087_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17087">REGION</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e9.htm"' onmouseover="highlightTOCItem('DXFd0e17145', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17145', 1, false, false)"><td class="toc_item" id="tdDXFd0e17145_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17145">SECTION</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e7.htm"' onmouseover="highlightTOCItem('DXFd0e17273', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17273', 1, false, false)"><td class="toc_item" id="tdDXFd0e17273_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17273">SEQEND</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e5.htm"' onmouseover="highlightTOCItem('DXFd0e17310', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17310', 1, false, false)"><td class="toc_item" id="tdDXFd0e17310_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17310">SHAPE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e3.htm"' onmouseover="highlightTOCItem('DXFd0e17439', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17439', 1, false, false)"><td class="toc_item" id="tdDXFd0e17439_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17439">SOLID</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79e1.htm"' onmouseover="highlightTOCItem('DXFd0e17608', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17608', 1, false, false)"><td class="toc_item" id="tdDXFd0e17608_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17608">SPLINE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79df.htm"' onmouseover="highlightTOCItem('DXFd0e17850', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17850', 1, false, false)"><td class="toc_item" id="tdDXFd0e17850_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17850">SUN</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79dd.htm"' onmouseover="highlightTOCItem('DXFd0e17968', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e17968', 1, false, false)"><td class="toc_item" id="tdDXFd0e17968_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e17968">SURFACE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d3.htm"' onmouseover="highlightTOCItem('DXFd0e18734', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e18734', 1, false, false)"><td class="toc_item" id="tdDXFd0e18734_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e18734">TABLE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79d1.htm"' onmouseover="highlightTOCItem('DXFd0e19401', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e19401', 1, false, false)"><td class="toc_item" id="tdDXFd0e19401_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e19401">TEXT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79ce.htm"' onmouseover="highlightTOCItem('DXFd0e19735', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e19735', 1, false, false)"><td class="toc_item" id="tdDXFd0e19735_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e19735">TOLERANCE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79cc.htm"' onmouseover="highlightTOCItem('DXFd0e19861', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e19861', 1, false, false)"><td class="toc_item" id="tdDXFd0e19861_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e19861">TRACE</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79ca.htm"' onmouseover="highlightTOCItem('DXFd0e20030', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e20030', 1, false, false)"><td class="toc_item" id="tdDXFd0e20030_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e20030">UNDERLAY</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c8.htm"' onmouseover="highlightTOCItem('DXFd0e20179', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e20179', 1, false, false)"><td class="toc_item" id="tdDXFd0e20179_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e20179">VERTEX</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c6.htm"' onmouseover="highlightTOCItem('DXFd0e20338', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e20338', 1, false, false)"><td class="toc_item" id="tdDXFd0e20338_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e20338">VIEWPORT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c4.htm"' onmouseover="highlightTOCItem('DXFd0e21045', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e21045', 1, false, false)"><td class="toc_item" id="tdDXFd0e21045_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e21045">WIPEOUT</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-79c2.htm"' onmouseover="highlightTOCItem('DXFd0e21287', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e21287', 1, false, false)"><td class="toc_item" id="tdDXFd0e21287_i"></td><td colspan="2" class="toc_entry_1" id="tdDXFd0e21287">XLINE</td></tr></tbody></table></div></div><div class="rightContent" id="rightContent"><div class="exchange_content_widget"><iframe src="http://autocad.autodesk.com/?html=fragment-autocad_help_rightnav_widget2&amp;topic_id=WS1a9193826455f5ff18cb41610ec0a2e719-7a3d&amp;topic_name=通用图元组码" scrolling="no" marginheight="0" marginwidth="0" width="190" height="600" frameborder="0"></iframe></div></div></body><div id="edge-translate-notifier-container" class="edge-translate-notifier-center"></div></html>

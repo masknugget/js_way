@@ -1,0 +1,1768 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>DXF 参考手册: HEADER 段组码</title>
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad-header.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad_html.css">
+      <link rel="stylesheet" type="text/css" href="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/disableComments.css"><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/cookies-worker.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk_006.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/adsk_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad_002.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/toc-treedata.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad_004.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad_003.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad_005.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/product-books.js"></script><script type="text/javascript" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/acad.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="HEADER 段组码">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   <script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/prompt.js"></script></head>
+   <body onload="convSymbols(); initFrame('./filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6f.htm','DXFd0e1573','indexDXF.html'); initPage('HEADER 段组码','DXF 参考手册');"><div class="acad-header"><table width="100%"><tbody><tr><td valign="top" align="left"><div class="header-links"><a href="http://docs.autodesk.com/ACD/2011/CHS/landing.html" target="_parent">常用</a><a href="http://docs.autodesk.com/ACD/2011/CHS/acad-indexes.html" target="_parent" class="header_link">索引颜色</a></div></td><td valign="top" align="right"><form name="searchForm" onsubmit='loadSearchResults(searchData.value,"../"); return false;'><input type="text" name="searchData" id="searchData" value="搜索" onfocus='javascript:searchData.value=""' class="query"><input type="image" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/searchSubmit.gif" name="searchButton" id="searchButton" class="searchButton" onclick='loadSearchResults(searchData.value,"../"); return false;' value="Search"></form></td></tr><tr><td valign="top"><div class="productName">AutoCAD 2011 帮助</div></td><td valign="top"><div class="companyLogo"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/Autodesk.png"></div></td></tr></tbody></table></div>
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WS1a9193826455f5ff18cb41610ec0a2e719-7a6f.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">在目录中显示</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6f.htm" target="content" onclick="javascript:showInContents('d0e1573');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">添加到收藏夹</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6f.htm" class="headNavLink" onclick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">主页: DXF 参考手册</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f35.htm" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">HEADER 段</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f05.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">HEADER 段</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f05.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">修订的 VPORT 标题变量</div><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6d.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f05.htm">HEADER 段</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span class="anchor_wrapper"><a name="WSc30cd3d5faa8f6d8cf40f5ffb755666b-7fff"></a></span><span>HEADER 段组码</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a6f"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5655"></a></span>下表列出了在 DXF™ 文件的 HEADER 区域中表示的变量。关于此表中使用的缩写和格式方面的信息，请参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm#WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd">
+                     <!--Reference = WSc30cd3d5faa8f6d84413eeffb75563a4-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a67.htm-->本参考的格式惯例</a></span></span>。
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff18cb41610ec0a2e719-7a6e"></a></span><div class="table_Ruled">
+            <table class="ruled" cellspacing="0" cellpadding="0">
+               <colgroup>
+                  <col style="width:1.461in">
+                  <col style="width:0.782in">
+                  <col style="width:2.999in">
+                  </colgroup><tbody><tr class="RuledHeading">
+                     <th class="table-heading" colspan="3"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5654"></a></span><p class="table-heading">DXF 标题变量</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledHeading">
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5653"></a></span><p class="table-heading">变量</p>
+                     </th>
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5652"></a></span><p class="table-heading">组码</p>
+                     </th>
+                     <th class="table-heading"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5651"></a></span><p class="table-heading">说明</p>
+                     </th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5650"></a></span><p class="table-body">$ACADMAINTVER</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-564f"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-564e"></a></span><p class="table-body">维护版本号（应忽略）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-564d"></a></span><p class="table-body">$ACADVER</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-564c"></a></span><p class="table-body">1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-564b"></a></span><p class="table-body">AutoCAD 图形数据库版本号： </p><span class="anchor_wrapper"><a name="WS73099cc142f4875546792d6511e39d97277-1c5b"></a></span><p class="table-body">AC1006 = R10;</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-564a"></a></span><p class="table-body">AC1009 = R11 and R12; </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5649"></a></span><p class="table-body">AC1012 = R13；AC1014 = R14；</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff6a6ac56911e1c5c8a4e-7913"></a></span><p class="table-body">AC1015 = AutoCAD 2000；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5648"></a></span><p class="table-body">AC1018 = AutoCAD 2004；</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff6a6ac56911e1c5c8a4e-7912"></a></span><p class="table-body">AC1021 = AutoCAD 2007;</p><span class="anchor_wrapper"><a name="WS73099cc142f4875546792d6511e39d97277-1c5a"></a></span><p class="table-body">AC1024 = AutoCAD 2010</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5647"></a></span><p class="table-body">$ANGBASE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5646"></a></span><p class="table-body">50</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5645"></a></span><p class="table-body">0 角度方向</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5644"></a></span><p class="table-body">$ANGDIR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5643"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5642"></a></span><p class="table-body">1 = 顺时针角度</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5641"></a></span><p class="table-body">0 = 逆时针角度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5640"></a></span><p class="table-body">$ATTMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-563f"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-563e"></a></span><p class="table-body">属性的可见性：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-563d"></a></span><p class="table-body">0 = 无</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-563c"></a></span><p class="table-body">1 = 普通</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-563b"></a></span><p class="table-body">2 = 全部</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-563a"></a></span><p class="table-body">$AUNITS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5639"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5638"></a></span><p class="table-body">角度的单位格式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5637"></a></span><p class="table-body">$AUPREC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5636"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5635"></a></span><p class="table-body">角度的单位精度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5634"></a></span><p class="table-body">$CECOLOR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5633"></a></span><p class="table-body">62</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5632"></a></span><p class="table-body">当前图元颜色号：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5631"></a></span><p class="table-body">0 = BYBLOCK；256 = BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5630"></a></span><p class="table-body">$CELTSCALE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-562f"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-562e"></a></span><p class="table-body">当前图元线型比例 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-562d"></a></span><p class="table-body">$CELTYPE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-562c"></a></span><p class="table-body"> 6</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-562b"></a></span><p class="table-body">图元线型名称、BYBLOCK 或 BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-562a"></a></span><p class="table-body">$CELWEIGHT </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5629"></a></span><p class="table-body">370</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5628"></a></span><p class="table-body">新对象的线宽</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5627"></a></span><p class="table-body">$CEPSNID </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5626"></a></span><p class="table-body">390</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5625"></a></span><p class="table-body">新对象的打印样式句柄。如果 CEPSNTYPE 为 3，则此值代表该句柄</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5624"></a></span><p class="table-body">$CEPSNTYPE </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5623"></a></span><p class="table-body">380</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5622"></a></span><p class="table-body">新对象的打印样式类型：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5621"></a></span><p class="table-body">0 = “BYLAYER” 打印样式</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5620"></a></span><p class="table-body">1 = BYBLOCK打印样式</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-561f"></a></span><p class="table-body">2 = 词典默认的打印样式</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-561e"></a></span><p class="table-body">3 = 随对象 ID/句柄打印样式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-561d"></a></span><p class="table-body">$CHAMFERA</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-561c"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-561b"></a></span><p class="table-body">第一个倒角距离</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-561a"></a></span><p class="table-body">$CHAMFERB</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5619"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5618"></a></span><p class="table-body">第二个倒角距离</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5617"></a></span><p class="table-body">$CHAMFERC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5616"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5615"></a></span><p class="table-body">倒角长度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5614"></a></span><p class="table-body">$CHAMFERD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5613"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5612"></a></span><p class="table-body">倒角角度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5611"></a></span><p class="table-body">$CLAYER</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5610"></a></span><p class="table-body"> 8</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-560f"></a></span><p class="table-body">当前图层名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-560e"></a></span><p class="table-body">$CMLJUST</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-560d"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-560c"></a></span><p class="table-body">当前多线对正： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-560b"></a></span><p class="table-body">0 = 顶端对正；1 = 居中对正；2 = 底端对正</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-560a"></a></span><p class="table-body">$CMLSCALE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5609"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5608"></a></span><p class="table-body">当前多线比例</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5607"></a></span><p class="table-body">$CMLSTYLE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5606"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5605"></a></span><p class="table-body">当前多线样式名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a4a"></a></span><p class="table-body">$CSHADOW</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a48"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a47"></a></span><p class="table-body">三维对象的阴影模式：</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a46"></a></span><p class="table-body">0 = 投射和接收阴影</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a45"></a></span><p class="table-body">1 = 投射阴影</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a44"></a></span><p class="table-body">2 = 接收阴影</p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a43"></a></span><p class="table-body">3 = 忽略阴影</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5604"></a></span><p class="table-body">$DIMADEC </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5603"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5602"></a></span><p class="table-body">角度标注中显示的精度位的位数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5601"></a></span><p class="table-body">$DIMALT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5600"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ff"></a></span><p class="table-body">非零时执行的换算单位标注</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55fe"></a></span><p class="table-body">$DIMALTD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55fd"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55fc"></a></span><p class="table-body">换算单位小数位</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55fb"></a></span><p class="table-body">$DIMALTF</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55fa"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f9"></a></span><p class="table-body">换算单位比例因子</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f8"></a></span><p class="table-body">$DIMALTRND </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f7"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f6"></a></span><p class="table-body">确定换算单位的舍入值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f5"></a></span><p class="table-body">$DIMALTTD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f4"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f3"></a></span><p class="table-body">换算单位标注的公差值的小数位数 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f2"></a></span><p class="table-body">$DIMALTTZ</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f1"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55f0"></a></span><p class="table-body">控制是否对换算公差值做消零处理： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ef"></a></span><p class="table-body">0 = 消除零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ee"></a></span><p class="table-body">1 = 包含零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ed"></a></span><p class="table-body">2 = 包含零英尺，消除零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ec"></a></span><p class="table-body">3 = 包含零英寸，消除零英尺</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55eb"></a></span><p class="table-body">$DIMALTU</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ea"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e9"></a></span><p class="table-body">所有标注样式族成员（角度标注除外）的换算单位的单位格式： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e8"></a></span><p class="table-body">1 = 科学；2 = 小数；3 = 工程； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e7"></a></span><p class="table-body">4 = 建筑（堆叠）；5 = 分数（堆叠）；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e6"></a></span><p class="table-body">6 = 建筑；7 = 分数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e5"></a></span><p class="table-body">$DIMALTZ</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e4"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e3"></a></span><p class="table-body">控制是否对换算单位标注值做消零处理： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e2"></a></span><p class="table-body">0 = 消除零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e1"></a></span><p class="table-body">1 = 包含零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55e0"></a></span><p class="table-body">2 = 包含零英尺，消除零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55df"></a></span><p class="table-body">3 = 包含零英寸，消除零英尺</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55de"></a></span><p class="table-body">$DIMAPOST</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55dd"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55dc"></a></span><p class="table-body">换算标注后缀</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55db"></a></span><p class="table-body">$DIMASO</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55da"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d9"></a></span><p class="table-body">1 = 创建关联标注</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d8"></a></span><p class="table-body">0 = 绘制单独图元</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d7"></a></span><p class="table-body">$DIMASSOC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d6"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d5"></a></span><p class="table-body">控制标注对象的关联性 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d4"></a></span><p class="table-body"></p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d3"></a></span><p class="table-body">0 = 创建分解标注；即标注的各元素之间没有任何关联，直线、圆弧、箭头及标注文字均作为单独的对象进行绘制</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d2"></a></span><p class="table-body">1 = 创建无关联标注对象；将标注的各种元素组成单一对象，如果对象上的定义点移动，标注值将被更新</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d1"></a></span><p class="table-body">2 = 创建关联标注对象；标注的各种元素组成单一对象，并且标注的一个或多个定义点与几何对象上的关联点相联结 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55d0"></a></span><p class="table-body">$DIMASZ</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55cf"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ce"></a></span><p class="table-body">标注箭头尺寸</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55cd"></a></span><p class="table-body">$DIMATFIT </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55cc"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55cb"></a></span><p class="table-body">当尺寸界线的空间不足以同时放置标注文字和箭头时用来控制两者的位置：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ca"></a></span><p class="table-body">0 = 将文字和箭头均置于尺寸界线之外</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c9"></a></span><p class="table-body">1 = 先移动箭头，然后移动文字</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c8"></a></span><p class="table-body">2 = 先移动文字，然后移动箭头</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c7"></a></span><p class="table-body">3 = 移动文字和箭头中较合适的一个</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c6"></a></span><p class="table-body">如果 DIMTMOVE 设定为 1，AutoCAD 将为被移动的标注文字添加一条引线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c5"></a></span><p class="table-body">$DIMAUNIT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c4"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c3"></a></span><p class="table-body">角度标注的角度格式： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c2"></a></span><p class="table-body">0 = 十进制度数；1 = 度/分/秒； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c1"></a></span><p class="table-body">2 = 百分度；3 = 弧度；4 = 勘测单位</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55c0"></a></span><p class="table-body">$DIMAZIN </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55bf"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55be"></a></span><p class="table-body">控制是否对角度标注做消零处理：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55bd"></a></span><p class="table-body">0 = 显示所有前导零和后续零</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55bc"></a></span><p class="table-body">1 = 消除十进制标注中的前导零</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55bb"></a></span><p class="table-body">2 = 消除十进制标注中的后续零 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ba"></a></span><p class="table-body">3 = 消除前导零和后续零</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b9"></a></span><p class="table-body">$DIMBLK</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b8"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b7"></a></span><p class="table-body">箭头块名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b6"></a></span><p class="table-body">$DIMBLK1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b5"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b4"></a></span><p class="table-body">第一箭头块名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b3"></a></span><p class="table-body">$DIMBLK2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b2"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b1"></a></span><p class="table-body">第二箭头块名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55b0"></a></span><p class="table-body">$DIMCEN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55af"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ae"></a></span><p class="table-body">中心标记/中心线的大小</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ad"></a></span><p class="table-body">$DIMCLRD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ac"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55ab"></a></span><p class="table-body">尺寸线颜色：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55aa"></a></span><p class="table-body">范围是：0 = BYBLOCK；256 = BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a9"></a></span><p class="table-body">$DIMCLRE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a8"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a7"></a></span><p class="table-body">尺寸界线颜色： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a6"></a></span><p class="table-body">范围是：0 = BYBLOCK；256 = BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a5"></a></span><p class="table-body">$DIMCLRT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a4"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a3"></a></span><p class="table-body">标注文字的颜色： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a2"></a></span><p class="table-body">范围是：0 = BYBLOCK；256 = BYLAYER</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a1"></a></span><p class="table-body">$DIMDEC </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-55a0"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-559f"></a></span><p class="table-body">主单位标注的公差值的小数位数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-559e"></a></span><p class="table-body">$DIMDLE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-559d"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-559c"></a></span><p class="table-body">尺寸线超出尺寸界线的距离</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-559b"></a></span><p class="table-body">$DIMDLI</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-559a"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5599"></a></span><p class="table-body">尺寸线增量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5598"></a></span><p class="table-body">$DIMDSEP </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5597"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5596"></a></span><p class="table-body">创建单位格式为小数的标注时使用的单字符小数分隔符</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5595"></a></span><p class="table-body">$DIMEXE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5594"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5593"></a></span><p class="table-body">尺寸界线延伸</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5592"></a></span><p class="table-body">$DIMEXO</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5591"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5590"></a></span><p class="table-body">尺寸界线偏移</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-558f"></a></span><p class="table-body">$DIMFAC </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-558e"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-558d"></a></span><p class="table-body">用于计算标注分数和公差的文字高度的比例因子。AutoCAD 将 DIMTFAC 与 DIMTXT 相乘，以设定分数或公差的文字高度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-558c"></a></span><p class="table-body">$DIMGAP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-558b"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-558a"></a></span><p class="table-body">尺寸线间距</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5589"></a></span><p class="table-body">$DIMJUST </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5588"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5587"></a></span><p class="table-body">水平标注文字位置： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5586"></a></span><p class="table-body">0 = 在尺寸线上方，且在尺寸界线之间居中对正 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5585"></a></span><p class="table-body">1 = 在尺寸线上方，且紧邻第一条尺寸界线 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5584"></a></span><p class="table-body">2 = 在尺寸线上方，且紧邻第二条尺寸界线 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5583"></a></span><p class="table-body">3 = 在第一条尺寸界线上方且居中对正 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5582"></a></span><p class="table-body">4 = 在第二条尺寸界线上方且居中对正</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5581"></a></span><p class="table-body">$DIMLDRBLK </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5580"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-557f"></a></span><p class="table-body">引线的箭头块名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-557e"></a></span><p class="table-body">$DIMLFAC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-557d"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-557c"></a></span><p class="table-body">线性测量的比例因子</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-557b"></a></span><p class="table-body">$DIMLIM</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-557a"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5579"></a></span><p class="table-body">非零时生成的标注界限</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5578"></a></span><p class="table-body">$DIMLUNIT </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5577"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5576"></a></span><p class="table-body">为所有标注类型（除角度标注外）设定单位：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5575"></a></span><p class="table-body">1 = 科学；2 = 小数；3 = 工程；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5574"></a></span><p class="table-body">4 = 建筑；5 = 分数；6 = Windows 桌面</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5573"></a></span><p class="table-body">$DIMLWD </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5572"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5571"></a></span><p class="table-body">尺寸线线宽： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5570"></a></span><p class="table-body">-3 = 标准</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-556f"></a></span><p class="table-body">-2 = BYLAYER</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-556e"></a></span><p class="table-body">-1 = BYBLOCK</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-556d"></a></span><p class="table-body">0-211 = 表示百分之几毫米的整数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-556c"></a></span><p class="table-body">$DIMLWE </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-556b"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-556a"></a></span><p class="table-body">尺寸界线线宽： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5569"></a></span><p class="table-body">-3 = 标准</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5568"></a></span><p class="table-body">-2 = BYLAYER</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5567"></a></span><p class="table-body">-1 = BYBLOCK</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5566"></a></span><p class="table-body">0-211 = 表示百分之几毫米的整数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5565"></a></span><p class="table-body">$DIMPOST</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5564"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5563"></a></span><p class="table-body">基本标注后缀</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5562"></a></span><p class="table-body">$DIMRND</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5561"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5560"></a></span><p class="table-body">标注距离的舍入值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-555f"></a></span><p class="table-body">$DIMSAH</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-555e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-555d"></a></span><p class="table-body">非零时使用单独的箭头块</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-555c"></a></span><p class="table-body">$DIMSCALE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-555b"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-555a"></a></span><p class="table-body">全局标注比例因子</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5559"></a></span><p class="table-body">$DIMSD1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5558"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5557"></a></span><p class="table-body">收缩第一条尺寸界线：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5556"></a></span><p class="table-body">0 = 不收缩；1 = 收缩</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5555"></a></span><p class="table-body">$DIMSD2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5554"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5553"></a></span><p class="table-body">收缩第一条尺寸界线：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5552"></a></span><p class="table-body">0 = 不收缩；1 = 收缩</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5551"></a></span><p class="table-body">$DIMSE1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5550"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-554f"></a></span><p class="table-body">非零时抑制第一条尺寸界线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-554e"></a></span><p class="table-body">$DIMSE2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-554d"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-554c"></a></span><p class="table-body">非零时抑制第二条尺寸界线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-554b"></a></span><p class="table-body">$DIMSHO</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-554a"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5549"></a></span><p class="table-body">1 = 拖动时重计算标注</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5548"></a></span><p class="table-body">0 = 拖动原始图像</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5547"></a></span><p class="table-body">$DIMSOXD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5546"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5545"></a></span><p class="table-body">非零时抑制位于尺寸界限之外的尺寸线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5544"></a></span><p class="table-body">$DIMSTYLE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5543"></a></span><p class="table-body"> 2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5542"></a></span><p class="table-body">标注样式名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5541"></a></span><p class="table-body">$DIMTAD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5540"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-553f"></a></span><p class="table-body">非零时文字在尺寸线上方</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-553e"></a></span><p class="table-body">$DIMTDEC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-553d"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-553c"></a></span><p class="table-body">显示公差值的小数位数</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-553b"></a></span><p class="table-body">$DIMTFAC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-553a"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5539"></a></span><p class="table-body">标注公差显示比例因子</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5538"></a></span><p class="table-body">$DIMTIH</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5537"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5536"></a></span><p class="table-body">非零时将文字水平放在内侧</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5535"></a></span><p class="table-body">$DIMTIX</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5534"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5533"></a></span><p class="table-body">非零时将文字强制放在尺寸界线的内侧</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5532"></a></span><p class="table-body">$DIMTM</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5531"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5530"></a></span><p class="table-body">下偏差</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-552f"></a></span><p class="table-body">$DIMTMOVE </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-552e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-552d"></a></span><p class="table-body">标注文字移动规则： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-552c"></a></span><p class="table-body">0 = 尺寸线和标注文字一起移动</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-552b"></a></span><p class="table-body">1 = 移动标注文字时添加引线</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-552a"></a></span><p class="table-body">2 = 允许标注文字自由移动而不添加引线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5529"></a></span><p class="table-body">$DIMTOFL</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5528"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5527"></a></span><p class="table-body">如果文字放在尺寸界线的外侧，非零时则强制在尺寸界线之间画直线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5526"></a></span><p class="table-body">$DIMTOH</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5525"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5524"></a></span><p class="table-body">非零时将文字水平放在外侧</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5523"></a></span><p class="table-body">$DIMTOL</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5522"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5521"></a></span><p class="table-body">非零时生成标注公差</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5520"></a></span><p class="table-body">$DIMTOLJ</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-551f"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-551e"></a></span><p class="table-body">公差值的垂直对正：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-551d"></a></span><p class="table-body">0 = 顶端对正；1 = 居中对正；2 = 底端对正</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-551c"></a></span><p class="table-body">$DIMTP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-551b"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-551a"></a></span><p class="table-body">上偏差</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5519"></a></span><p class="table-body">$DIMTSZ</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5518"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5517"></a></span><p class="table-body">标注标记大小： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5516"></a></span><p class="table-body">0 = 无标记</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5515"></a></span><p class="table-body">$DIMTVP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5514"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5513"></a></span><p class="table-body">文字的垂直位置</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5512"></a></span><p class="table-body">$DIMTXSTY</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5511"></a></span><p class="table-body">7</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5510"></a></span><p class="table-body">标注文字样式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-550f"></a></span><p class="table-body">$DIMTXT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-550e"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-550d"></a></span><p class="table-body">标注文字高度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-550c"></a></span><p class="table-body">$DIMTZIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-550b"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-550a"></a></span><p class="table-body">控制是否对公差值做消零处理： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5509"></a></span><p class="table-body">0 = 消除零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5508"></a></span><p class="table-body">1 = 包含零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5507"></a></span><p class="table-body">2 = 包含零英尺，消除零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5506"></a></span><p class="table-body">3 = 包含零英寸，消除零英尺</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5505"></a></span><p class="table-body">$DIMUPT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5504"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5503"></a></span><p class="table-body">用户定位文字的光标功能： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5502"></a></span><p class="table-body">0 = 仅控制尺寸线的位置</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5501"></a></span><p class="table-body">1 = 控制文字位置和尺寸线位置</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5500"></a></span><p class="table-body">$DIMZIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ff"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54fe"></a></span><p class="table-body">控制是否对主单位值做消零处理： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54fd"></a></span><p class="table-body">0 = 消除零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54fc"></a></span><p class="table-body">1 = 包含零英尺和零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54fb"></a></span><p class="table-body">2 = 包含零英尺，消除零英寸</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54fa"></a></span><p class="table-body">3 = 包含零英寸，消除零英尺</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f9"></a></span><p class="table-body">$DISPSILH </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f8"></a></span><p class="table-body">70 </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f7"></a></span><p class="table-body">控制“线框”模式下体对象轮廓曲线的显示： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f6"></a></span><p class="table-body">0 = 关闭；1 = 打开</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a42"></a></span><p class="table-body">$DRAGVS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a40"></a></span><p class="table-body">349</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a3f"></a></span><p class="table-body">创建三维实体图元时，视觉样式的硬指针 ID。默认值为“空”</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f5"></a></span><p class="table-body">$DWGCODEPAGE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f4"></a></span><p class="table-body"> 3</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f3"></a></span><p class="table-body">图形代码页；创建新图形时设定为系统代码页，但不再由 AutoCAD 维护</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f2"></a></span><p class="table-body">$ELEVATION</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f1"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54f0"></a></span><p class="table-body">由 ELEV 命令设定的当前标高</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ef"></a></span><p class="table-body">$ENDCAPS </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ee"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ed"></a></span><p class="table-body">新对象的线宽端点封口设置：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ec"></a></span><p class="table-body">0 = 无；1 = 圆形；2 = 角度；3 = 方形</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54eb"></a></span><p class="table-body">$EXTMAX</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ea"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e9"></a></span><p class="table-body"><em class="mild">X</em>、<em class="mild">Y</em> 和 <em class="mild">Z</em> 图形范围右上角（在 WCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e8"></a></span><p class="table-body">$EXTMIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e7"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e6"></a></span><p class="table-body"><em class="mild">X</em>、<em class="mild">Y</em> 和 <em class="mild">Z</em> 图形范围左下角（在 WCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e5"></a></span><p class="table-body">$EXTNAMES </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e4"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e3"></a></span><p class="table-body">控制符号表命名：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e2"></a></span><p class="table-body">0 = R14 兼容。名称最多可以包含 31 个字符。其中可以包括字母 A&nbsp;到 Z、数字 0 到 9 以及特殊字符，例如，美元符号 ($)、下划线 (_) 和连字符 (-)。</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e1"></a></span><p class="table-body">1 = AutoCAD 2000。名称中最多可以包含 255 个字符，可以包含字母 A 到 Z，数字 0 到 9，空格以及未被 Microsoft Windows 和 AutoCAD 用于其他目的的特殊字符</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54e0"></a></span><p class="table-body">$FILLETRAD</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54df"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54de"></a></span><p class="table-body">圆角半径</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54dd"></a></span><p class="table-body">$FILLMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54dc"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54db"></a></span><p class="table-body">非零时启用填充模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54da"></a></span><p class="table-body">$FINGERPRINTGUID</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d9"></a></span><p class="table-body"> 2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d8"></a></span><p class="table-body">在创建时设定，用于唯一标识特定图形</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d7"></a></span><p class="table-body">$HALOGAP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d6"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d5"></a></span><p class="table-body">指定在某一对象被另一对象隐藏处显示的间距；该值被指定为一种单位的百分数，并且不受缩放级别的影响。使用 HIDE 或 SHADEMODE 的 Hidden 选项时，在晕圈行的隐藏点处缩短晕圈行</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d4"></a></span><p class="table-body">$HANDSEED</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d3"></a></span><p class="table-body"> 5</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d2"></a></span><p class="table-body">下一个可用的句柄</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d1"></a></span><p class="table-body">$HIDETEXT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54d0"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54cf"></a></span><p class="table-body">指定 HIDETEXT 系统变量： </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ce"></a></span><p class="table-body">0 = 在生成隐藏视图时 HIDE 忽略文字对象</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54cd"></a></span><p class="table-body">1 = HIDE 不忽略文字对象</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54cc"></a></span><p class="table-body">$HYPERLINKBASE </p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54cb"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ca"></a></span><p class="table-body">图形中所有相对超链接的路径。如果为空，则使用图形路径</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c9"></a></span><p class="table-body">$INDEXCTL</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c8"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c7"></a></span><p class="table-body">控制是否创建图层和空间索引并保存到图形文件中：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c6"></a></span><p class="table-body">0 = 不创建索引</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c5"></a></span><p class="table-body">1 = 创建图层索引</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c4"></a></span><p class="table-body">2 = 创建空间索引</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c3"></a></span><p class="table-body">3 = 创建图层和空间索引</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c2"></a></span><p class="table-body">$INSBASE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c1"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54c0"></a></span><p class="table-body">由 BASE 命令设定的插入基点（在 WCS 中） </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54bf"></a></span><p class="table-body">$INSUNITS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54be"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54bd"></a></span><p class="table-body">AutoCAD 设计中心块的默认图形单位：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54bc"></a></span><p class="table-body">0 = 无单位；1 = 英寸；2 = 英尺；3 = 英里；4 = 毫米； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54bb"></a></span><p class="table-body">5 = 厘米；6 = 米；7 = 千米；8 = 微英寸； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ba"></a></span><p class="table-body">9 = 密耳；10 = 码；11 = 埃；12 = 纳米； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b9"></a></span><p class="table-body">13 = 微米；14 = 分米；15 = 十米； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b8"></a></span><p class="table-body">16 = 百米；17 = 百万公里；18 = 天文单位； </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b7"></a></span><p class="table-body">19 = 光年；20 = 秒差距</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a3e"></a></span><p class="table-body">$INTERFERECOLOR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a3c"></a></span><p class="table-body">62</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a3b"></a></span><p class="table-body">表示在执行干涉命令期间创建的“干涉对象”的 ACI 颜色索引。默认值为 1</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a3a"></a></span><p class="table-body">$INTERFEREOBJVS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a38"></a></span><p class="table-body">345</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a37"></a></span><p class="table-body">干涉对象的视觉样式的硬指针 ID。默认视觉样式为“概念”。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a36"></a></span><p class="table-body">$INTERFEREVPVS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a34"></a></span><p class="table-body">346</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a33"></a></span><p class="table-body">在检查干涉期间视口的视觉样式的硬指针 ID。默认视觉样式为“三维线框”。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b6"></a></span><p class="table-body">$INTERSECTIONCOLOR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b5"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b4"></a></span><p class="table-body">指定相交多段线的图元颜色：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b3"></a></span><p class="table-body">1 到 255 的值可以指定 AutoCAD 颜色索引 (ACI)</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b2"></a></span><p class="table-body">0 = 颜色“BYBLOCK”</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b1"></a></span><p class="table-body">256 = 颜色“BYLAYER”</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54b0"></a></span><p class="table-body">257 = 颜色“随图元”</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54af"></a></span><p class="table-body">$INTERSECTIONDISPLAY</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ae"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ad"></a></span><p class="table-body">指定相交多段线的显示：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ac"></a></span><p class="table-body">0 = 关闭相交多段线的显示</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54ab"></a></span><p class="table-body">1 = 打开相交多段线的显示</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54aa"></a></span><p class="table-body">$JOINSTYLE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a9"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a8"></a></span><p class="table-body">新对象的线宽接头设置：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a7"></a></span><p class="table-body">0 = 无；1= 圆形；2 = 角度；3 = 平面</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a6"></a></span><p class="table-body">$LIMCHECK</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a5"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a4"></a></span><p class="table-body">如果打开了界限检查则为非零值</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a3"></a></span><p class="table-body">$LIMMAX</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a2"></a></span><p class="table-body">10, 20</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a1"></a></span><p class="table-body"><em class="mild">XY</em> 图形界限右上角（在 WCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-54a0"></a></span><p class="table-body">$LIMMIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-549f"></a></span><p class="table-body">10, 20</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-549e"></a></span><p class="table-body"><em class="mild">XY</em> 图形界限左下角（在 WCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-549d"></a></span><p class="table-body">$LTSCALE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-549c"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-549b"></a></span><p class="table-body">全局线型比例</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-549a"></a></span><p class="table-body">$LUNITS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5499"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5498"></a></span><p class="table-body">坐标和距离的单位格式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5497"></a></span><p class="table-body">$LUPREC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5496"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5495"></a></span><p class="table-body">坐标和距离的单位精度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5494"></a></span><p class="table-body">$LWDISPLAY</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5493"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5492"></a></span><p class="table-body">控制“模型”选项卡或“布局”选项卡中线宽的显示：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5491"></a></span><p class="table-body">0 = 不显示线宽</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5490"></a></span><p class="table-body">1 = 显示线宽</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-548f"></a></span><p class="table-body">$MAXACTVP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-548e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-548d"></a></span><p class="table-body">设定要重生成的视口的最大数目</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-548c"></a></span><p class="table-body">$MEASUREMENT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-548b"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-548a"></a></span><p class="table-body">设定图形单位：0 = 英制；1 = 公制</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5489"></a></span><p class="table-body">$MENU</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5488"></a></span><p class="table-body"> 1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5487"></a></span><p class="table-body">菜单文件名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5486"></a></span><p class="table-body">$MIRRTEXT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5485"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5484"></a></span><p class="table-body">非零时镜像文字</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5483"></a></span><p class="table-body">$OBSCOLOR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5482"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5481"></a></span><p class="table-body">指定遮挡线的颜色。遮挡线是通过更改颜色和线型使其可见的隐藏线，并且仅在使用 HIDE 或 SHADEMODE 命令时才可见。仅当 OBSCUREDLTYPE 的值设定为非 0，打开它时，OBSCUREDCOLOR 设置才可见。</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5480"></a></span><p class="table-body">0 和 256 = 图元颜色</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-547f"></a></span><p class="table-body">1-255 = AutoCAD 颜色索引 (ACI)</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-547e"></a></span><p class="table-body">$OBSLTYPE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-547d"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-547c"></a></span><p class="table-body">指定遮挡线的线型。与通常的 AutoCAD 线型不同，遮挡线的线型不受缩放级别的影响。默认值，即 0 值，将关闭遮挡线的显示。线型值定义如下：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-547b"></a></span><p class="table-body">0 = 关闭</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-547a"></a></span><p class="table-body">1 = 实线</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5479"></a></span><p class="table-body">2 = 虚线</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5478"></a></span><p class="table-body">3 = 点</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5477"></a></span><p class="table-body">4 = 短划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5476"></a></span><p class="table-body">5 = 中划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5475"></a></span><p class="table-body">6 = 长划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5474"></a></span><p class="table-body">7 = 双短划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5473"></a></span><p class="table-body">8 = 双中划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5472"></a></span><p class="table-body">9 = 双长划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5471"></a></span><p class="table-body">10 = 中长划</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5470"></a></span><p class="table-body">11 = 疏点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-546f"></a></span><p class="table-body">$ORTHOMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-546e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-546d"></a></span><p class="table-body">非零时启用正交模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-546c"></a></span><p class="table-body">$PDMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-546b"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-546a"></a></span><p class="table-body">点显示模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5469"></a></span><p class="table-body">$PDSIZE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5468"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5467"></a></span><p class="table-body">点显示尺寸</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5466"></a></span><p class="table-body">$PELEVATION</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5465"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5464"></a></span><p class="table-body">当前图纸空间标高</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5463"></a></span><p class="table-body">$PEXTMAX</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5462"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5461"></a></span><p class="table-body">图纸空间的 <em class="mild">X</em>、<em class="mild">Y</em> 和 <em class="mild">Z</em> 的最大范围
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5460"></a></span><p class="table-body">$PEXTMIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-545f"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-545e"></a></span><p class="table-body">图纸空间的 <em class="mild">X</em>、<em class="mild">Y</em> 和 <em class="mild">Z</em> 的最小范围
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-545d"></a></span><p class="table-body">$PINSBASE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-545c"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-545b"></a></span><p class="table-body">图纸空间插入基点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-545a"></a></span><p class="table-body">$PLIMCHECK</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5459"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5458"></a></span><p class="table-body">非零时图纸空间中的界限检查</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5457"></a></span><p class="table-body">$PLIMMAX</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5456"></a></span><p class="table-body">10, 20</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5455"></a></span><p class="table-body">图纸空间中 <em class="mild">X</em> 和 <em class="mild">Y</em> 的最大界限
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5454"></a></span><p class="table-body">$PLIMMIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5453"></a></span><p class="table-body">10, 20</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5452"></a></span><p class="table-body">图纸空间中 <em class="mild">X</em> 和 <em class="mild">Y</em> 的最小界限
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5451"></a></span><p class="table-body">$PLINEGEN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5450"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-544f"></a></span><p class="table-body">控制是否围绕二维多段线的顶点生成线型图案：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-544e"></a></span><p class="table-body">1 = 围绕多段线顶点生成连续的线型图案</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-544d"></a></span><p class="table-body">0 = 多段线的每一段都以虚线开始和结束</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-544c"></a></span><p class="table-body">$PLINEWID</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-544b"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-544a"></a></span><p class="table-body">默认的多段线宽度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5449"></a></span><p class="table-body">$PROJECTNAME</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5448"></a></span><p class="table-body">1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5447"></a></span><p class="table-body">为当前图形指定工程名称。在原始路径中没有找到外部参照或图像时使用。此工程名称指向注册表中的一段，其中包含每个已定义工程名称的一个或多个搜索路径。工程名称及其搜索路径可以在“选项”对话框的“文件”选项卡中设置</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5446"></a></span><p class="table-body">$PROXYGRAPHICS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5445"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5444"></a></span><p class="table-body">控制代理对象图像的保存</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5443"></a></span><p class="table-body">$PSLTSCALE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5442"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5441"></a></span><p class="table-body">控制图纸空间的线型比例：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5440"></a></span><p class="table-body">1 = 无特殊线型比例</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-543f"></a></span><p class="table-body">0 = 视口比例缩放决定线型比例缩放</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-543e"></a></span><p class="table-body">$PSTYLEMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-543d"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-543c"></a></span><p class="table-body">指示当前图形处于“颜色相关打印样式”还是“命名打印样式”模式：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-543b"></a></span><p class="table-body">0 = 使用当前图形中的命名打印样式表</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-543a"></a></span><p class="table-body">1 = 使用当前图形中的颜色相关打印样式表</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5439"></a></span><p class="table-body">$PSVPSCALE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5438"></a></span><p class="table-body"> 40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5437"></a></span><p class="table-body">新视口的视图比例因子：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5436"></a></span><p class="table-body">0 = 按图纸空间缩放</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5435"></a></span><p class="table-body">&gt;0 = 比例因子（正实数值）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5434"></a></span><p class="table-body">$PUCSBASE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5433"></a></span><p class="table-body"> 2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5432"></a></span><p class="table-body">定义正交 UCS 设置（仅用于图纸空间）的原点和方向的 UCS 名称。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5431"></a></span><p class="table-body">$PUCSNAME</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5430"></a></span><p class="table-body"> 2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-542f"></a></span><p class="table-body">当前图纸空间 UCS 名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-542e"></a></span><p class="table-body">$PUCSORG</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-542d"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-542c"></a></span><p class="table-body">当前图纸空间 UCS 原点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-542b"></a></span><p class="table-body">$PUCSORGBACK</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-542a"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5429"></a></span><p class="table-body">将 PUCSBASE 设定为 WORLD 并将图纸空间 UCS 改为 BACK 后成为新的 UCS 原点的点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5428"></a></span><p class="table-body">$PUCSORGBOTTOM</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5427"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5426"></a></span><p class="table-body">将 PUCSBASE 设定为 WORLD 并将图纸空间 UCS 改为 BOTTOM 后成为新的 UCS 原点的点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5425"></a></span><p class="table-body">$PUCSORGFRONT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5424"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5423"></a></span><p class="table-body">将 PUCSBASE 设定为 WORLD 并将图纸空间 UCS 改为 FRONT 后成为新的 UCS 原点的点 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5422"></a></span><p class="table-body">$PUCSORGLEFT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5421"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5420"></a></span><p class="table-body">将 PUCSBASE 设定为 WORLD 并将图纸空间 UCS 改为 LEFT 后成为新的 UCS 原点的点 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-541f"></a></span><p class="table-body">$PUCSORGRIGHT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-541e"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-541d"></a></span><p class="table-body">将 PUCSBASE 设定为 WORLD 并将图纸空间 UCS 改为 RIGHT 后成为新的 UCS 原点的点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-541c"></a></span><p class="table-body">$PUCSORGTOP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-541b"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-541a"></a></span><p class="table-body">将 PUCSBASE 设定为 WORLD 并将图纸空间 UCS 改为 TOP 后成为新的 UCS 原点的点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5419"></a></span><p class="table-body">$PUCSORTHOREF</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5418"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5417"></a></span><p class="table-body">如果图纸空间 UCS 为正交（PUCSORTHOVIEW 不等于 0），该名称即为与正交 UCS 相关的 UCS 的名称。如果为空，则 UCS 与 WORLD 相关</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5416"></a></span><p class="table-body">$PUCSORTHOVIEW</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5415"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5414"></a></span><p class="table-body">图纸空间 UCS 的正交视图类型：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5413"></a></span><p class="table-body">0 = UCS 为非正交视图；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5412"></a></span><p class="table-body">1 = 俯视图；2 = 仰视图；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5411"></a></span><p class="table-body">3 = 主视图；4 = 后视图；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5410"></a></span><p class="table-body">5 = 左视图；6 = 右视图</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-540f"></a></span><p class="table-body">$PUCSXDIR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-540e"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-540d"></a></span><p class="table-body">当前图纸空间的 UCS <em class="mild">X</em> 轴
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-540c"></a></span><p class="table-body">$PUCSYDIR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-540b"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-540a"></a></span><p class="table-body">当前图纸空间的 UCS <em class="mild">Y</em> 轴
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5409"></a></span><p class="table-body">$QTEXTMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5408"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5407"></a></span><p class="table-body">非零时启用“快速文字”模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5406"></a></span><p class="table-body">$REGENMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5405"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5404"></a></span><p class="table-body">非零时启用 REGENAUTO 模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5403"></a></span><p class="table-body">$SHADEDGE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5402"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5401"></a></span><p class="table-body">0 = 表面着色，边不亮显 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5400"></a></span><p class="table-body">1 = 表面着色，边亮显为黑色 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ff"></a></span><p class="table-body">2 = 表面不填充，边以图元的颜色绘制 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53fe"></a></span><p class="table-body">3 = 表面为图元颜色，边为黑色</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53fd"></a></span><p class="table-body">$SHADEDIF</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53fc"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53fb"></a></span><p class="table-body">以百分比表示的环境光/漫射光；范围从 1 到 100；默认值为 70</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a32"></a></span><p class="table-body">$SHADOWPLANELOCATION</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a30"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff9110c71085341391d-7a2f"></a></span><p class="table-body">地面阴影平面的位置。这是 Z 轴坐标。</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53fa"></a></span><p class="table-body">$SKETCHINC</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f9"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f8"></a></span><p class="table-body">徒手画记录增量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f7"></a></span><p class="table-body">$SKPOLY</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f6"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f5"></a></span><p class="table-body">0 = 徒手画直线；1 = 徒手画多段线</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f4"></a></span><p class="table-body">$SORTENTS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f3"></a></span><p class="table-body">280</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f2"></a></span><p class="table-body">控制对象的排序方式；可从通过“选项”对话框的“用户系统配置”选项卡访问。SORTENTS 使用下列位码值：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f1"></a></span><p class="table-body">0 = 禁用 SORTENTS</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53f0"></a></span><p class="table-body">1 = 为选择的对象排序</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ef"></a></span><p class="table-body">2 = 为捕捉的对象排序</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ee"></a></span><p class="table-body">4 = 为重画的图形排序</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ed"></a></span><p class="table-body">8 = 为 MSLIDE 命令创建的幻灯片排序</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ec"></a></span><p class="table-body">16 = 为 REGEN 命令排序</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53eb"></a></span><p class="table-body">32 = 为打印的对象排序</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ea"></a></span><p class="table-body">64 = 为 PostScript 输出的对象排序</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e6"></a></span><p class="table-body">$SPLINESEGS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e5"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e4"></a></span><p class="table-body">每个样条曲线曲面的直线段数目</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e3"></a></span><p class="table-body">$SPLINETYPE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e2"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e1"></a></span><p class="table-body">PEDIT 样条曲线的样条曲线类型</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53e0"></a></span><p class="table-body">$SURFTAB1</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53df"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53de"></a></span><p class="table-body">在第一个方向上的网格平移数目</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53dd"></a></span><p class="table-body">$SURFTAB2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53dc"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53db"></a></span><p class="table-body">在第二个方向上的网格平移数目</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53da"></a></span><p class="table-body">$SURFTYPE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d9"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d8"></a></span><p class="table-body">PEDIT 平滑的曲面类型</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d7"></a></span><p class="table-body">$SURFU</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d6"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d5"></a></span><p class="table-body">在 <em class="mild">M</em> 方向上的曲面密度（用于 PEDIT 平滑）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d4"></a></span><p class="table-body">$SURFV</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d3"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d2"></a></span><p class="table-body">在 <em class="mild">N</em> 方向上的曲面密度（用于 PEDIT 平滑）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d1"></a></span><p class="table-body">$TDCREATE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53d0"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53cf"></a></span><p class="table-body">创建图形的本地日期/时间（参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm#WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd">
+                                    <!--Reference = WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm-->日期/时间变量的特殊处理</a></span></span>）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ce"></a></span><p class="table-body">$TDINDWG</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53cd"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53cc"></a></span><p class="table-body">此图形的累计编辑时间（参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm#WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd">
+                                    <!--Reference = WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm-->日期/时间变量的特殊处理</a></span></span>）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53cb"></a></span><p class="table-body">$TDUCREATE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ca"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c9"></a></span><p class="table-body">创建图形的通用日期/时间（参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm#WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd">
+                                    <!--Reference = WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm-->日期/时间变量的特殊处理</a></span></span>）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c8"></a></span><p class="table-body">$TDUPDATE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c7"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c6"></a></span><p class="table-body">上次更新图形的本地日期/时间（参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm#WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd">
+                                    <!--Reference = WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm-->日期/时间变量的特殊处理</a></span></span>）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c5"></a></span><p class="table-body">$TDUSRTIMER</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c4"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c3"></a></span><p class="table-body">用户消耗时间计时器</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c2"></a></span><p class="table-body">$TDUUPDATE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c1"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53c0"></a></span><p class="table-body">上次更新/保存图形的通用日期/时间（参见<span class="hypertext"><span class="char_link"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm#WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd">
+                                    <!--Reference = WSc30cd3d5faa8f6d8cf40f5ffb755666b-7ffd; Target topic = WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm-->日期/时间变量的特殊处理</a></span></span>）
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53bf"></a></span><p class="table-body">$TEXTSIZE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53be"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53bd"></a></span><p class="table-body">默认文字高度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53bc"></a></span><p class="table-body">$TEXTSTYLE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53bb"></a></span><p class="table-body"> 7</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ba"></a></span><p class="table-body">当前文字样式名</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b9"></a></span><p class="table-body">$THICKNESS</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b8"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b7"></a></span><p class="table-body">由 ELEV 命令设定的当前厚度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b6"></a></span><p class="table-body">$TILEMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b5"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b4"></a></span><p class="table-body">1 表示以前版本的兼容模式；0 表示其他模式</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b3"></a></span><p class="table-body">$TRACEWID</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b2"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b1"></a></span><p class="table-body">默认宽线宽度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53b0"></a></span><p class="table-body">$TREEDEPTH</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53af"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ae"></a></span><p class="table-body">指定空间索引的最大深度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ad"></a></span><p class="table-body">$UCSBASE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ac"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53ab"></a></span><p class="table-body">定义正交 UCS 设置的原点和方向的 UCS 名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53aa"></a></span><p class="table-body">$UCSNAME</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a9"></a></span><p class="table-body"> 2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a8"></a></span><p class="table-body">当前 UCS 的名称</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a7"></a></span><p class="table-body">$UCSORG</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a6"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a5"></a></span><p class="table-body">当前 UCS 的原点（在 WCS 中）</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a4"></a></span><p class="table-body">$UCSORGBACK</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a3"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a2"></a></span><p class="table-body">将 UCSBASE 设定为 WORLD 并将模型空间 UCS 改为 BACK 后成为新的 UCS 原点的点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a1"></a></span><p class="table-body">$UCSORGBOTTOM</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-53a0"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-539f"></a></span><p class="table-body">将 UCSBASE 设定为 WORLD 并将模型空间 UCS 改为 BOTTOM 后成为新的 UCS 原点的点 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-539e"></a></span><p class="table-body">$UCSORGFRONT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-539d"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-539c"></a></span><p class="table-body">将 UCSBASE 设定为 WORLD 并将模型空间 UCS 改为 FRONT 后成为新的 UCS 原点的点 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-539b"></a></span><p class="table-body">$UCSORGLEFT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-539a"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5399"></a></span><p class="table-body">将 UCSBASE 设定为 WORLD 并将模型空间 UCS 改为 LEFT 后成为新的 UCS 原点的点 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5398"></a></span><p class="table-body">$UCSORGRIGHT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5397"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5396"></a></span><p class="table-body">将 UCSBASE 设定为 WORLD 并将模型空间 UCS 改为 RIGHT 后成为新的 UCS 原点的点 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5395"></a></span><p class="table-body">$UCSORGTOP</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5394"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5393"></a></span><p class="table-body">将 UCSBASE 设定为 WORLD 并将模型空间 UCS 改为 TOP 后成为新的 UCS 原点的点</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5392"></a></span><p class="table-body">$UCSORTHOREF</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5391"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5390"></a></span><p class="table-body">如果模型空间 UCS 为正交（UCSORTHOVIEW 不等于 0），该名称即为与正交 UCS 相关的 UCS 的名称。如果为空，则 UCS 与 WORLD 相关</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-538f"></a></span><p class="table-body">$UCSORTHOVIEW</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-538e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-538d"></a></span><p class="table-body">模型空间 UCS 的正交视图类型：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-538c"></a></span><p class="table-body">0 = UCS 为非正交视图；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-538b"></a></span><p class="table-body">1 = 俯视图；2 = 仰视图；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-538a"></a></span><p class="table-body">3 = 主视图；4 = 后视图；</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5389"></a></span><p class="table-body">5 = 左视图；6 = 右视图</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5388"></a></span><p class="table-body">$UCSXDIR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5387"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5386"></a></span><p class="table-body">当前 UCS <em class="mild">X</em> 轴的方向（在 WCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5385"></a></span><p class="table-body">$UCSYDIR</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5384"></a></span><p class="table-body">10, 20, 30</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5383"></a></span><p class="table-body">当前 UCS <em class="mild">Y</em> 轴的方向（在 WCS 中） 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5382"></a></span><p class="table-body">$UNITMODE</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5381"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5380"></a></span><p class="table-body">低位集 = 按照输入的格式显示分数、英尺-英寸和勘测角度</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-537f"></a></span><p class="table-body">$USERI1 - 5</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-537e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-537d"></a></span><p class="table-body">供第三方开发商使用的五个整数变量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-537c"></a></span><p class="table-body">$USERR1 - 5</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-537b"></a></span><p class="table-body">40</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-537a"></a></span><p class="table-body">供第三方开发商使用的五个实数变量</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5379"></a></span><p class="table-body">$USRTIMER</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5378"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5377"></a></span><p class="table-body">0 = 关闭计时器；1 = 打开计时器</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5376"></a></span><p class="table-body">$VERSIONGUID</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5375"></a></span><p class="table-body">2</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5374"></a></span><p class="table-body">唯一标识图形的特定版本。修改图形时更新 </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5373"></a></span><p class="table-body">$VISRETAIN</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5372"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5371"></a></span><p class="table-body">0 = 不保留依赖外部参照的可见性设置 </p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5370"></a></span><p class="table-body">1 = 保留依赖外部参照的可见性设置</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-536f"></a></span><p class="table-body">$WORLDVIEW</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-536e"></a></span><p class="table-body">70</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-536d"></a></span><p class="table-body">1 = 在 DVIEW/VPOINT 期间将 UCS 设定为 WCS</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-536c"></a></span><p class="table-body">0 = 不更改 UCS</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-536b"></a></span><p class="table-body">$XCLIPFRAME</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-536a"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5369"></a></span><p class="table-body">控制外部参照剪裁边界的可见性：</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5368"></a></span><p class="table-body">0 = 剪裁边界不可见</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5367"></a></span><p class="table-body">1 = 剪裁边界可见</p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5366"></a></span><p class="table-body">$XEDIT</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5365"></a></span><p class="table-body">290</p>
+                     </td>
+                     <td class="table-body"><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5364"></a></span><p class="table-body">控制当前图形被其他图形参照时是否可以在位编辑。</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5363"></a></span><p class="table-body">0 = 无法使用在位参照编辑</p><span class="anchor_wrapper"><a name="WSfacf1429558a55dec759ddffb0eba947-5362"></a></span><p class="table-body">1 = 可以进行在位参照编辑</p>
+                     </td>
+                  </tr>
+               
+            </tbody></table>
+         </div>
+         <!---->
+         <div class="topic-list">
+            <h4 class="related">本节内容</h4>
+            <ul>
+               <li class="topiclist-litem"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6d.htm">修订的 VPORT 标题变量</a></li>
+               <li class="topiclist-litem"><a href="http://docs.autodesk.com/ACD/2011/CHS/filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm">日期/时间变量的特殊处理</a></li>
+            </ul>
+         </div>
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">请将您对此页内容的评论发送给我们</span></a></div><br><script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script><script src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/ga.js" type="text/javascript"></script><script type="text/javascript">
+                try {
+                    var pageTracker = _gat._getTracker("UA-2967772-176");
+                    pageTracker._trackPageview();
+                } catch(err) {}
+            </script></div>
+   
+<div class="leftContent" id="leftContent"><div class="acad-contents" id="acad-contents" style="left: 0px;"><table id="tbl-acad-contents" border="0"><tbody id="tbody-acad-contents"><tr onclick='parent.location.href=".././filesDXF/WSfacf1429558a55de185c428100849a0ab7-5f05.htm"' onmouseover="highlightTOCItem('DXFd0e1559', 0, true, false)" onmouseout="highlightTOCItem('DXFd0e1559', 0, false, false)"><td class="toc_item" id="tdDXFd0e1559_i"></td><td class="toc_entry_0" id="tdDXFd0e1559">HEADER 段</td><td class="toc_item_top" id="tdDXFd0e1559_it"><img alt="" src="DXF%20%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%20HEADER%20%E6%AE%B5%E7%BB%84%E7%A0%81_files/top_topic.gif"></td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6f.htm"' onmouseover="highlightTOCItem('DXFd0e1573', 1, true, false)" onmouseout="highlightTOCItem('DXFd0e1573', 1, false, false)"><td class="toc_item_selected" id="tdDXFd0e1573_i"></td><td colspan="2" class="toc_entry_1_selected" id="tdDXFd0e1573">HEADER 段组码</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6d.htm"' onmouseover="highlightTOCItem('DXFd0e4930', 2, true, false)" onmouseout="highlightTOCItem('DXFd0e4930', 2, false, false)"><td class="toc_item" id="tdDXFd0e4930_i"></td><td colspan="2" class="toc_entry_2" id="tdDXFd0e4930">修订的 VPORT 标题变量</td></tr><tr onclick='parent.location.href=".././filesDXF/WS1a9193826455f5ff18cb41610ec0a2e719-7a6b.htm"' onmouseover="highlightTOCItem('DXFd0e5136', 2, true, false)" onmouseout="highlightTOCItem('DXFd0e5136', 2, false, false)"><td class="toc_item" id="tdDXFd0e5136_i"></td><td colspan="2" class="toc_entry_2" id="tdDXFd0e5136">日期/时间变量的特殊处理</td></tr></tbody></table></div></div><div class="rightContent" id="rightContent"><div class="exchange_content_widget"><iframe src="http://autocad.autodesk.com/?html=fragment-autocad_help_rightnav_widget2&amp;topic_id=WS1a9193826455f5ff18cb41610ec0a2e719-7a6f&amp;topic_name=HEADER%20段组码" scrolling="no" marginheight="0" marginwidth="0" width="190" height="600" frameborder="0"></iframe></div></div></body><div id="edge-translate-notifier-container" class="edge-translate-notifier-center"></div></html>
