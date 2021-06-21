@@ -1,0 +1,22 @@
+/*         ADD YOUR COMMENTS WHEN MAKING CHANGES TO THIS FILE          */
+/*use this to disable the comments link in the footer.*/
+
+/*Ver. 1 - Created a comments disabling override -anant 			   */
+
+/***********************************************************************/
+
+span.comments-link {
+display:none;
+}
+
+DIV.footer-block {
+margin-top: 25pt;
+margin-bottom: 20pt;
+border-top: 2px #959595 solid;
+border-bottom: 1px #FFFFFF solid;
+text-align: right;
+padding-right: 15px;
+padding-top: 8px;
+padding-bottom: 14px;
+display: block;
+}
