@@ -1,0 +1,38 @@
+tan（2kπ+α）=tan α
+
+tan(π/2-α）=cot α
+
+tan（π/2+α）=-cot α
+
+tan（π+α）=tan α
+
+tan（π-α）=-tan α
+
+两角和差公式：
+
+tan（α+β）=(tanα+tanβ）/（1-tanα·tanβ）
+
+tan（α-β）=(tanα-tanβ）/（1+tanα·tanβ）
+
+tan(a+b+c)=tanα+tanb+tanc-tanatanbtanc/1-tanatanb-tanctanb-tanatanc
+
+
+
+综上所述，主要的公式是：
+
+const x = (x1 + x2 - (y2 - y1) * b) / 2
+const y = (y1 + y2 + (x2 - x1) * b) / 2
+
+x，y即为弧度所在圆的圆心。其中：
+
+const b = (1 / bulge - bulge) / 2
+
+bulge=0时，代表直线，显然不需要计算圆心。
+
+直接拿过来用就好了，
+
+有了圆心，画圆当然还需要知道半径（勾股定理）
+
+const r = Math.sqrt(Math.pow((x1 - x), 2) + Math.pow((y1 - y), 2))
+
+
